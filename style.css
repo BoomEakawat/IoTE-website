@@ -1,6 +1,7 @@
 /* --- CSS VARIABLES & RESET --- */
 :root {
     --primary-blue: #000080;
+    --secondary-blue: #ffffff;
     --accent-orange: #e67e22;
     --accent-orange-hover: #d35400;
     --text-dark: #333;
@@ -9,6 +10,7 @@
     --white: #ffffff;
     --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
     --shadow-md: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 2px;
 }
 
 * {
@@ -29,16 +31,17 @@ h1, h2, h3, .nav-link, .btn {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 2000px;
+    margin: 0 auto;    /* This does the centering */
+    padding: 0 20px;   /* Use actual pixels for side padding */
+    width: 100%;
 }
 
 /* --- HEADER --- */
 header {
     background-color: var(--primary-blue);
     color: var(--white);
-    padding: 15px 0;
+    padding: 15px 30px;
     position: fixed; /* Sticky Header */
     width: 100%;
     top: 0;
@@ -112,11 +115,58 @@ header.scrolled {
     color: var(--accent-orange);
 }
 
+/* Dropdown Section */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* The actual dropdown menu (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-blue);
+    min-width: 270px;
+    box-shadow: var(--shadow-md);
+    border-radius: 4px;
+    z-index: 1001;
+    top: 100%; /* Sits right below the parent link */
+    left: -8px;
+    overflow: hidden;
+}
+
+#drop-faculty {
+    min-width: 200px;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: var(--accent-orange);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Prompt', sans-serif;
+    font-size: 0.8rem;
+    transition: background 0.3s;
+}
+
+/* Hover effect for items inside the dropdown */
+.dropdown-content a:hover {
+    background-color: var(--accent-orange);
+    color: var(--white);
+}
+
+/* SHOW the dropdown when hovering over the .dropdown container */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* Special styling for 'Contact Us' button */
 .btn-contact {
     background-color: var(--accent-orange);
     padding: 8px 20px;
-    border-radius: 50px;
+    border-radius: 5px;
     color: white !important;
     transition: transform 0.2s, background 0.3s;
     /* FIX: Prevent button text from wrapping */
@@ -131,11 +181,12 @@ header.scrolled {
 
 /* --- HAMBURGER MENU --- */
 .hamburger {
+    position: relative; /* z-index requires a position value */
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
-    z-index: 1001;
+    z-index: 2000;
 }
 
 .line {
@@ -156,17 +207,18 @@ header.scrolled {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 300px; /* FIXED: Limits the width so it doesn't cover the whole page */
     height: 100vh;
-    background-color: var(--primary-blue);
+    background-color: var(--primary-blue); /* Darker color from your screenshot */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    transform: translateX(100%);
+    justify-content: flex-start; /* Aligns items to the top */
+    padding: 80px 20px;
+    gap: 15px; /* Spacing between links */
+    transform: translateX(100%); /* Keeps it hidden off-screen */
     transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    z-index: 999;
+    z-index: 1001; /* Higher than header */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5); /* Adds depth */
 }
 
 .mobile-menu.active {
@@ -176,9 +228,12 @@ header.scrolled {
 .mobile-link {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: 'Prompt', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator lines like your screenshot */
+    width: 100%;
 }
 
 /* --- HERO SECTION --- */
@@ -283,7 +338,7 @@ footer {
 }
 
 /* --- RESPONSIVE BREAKPOINTS IPAD --- */
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
     .nav-desktop { display: none; }
     .hamburger { display: flex; }
     

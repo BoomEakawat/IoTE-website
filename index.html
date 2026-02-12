@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KMITL - Department of IoT</title>
+    <title>IoT and Information Engineering, KMITL</title>
+    <link rel="icon" type="images/jpg" href="images/logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,21 +13,42 @@
     <header id="main-header">
         <div class="container header-container">
             <div class="brand">
-                <img src="images/iote-logo.png" alt="KMITL IoT Logo" class="logo-img">
+                <img src="images/logo-nobg.png" alt="KMITL IoT Logo" class="logo-img">
                 
                 <div class="brand-text">
                     <h1>Department of IoT and Information Engineering</h1>
                     <p>ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
                 </div>
             </div>
-
+            
+            <!-- navbar -->
             <nav class="nav-desktop">
+                <!-- Home -->
                 <a href="#" class="nav-link active">Home</a>
+                <!-- About Us -->
                 <a href="#" class="nav-link">About Us</a>
-                <a href="#" class="nav-link">Academics</a>
+                <!-- Academics -->
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="#">B.Eng.IoT and Information Engineering</a>
+                        <a href="#">B.Eng.IoT and Information Engineering + B.Sc.Industrial Physics</a>
+                        <a href="#">B.Eng.Computer Engineering (Continuing)</a>
+                    </div>
+                </div>
+                <!-- Admission -->
                 <a href="#" class="nav-link">Admission</a>
-                <a href="#" class="nav-link">Faculty</a>
-                <a href="#" class="nav-link btn-contact">Contact Us</a>
+                <!-- Faculty -->
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Faculty ▾</a>
+                    <div class="dropdown-content" id="drop-faculty">
+                        <a href="#">Professor of IoT and Information Engineering</a>
+                        <a href="#">Professor of Industrial Physics</a>
+                    </div>
+                </div>
+                
+                <!-- <a href="#" class="nav-link btn-contact">Contact Us</a> -->
+                <a href="#" class="nav-link">Contact Us</a>
             </nav>
 
             <div class="hamburger" id="hamburger">
