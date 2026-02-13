@@ -1,7 +1,7 @@
 /* --- CSS VARIABLES & RESET --- */
 :root {
     --primary-blue: #000080;
-    --secondary-blue: #ffffff;
+    --secondary-blue: #000070;
     --accent-orange: #e67e22;
     --accent-orange-hover: #d35400;
     --text-dark: #333;
@@ -202,6 +202,26 @@ header.scrolled {
 .hamburger.active .line2 { opacity: 0; }
 .hamburger.active .line3 { transform: rotate(-45deg) translate(5px, -6px); }
 
+/* --- OVERLAY DIMMING EFFECT --- */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Dims the page 60% black */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+    z-index: 1000; /* Sits just below the mobile-menu */
+}
+
+/* Show the overlay when active */
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* --- MOBILE MENU --- */
 .mobile-menu {
     position: fixed;
@@ -209,20 +229,27 @@ header.scrolled {
     right: 0;
     width: 300px; /* FIXED: Limits the width so it doesn't cover the whole page */
     height: 100vh;
-    background-color: var(--primary-blue); /* Darker color from your screenshot */
+    background-color: var(--secondary-blue); /* Darker color from your screenshot */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Aligns items to the top */
-    padding: 80px 20px;
+    padding: 30px 20px;
     gap: 15px; /* Spacing between links */
     transform: translateX(100%); /* Keeps it hidden off-screen */
     transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: 1001; /* Higher than header */
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5); /* Adds depth */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2); /* Adds depth */
 }
 
 .mobile-menu.active {
     transform: translateX(0);
+}
+
+#mobile-menu-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
 }
 
 .mobile-link {
@@ -232,7 +259,7 @@ header.scrolled {
     font-family: 'Prompt', sans-serif;
     font-weight: 500;
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator lines like your screenshot */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Separator lines like your screenshot */
     width: 100%;
 }
 
@@ -253,6 +280,7 @@ header.scrolled {
     gap: 30px;
     align-items: start;
 }
+
 
 /* Content Card */
 .content-card {
@@ -319,12 +347,20 @@ header.scrolled {
 }
 
 /* Footer */
+
 footer {
-    background: #000050;
+    /* background: #000050; */
+    background: var(--secondary-blue);
     color: rgba(255,255,255,0.6);
     text-align: center;
     padding: 20px 0;
     font-size: 0.8rem;
+}
+
+footer .footer-drawer {
+    background: var(--secondary-blue);
+    /* padding: 0 0; */
+    margin: 20px 0;
 }
 
 /* Animation Utilities */
