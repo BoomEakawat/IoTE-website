@@ -115,6 +115,11 @@ header.scrolled {
     color: var(--accent-orange);
 }
 
+.nav-link.active {
+  border-bottom: 2px solid var(--accent-orange);
+  color: var(--accent-orange);
+}
+
 /* Dropdown Section */
 .dropdown {
     position: relative;
@@ -125,7 +130,7 @@ header.scrolled {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--secondary-blue);
+    background-color: var(--white);
     min-width: 270px;
     box-shadow: var(--shadow-md);
     border-radius: 4px;
