@@ -182,6 +182,45 @@ header.scrolled {
     border-bottom: 2.5px solid var(--accent-orange); /* Keeps the line divider */
 }
 
+/* --- MOBILE DROPDOWN STYLING --- */
+
+/* The submenu container */
+.mobile-submenu {
+    max-height: 0;            /* Start hidden */
+    overflow: hidden;         /* Hide content when collapsed */
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth slide */
+    background-color: rgba(0, 0, 0, 0.15); /* Slightly darker background for depth */
+    border-left: 3px solid transparent;    /* Preparation for active state */
+}
+
+/* The class added by JavaScript */
+.mobile-submenu.open {
+    max-height: 500px;        /* Large enough value to fit all links */
+    border-left: 3px solid var(--accent-orange); /* Orange highlight when open */
+}
+
+/* Styling for the links inside the dropdown */
+.mobile-sublink {
+    display: block;
+    padding: 12px 0 12px 20px; /* Indent links to show hierarchy */
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: 'Prompt', sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: color 0.3s ease;
+}
+
+.mobile-sublink:hover {
+    color: var(--accent-orange);
+}
+
+/* The trigger title */
+.dropdown-trigger {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
 /* --- HAMBURGER MENU --- */
 .hamburger {
     position: relative; /* z-index requires a position value */

@@ -1,57 +1,88 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Function to fetch and insert HTML
+    // 1. Unified Component Loader
     const loadComponent = async (id, filePath, callback) => {
         try {
             const response = await fetch(filePath);
             const html = await response.text();
-            document.getElementById(id).innerHTML = html;
-            
-            // If we have extra logic (like the hamburger), run it now
-            if (callback) callback();
+            const container = document.getElementById(id);
+            if (container) {
+                container.innerHTML = html;
+                if (callback) callback(); // Run logic only after HTML exists
+            }
         } catch (error) {
             console.error(`Could not load ${filePath}:`, error);
         }
     };
 
-    // 2. Load the Navbar and Footeromponents/navbar.html', () => {
+    // 2. Initialize Components
     loadComponent('navbar-placeholder', '/components/navbar.html', () => {
-        initMenu();            // Your existing menu logic
-        highlightActiveLink(); // NEW: Highlight the current page
+        initMenu();            
+        highlightActiveLink(); 
     });
+    
     loadComponent('footer-placeholder', '/components/footer.html');
 });
 
-// 3. Initialize the Hamburger Menu logic AFTER navbar is loaded
+// 3. Centralized Menu Logic
 function initMenu() {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const overlay = document.getElementById('menuOverlay');
 
+    // Hamburger Toggle
     if (hamburger && mobileMenu && overlay) {
-        hamburger.addEventListener('click', (event) => {
-            event.stopPropagation();
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
+        const toggleMenu = (state) => {
+            const action = state ? 'add' : 'remove';
+            hamburger.classList[action]('active');
+            mobileMenu.classList[action]('active');
+            overlay.classList[action]('active');
+        };
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isActive = hamburger.classList.contains('active');
+            toggleMenu(!isActive);
         });
 
-        overlay.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-        });
+        overlay.addEventListener('click', () => toggleMenu(false));
     }
+
+    // --- MULTI-DROPDOWN LOGIC ---
+    // Selects all triggers (Academics, Faculty, etc.)
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            // Finds the submenu immediately following the trigger in HTML
+            const submenu = trigger.nextElementSibling;
+
+            if (submenu && submenu.classList.contains('mobile-submenu')) {
+                // Toggle current submenu
+                const isOpen = submenu.classList.toggle('open');
+                
+                // Update trigger style
+                trigger.style.color = isOpen ? 'var(--accent-orange)' : 'white';
+
+                // Optional: Close other open submenus for a cleaner look
+                document.querySelectorAll('.mobile-submenu').forEach(other => {
+                    if (other !== submenu) {
+                        other.classList.remove('open');
+                        other.previousElementSibling.style.color = 'white';
+                    }
+                });
+            }
+        });
+    });
 }
 
 function highlightActiveLink() {
-    // Get current path (e.g., /pages/about.html)
     const currentPath = window.location.pathname;
     const allLinks = document.querySelectorAll('.nav-link, .mobile-link');
 
     allLinks.forEach(link => {
         const linkPath = link.getAttribute('href');
-
-        // Logic to handle root index vs /index.html
         if (currentPath === linkPath || (currentPath === '/' && linkPath === '/index.html')) {
             link.classList.add('active');
         } else {
