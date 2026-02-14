@@ -1,0 +1,16 @@
+/* Footer */
+
+footer {
+    /* background: #000050; */
+    background: var(--secondary-blue);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8rem;
+}
+
+footer .footer-drawer {
+    background: var(--secondary-blue);
+    /* padding: 0 0; */
+    margin: 20px 0;
+}

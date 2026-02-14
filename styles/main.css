@@ -1,0 +1,43 @@
+:root {
+    --primary-blue: #000080;
+    --secondary-blue: #000070;
+    --accent-orange: #e67e22;
+    --accent-orange-hover: #d35400;
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .nav-link, .btn {
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Animation Utilities */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
