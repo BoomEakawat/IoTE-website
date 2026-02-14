@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // 2. Load the Navbar and Footer
+    // 2. Load the Navbar and Footeromponents/navbar.html', () => {
     loadComponent('navbar-placeholder', '/components/navbar.html', () => {
         initMenu();            // Your existing menu logic
         highlightActiveLink(); // NEW: Highlight the current page
@@ -44,17 +44,14 @@ function initMenu() {
 }
 
 function highlightActiveLink() {
-    // Get the current URL path (e.g., /pages/about.html)
+    // Get current path (e.g., /pages/about.html)
     const currentPath = window.location.pathname;
-    
-    // Select all links in the desktop and mobile menus
     const allLinks = document.querySelectorAll('.nav-link, .mobile-link');
-    
+
     allLinks.forEach(link => {
-        // Get the href attribute (e.g., /index.html or /pages/about.html)
         const linkPath = link.getAttribute('href');
-    
-        // Check if the current URL ends with the link's path
+
+        // Logic to handle root index vs /index.html
         if (currentPath === linkPath || (currentPath === '/' && linkPath === '/index.html')) {
             link.classList.add('active');
         } else {

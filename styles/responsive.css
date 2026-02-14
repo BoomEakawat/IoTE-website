@@ -3,7 +3,7 @@
 }
 
 /* --- RESPONSIVE BREAKPOINTS IPAD --- */
-@media (max-width: 1350px) {
+@media (max-width: 1200px) {
     .nav-desktop { display: none; }
     .hamburger { display: flex; }
     
@@ -24,7 +24,10 @@
         font-size: 0.95rem; /* Slightly smaller to fit mobile screens */
     }
 
-    .header-container { align-items: center; }
+    .header-container { 
+        align-items: center;
+        padding: 0;
+    }
 }
 
 /* --- RESPONSIVE BREAKPOINTS MOBILE --- */

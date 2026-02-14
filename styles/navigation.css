@@ -2,7 +2,7 @@
 header {
     background-color: var(--primary-blue);
     color: var(--white);
-    padding: 15px 30px;
+    padding: 15px 30px 15px 10px;
     position: fixed; /* Sticky Header */
     width: 100%;
     top: 0;
@@ -54,42 +54,6 @@ header.scrolled {
     white-space: nowrap;
 }
 
-/* --- NAVIGATION --- */
-.nav-desktop {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.nav-link {
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s;
-    /* FIX: Prevent menu items like "About Us" from wrapping */
-    white-space: nowrap;
-}
-
-.nav-link:hover {
-    color: var(--accent-orange);
-}
-
-/* Update this in styles/navigation.css */
-.nav-link.active, 
-.mobile-link.active {
-    color: var(--accent-orange) !important;
-    border-bottom: 2px solid var(--accent-orange);
-}
-
-/* Update this in styles/navigation.css */
-.nav-link.active, 
-.mobile-link.active {
-    color: var(--accent-orange) !important;
-    border-bottom: 2px solid var(--accent-orange);
-}
-
 /* Dropdown Section */
 .dropdown {
     position: relative;
@@ -114,7 +78,6 @@ header.scrolled {
     min-width: 200px;
 }
 
-
 /* Links inside the dropdown */
 .dropdown-content a {
     color: var(--accent-orange);
@@ -137,21 +100,86 @@ header.scrolled {
     display: block;
 }
 
-/* Special styling for 'Contact Us' button */
-.btn-contact {
-    background-color: var(--accent-orange);
-    padding: 8px 20px;
-    border-radius: 5px;
-    color: white !important;
-    transition: transform 0.2s, background 0.3s;
-    /* FIX: Prevent button text from wrapping */
+/* --- NAVIGATION --- */
+.nav-desktop {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+    /* FIX: Prevent menu items like "About Us" from wrapping */
     white-space: nowrap;
 }
 
-.btn-contact:hover {
-    background-color: var(--accent-orange-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.4);
+.nav-link:hover {
+    color: var(--accent-orange);
+    border-bottom: 2px solid var(--accent-orange);
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--accent-orange) !important;
+    border-bottom: 2.5px solid var(--accent-orange); /* Matches the underline in your reference */
+    /* padding-bottom: 5px; */
+}
+
+/* --- MOBILE MENU --- */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* FIXED: Limits the width so it doesn't cover the whole page */
+    height: 100vh;
+    background-color: var(--secondary-blue); /* Darker color from your screenshot */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns items to the top */
+    padding: 30px 20px;
+    gap: 15px; /* Spacing between links */
+    transform: translateX(100%); /* Keeps it hidden off-screen */
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1001; /* Higher than header */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+#mobile-menu-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+}
+
+.mobile-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 500;
+    padding: 15px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Separator lines like your screenshot */
+    width: 100%;
+}
+
+/* .mobile-link:hover {
+    color: var(--accent-orange);
+    border-bottom: 2px solid var(--accent-orange);
+} */
+
+.mobile-link.active {
+    color: var(--accent-orange) !important; /* Matches orange text in your reference */
+    font-weight: 600;
+    border-bottom: 2.5px solid var(--accent-orange); /* Keeps the line divider */
 }
 
 /* --- HAMBURGER MENU --- */
@@ -196,45 +224,3 @@ header.scrolled {
     opacity: 1;
     visibility: visible;
 }
-
-/* --- MOBILE MENU --- */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px; /* FIXED: Limits the width so it doesn't cover the whole page */
-    height: 100vh;
-    background-color: var(--secondary-blue); /* Darker color from your screenshot */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Aligns items to the top */
-    padding: 30px 20px;
-    gap: 15px; /* Spacing between links */
-    transform: translateX(100%); /* Keeps it hidden off-screen */
-    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    z-index: 1001; /* Higher than header */
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2); /* Adds depth */
-}
-
-.mobile-menu.active {
-    transform: translateX(0);
-}
-
-#mobile-menu-title {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    border: none;
-}
-
-.mobile-link {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: 'Prompt', sans-serif;
-    font-weight: 500;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Separator lines like your screenshot */
-    width: 100%;
-}
-
