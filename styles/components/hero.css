@@ -1,0 +1,57 @@
+/* --- HERO HOME (Full Image / Cinematic) --- */
+.hero-home {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    background-image: url('/images/home-img1.jpg'); /* Ensure path is correct */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-home .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,80,0.85) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
+.hero-home .container {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+}
+
+/* --- HERO SUBPAGE (Clean White Layout) --- */
+.hero-subpage {
+    padding-top: 100px; /* Space for fixed navbar */
+    padding-bottom: 30px;
+    background-color: var(--white); /* Your requested white blank screen */
+    border-bottom: 1px solid #eee;
+    min-height: 40vh;
+}
+
+.hero-subpage .container {
+    color: var(--primary-blue);
+}
+
+.hero-subpage h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+
+
+
+
+

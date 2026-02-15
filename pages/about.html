@@ -8,11 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/components/navbar.html">
     <link rel="stylesheet" href="/components/footer.html">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/navigation.css">
-    <link rel="stylesheet" href="/styles/hero.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
+    <link rel="stylesheet" href="/styles/base/main.css">
+    <link rel="stylesheet" href="/styles/base/responsive.css">
+    <link rel="stylesheet" href="/styles/components/navigation.css">
+    <link rel="stylesheet" href="/styles/components/hero.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/pages/about.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -20,28 +21,28 @@
     <main>
         <section class="hero-subpage">
             <div class="container fade-in">
-                <!-- <div class="breadcrumb">Home / About Us</div> -->
+                <div class="breadcrumb">Home / About Us</div>
                 <h1 class="page-title">ประวัติความเป็นมาของหลักสูตร</h1>
-            
+
                 <div class="history-container">
                     <p class="history-intro">ประวัติความเป็นมาของภาควิชาวิศวกรรมไอโอทีและสารสนเทศ สรุปได้ดังนี้:</p>
-                
+
                     <div class="timeline">
                         <div class="timeline-item">
                             <h3 class="timeline-date">พ.ศ. 2517 - 2540</h3>
                             <p class="timeline-text">เริ่มแรกใช้ชื่อ ภาควิชาเทคนิคอุตสาหกรรม เปิดสอนหลักสูตรอุตสาหกรรมศาสตรบัณฑิต (ต่อเนื่อง 3 ปี) แขนงวิชาเทคโนโลยีโทรทัศน์ เพื่อรับผู้จบ ปวส. เข้าศึกษาต่อ ต่อมาในปี พ.ศ. 2541 ได้ยกระดับเป็นหลักสูตร วิศวกรรมศาสตรบัณฑิต (4 ปี) โดยเปิดรับทั้งผู้จบ ม.6 และ ปวส.</p>
                         </div>
-                    
+
                         <div class="timeline-item">
                             <h3 class="timeline-date">พ.ศ. 2544 - 2552</h3>
                             <p class="timeline-text">เปลี่ยนชื่อเป็น "ภาควิชาวิศวกรรมสารสนเทศ" อย่างเป็นทางการเมื่อวันที่ 6 พฤศจิกายน 2544 มุ่งเน้นผลิตวิศวกรที่มีความรู้บูรณาการระหว่าง คอมพิวเตอร์ โทรคมนาคม และอิเล็กทรอนิกส์ เพื่อรองรับการขยายตัวของตลาดแรงงานด้าน IT</p>
                         </div>
-                    
+
                         <div class="timeline-item">
                             <h3 class="timeline-date">พ.ศ. 2553 - 2563</h3>
                             <p class="timeline-text">มีการปรับโครงสร้างองค์กรให้ภาควิชาวิศวกรรมสารสนเทศเข้าสังกัด ภาควิชาวิศวกรรมคอมพิวเตอร์ เพื่อทำงานร่วมกัน แต่ยังคงดูแลหลักสูตรเดิมและปรับปรุงเนื้อหาให้ทันสมัย และงดรับนักศึกษาในปีการศึกษา 2563-2564</p>
                         </div>
-                    
+
                         <div class="timeline-item">
                             <h3 class="timeline-date">พ.ศ. 2564 - ปัจจุบัน</h3>
                             <p class="timeline-text">ปรับปรุงหลักสูตรครั้งใหญ่ภายใต้นโยบาย "Disruptive Curriculum" ในชื่อ "หลักสูตรวิศวกรรมระบบไอโอทีและสารสนเทศ" โดยมีจุดเด่นคือ:</p>
@@ -51,48 +52,48 @@
                                 <li>ความทันสมัย: มุ่งเน้นการทลายกำแพงความรู้และเพิ่มโอกาสการทำงานในยุคดิจิทัล</li>
                             </ul>
                         </div>
-                    
+
                         </div>
                 </div>
             </div>
         </section>
-    </main>
-    <!-- <section class="hero-subpage">
-        <div class="container fade-in">
-            <div>
-                <h1>About us</h1>
-                <h3>อาชีพที่ประกอบได้หลังจบการศึกษา</h3>
-                <ul>
-                    <li>วิศวกรระบบไอโอที (IoT Engineer)</li>
-                    <li>วิศวกรระบบสารสนเทศ (Information System Engineer)</li>
-                    <li>วิศวกรระบบสมองกลฝังตัว (Embedded System Engineer)</li>
-                    <li>วิศวกรซอฟต์แวร์ระบบสมองกลฝังตัว (Embedded Software Engineer)</li>
-                    <li>นักพัฒนาแอพพลิเคชัน (Application Developer)</li>
-                    <li>โปรแกรมเมอร์ (Programmer)</li>
-                    <li>วิศวกรซอฟต์แวร์ (Software Engineer)</li>
-                    <li>นักพัฒนาส่วนหน้า (Front End Developer)</li>
-                    <li>นักพัฒนาส่วนเบื้องหลัง (Back End Developer)</li>
-                    <li>นักพัฒนาฟูลสแต็ก (Full Stack Developer)</li>
-                    <li>วิศวกรระบบคลาวด์ (Cloud Engineer)</li>
-                    <li>วิศวกรระบบเครือข่าย (Network Engineer)</li>
-                    <li>นักวิทยาการข้อมูล (Data Scientist)</li>
-                    <li>วิศวกรข้อมูล (Data Engineer)</li>
-                    <li>ผู้ดูแลระบบ (System Administrator)</li>
-                    <li>นักวิจัย นักวิชาการ เจ้าของธุรกิจส่วนตัว และอาชีพอื่น ๆ ที่เกี่ยวข้องกับทางด้านคอมพิวเตอร์หรือไอที ทั้งหมด</li>
-                    <li>วิศวกรระบบเครือข่าย (Network Engineer)</li>
-                    <li>นักวิทยาการข้อมูล (Data Scientist)</li>
-                    <li>วิศวกรข้อมูล (Data Engineer)</li>
-                    <li>ผู้ดูแลระบบ (System Administrator)</li>
-                    <li>นักวิจัย นักวิชาการ เจ้าของธุรกิจส่วนตัว และอาชีพอื่น ๆ ที่เกี่ยวข้องกับทางด้านคอมพิวเตอร์หรือไอที ทั้งหมด</li>
-                    <li>วิศวกรระบบเครือข่าย (Network Engineer)</li>
-                    <li>นักวิทยาการข้อมูล (Data Scientist)</li>
-                    <li>วิศวกรข้อมูล (Data Engineer)</li>
-                    <li>ผู้ดูแลระบบ (System Administrator)</li>
-                    <li>นักวิจัย นักวิชาการ เจ้าของธุรกิจส่วนตัว และอาชีพอื่น ๆ ที่เกี่ยวข้องกับทางด้านคอมพิวเตอร์หรือไอที ทั้งหมด</li>
-                </ul>
+        <section class="hero-subpage">
+            <div class="container fade-in">
+                <div>
+                    <h1>About us</h1>
+                    <h3>อาชีพที่ประกอบได้หลังจบการศึกษา</h3>
+                    <ul>
+                        <li>วิศวกรระบบไอโอที (IoT Engineer)</li>
+                        <li>วิศวกรระบบสารสนเทศ (Information System Engineer)</li>
+                        <li>วิศวกรระบบสมองกลฝังตัว (Embedded System Engineer)</li>
+                        <li>วิศวกรซอฟต์แวร์ระบบสมองกลฝังตัว (Embedded Software Engineer)</li>
+                        <li>นักพัฒนาแอพพลิเคชัน (Application Developer)</li>
+                        <li>โปรแกรมเมอร์ (Programmer)</li>
+                        <li>วิศวกรซอฟต์แวร์ (Software Engineer)</li>
+                        <li>นักพัฒนาส่วนหน้า (Front End Developer)</li>
+                        <li>นักพัฒนาส่วนเบื้องหลัง (Back End Developer)</li>
+                        <li>นักพัฒนาฟูลสแต็ก (Full Stack Developer)</li>
+                        <li>วิศวกรระบบคลาวด์ (Cloud Engineer)</li>
+                        <li>วิศวกรระบบเครือข่าย (Network Engineer)</li>
+                        <li>นักวิทยาการข้อมูล (Data Scientist)</li>
+                        <li>วิศวกรข้อมูล (Data Engineer)</li>
+                        <li>ผู้ดูแลระบบ (System Administrator)</li>
+                        <li>นักวิจัย นักวิชาการ เจ้าของธุรกิจส่วนตัว และอาชีพอื่น ๆ ที่เกี่ยวข้องกับทางด้านคอมพิวเตอร์หรือไอที ทั้งหมด</li>
+                        <li>วิศวกรระบบเครือข่าย (Network Engineer)</li>
+                        <li>นักวิทยาการข้อมูล (Data Scientist)</li>
+                        <li>วิศวกรข้อมูล (Data Engineer)</li>
+                        <li>ผู้ดูแลระบบ (System Administrator)</li>
+                        <li>นักวิจัย นักวิชาการ เจ้าของธุรกิจส่วนตัว และอาชีพอื่น ๆ ที่เกี่ยวข้องกับทางด้านคอมพิวเตอร์หรือไอที ทั้งหมด</li>
+                        <li>วิศวกรระบบเครือข่าย (Network Engineer)</li>
+                        <li>นักวิทยาการข้อมูล (Data Scientist)</li>
+                        <li>วิศวกรข้อมูล (Data Engineer)</li>
+                        <li>ผู้ดูแลระบบ (System Administrator)</li>
+                        <li>นักวิจัย นักวิชาการ เจ้าของธุรกิจส่วนตัว และอาชีพอื่น ๆ ที่เกี่ยวข้องกับทางด้านคอมพิวเตอร์หรือไอที ทั้งหมด</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section> -->
+        </section>
+    </main>
 
     <div id="footer-placeholder"></div>
 
