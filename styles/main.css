@@ -23,6 +23,16 @@ body {
     background-color: var(--bg-light);
     color: var(--text-dark);
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Forces body to be at least full screen height */
+    margin: 0;
+}
+
+#navbar-placeholder + section, 
+main, 
+.hero-subpage {
+    flex: 1 0 auto;
 }
 
 h1, h2, h3, .nav-link, .btn {
