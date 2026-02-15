@@ -259,113 +259,56 @@
     .tcas-node { width: 100%; }
 }
 
-/* --- EXACT TCAS TIMELINE DESIGN --- */
-:root {
-    --tcas-accent: #a34e25; /* Change this to your preferred color */
-    --tcas-bg: #ffffff;
-    --tcas-line: #ccc;
-    --tcas-badge-bg: #000000;
+/* Academic Component Styles */
+.academic-detail-section {
+    background-color: var(--light-accent-orange);
+    padding: 80px 0;
 }
 
-.tcas-header {
-    text-align: center;
-    color: var(--tcas-accent);
-    font-size: 2.5rem;
+.academic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Media on left, text on right */
+    gap: 50px;
+    align-items: center;
+}
+
+.featured-pic {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.academic-content {
+    text-align: center; /* Centered content like the image */
+}
+
+.academic-title {
+    color: var(--accent-orange);
+    font-size: 2rem;
     font-family: 'Prompt', sans-serif;
-    margin-bottom: 60px;
+    margin-bottom: 25px;
 }
 
-.tcas-timeline-container {
-    position: relative;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-/* The horizontal dashed line */
-.tcas-horizontal-line {
-    position: absolute;
-    top: 105px; /* Aligns with the dots */
-    left: 0;
-    right: 0;
-    border-top: 1px dashed var(--tcas-line);
-    z-index: 1;
-}
-
-.tcas-nodes {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    z-index: 2;
-}
-
-.tcas-node {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    text-align: center;
-}
-
-.tcas-date-text {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.4;
-    color: #333;
-}
-
-.tcas-date-highlight {
-    font-size: 1.6rem;
-    font-weight: 700;
-}
-
-.tcas-marker-dot {
-    width: 14px;
-    height: 14px;
-    background-color: #000;
-    border-radius: 50%;
+.academic-text {
+    font-family: 'Sarabun', sans-serif;
+    line-height: 1.8;
+    color: #444;
     margin-bottom: 40px;
-    border: 4px solid var(--tcas-bg); /* Prevents line from crossing the dot */
 }
 
-.tcas-title-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.tcas-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--tcas-accent);
-    font-family: 'Prompt';
-}
-
-.tcas-icon {
-    font-size: 1.4rem;
-    background: #fdf2e9;
-    padding: 5px;
-    border-radius: 6px;
-}
-
-.tcas-category {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.tcas-quota-badge {
-    background-color: var(--tcas-badge-bg);
+.register-btn {
+    background-color: var(--accent-orange);
     color: white;
-    padding: 10px 25px;
-    border-radius: 12px;
-    font-size: 1rem;
-    display: inline-block;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Prompt', sans-serif;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
-/* Responsive adjustment for Mobile */
-@media (max-width: 768px) {
-    .tcas-nodes { flex-direction: column; gap: 60px; }
-    .tcas-horizontal-line { display: none; }
-    .tcas-node { width: 100%; }
+.register-btn:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
 }
