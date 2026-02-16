@@ -1,3 +1,7 @@
+#academics-title {
+    color: var(--white);
+}
+
 /* Container spacing and background */
 .programs-section {
     background-color: var(--bg-light); /* Light grey background to make white card pop */
@@ -32,6 +36,7 @@
     flex-direction: column;
     align-items: center;
     border-right: 1px solid #eee; /* Vertical Dividers */
+    text-decoration: none;
 }
 
 .program-card:last-child {

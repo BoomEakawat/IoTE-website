@@ -1,5 +1,9 @@
 /* --- SHARED HERO STRUCTURE (Global) --- */
 
+.page-title {
+    color: black;
+}
+
 #home {
     padding-top: 20px; /* Space for fixed navbar */
     padding-bottom: 30px;
