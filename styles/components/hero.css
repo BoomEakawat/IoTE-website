@@ -1,0 +1,43 @@
+/* --- SHARED HERO STRUCTURE (Global) --- */
+
+#home {
+    padding-top: 20px; /* Space for fixed navbar */
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    min-height: 40vh; /* Consistent height for sub-headers */
+}
+
+.hero-subpage{
+    padding-top: 109px; /* Space for fixed navbar (100-89=)*/ 
+    padding-bottom: 30px;
+    padding-left: 20px;
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    min-height: 40vh; /* Consistent height for sub-headers */
+}
+
+.hero-subpage .container {
+    color: var(--primary-blue);
+}
+
+.hero-subpage h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Prompt', sans-serif;
+}
+
+/* Common Text Utilities for Heroes */
+.highlight {
+    color: var(--accent-orange);
+}
+
+/* .fade-in {
+    animation: fadeIn 1s ease-in;
+} */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

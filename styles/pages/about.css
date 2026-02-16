@@ -1,0 +1,52 @@
+/* --- HISTORY TIMELINE STYLE --- */
+.history-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-top: 30px;
+}
+
+.history-intro {
+    margin-bottom: 30px;
+    color: var(--text-light);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.timeline {
+    border-left: 2px solid #eee; /* The vertical line of the timeline */
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+/* The orange bullet point on the line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -37px; /* Aligns with the border-left of .timeline */
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-orange);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    color: var(--accent-orange);
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.timeline-text .timeline-order{
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}

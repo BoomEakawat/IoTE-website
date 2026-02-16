@@ -1,0 +1,62 @@
+.fame-grid {
+    display: grid;
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.fame-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.fame-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.fame-img-box {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes the image square like the reference */
+    overflow: hidden;
+}
+
+.fame-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fame-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fame-title {
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.fame-meta {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+}
