@@ -26,10 +26,19 @@
     color: var(--text-light);
 }
 
+.header {
+    margin-bottom: 20px;
+}
+
 .page-title {
     color: black;
     font-size: 2rem;
     font-weight: bold;
+}
+
+.page-subtitle {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
 }
 
 #home {

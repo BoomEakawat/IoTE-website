@@ -5,17 +5,29 @@
 
 /* --- Faculty Home --- */
 
+.category-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Update this section in faculty.css */
+
 .faculty-grid {
     margin-top: 15px;    
-    margin-bottom: 15px;    
+    margin-bottom: 15px;
+    display: grid; /* Enables Grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Automatically places cards side-by-side */
+    gap: 25px; /* Adds space between the cards */
 }
 
 .faculty-card {
-    max-width: 400px;
+    /* Remove max-width: 400px; so the grid can control the size */
+    width: 100%; 
     background: #ffffff;
     border: 1px solid #e0e0e0;
-    border-radius: 4px; /* Subtle rounding */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow */
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     text-decoration: none;
     display: flex;
     flex-direction: column;
