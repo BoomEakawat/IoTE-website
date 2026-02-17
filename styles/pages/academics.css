@@ -68,12 +68,6 @@
     line-height: 1.8;
 }
 
-/* Ensure Hero has enough space for the overlap */
-.hero-subpage {
-    padding-bottom: 180px; /* Extra space at bottom for the card to "float" on */
-    background: #001a4d; /* Matches dark blue in image_6e6dfc.jpg */
-}
-
 /* --- ADMISSION TIMELINE (TCAS STYLE) --- */
 .admission-timeline-container {
     margin-top: 60px;

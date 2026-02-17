@@ -72,6 +72,8 @@
 /* Faculty Profile Refactor */
 
 .highlight-title {
+    font-size: 2.5rem;
+    font-weight: bold;
     color: var(--accent-orange);
 }
 

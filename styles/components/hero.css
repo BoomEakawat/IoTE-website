@@ -2,6 +2,8 @@
 
 .page-title {
     color: black;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 #home {
@@ -17,6 +19,7 @@
     padding-top: 109px; /* Space for fixed navbar (100-89=)*/ 
     padding-bottom: 30px;
     padding-left: 20px;
+    padding-right: 20px;
     background-color: var(--white);
     border-bottom: 1px solid #eee;
     min-height: 40vh; /* Consistent height for sub-headers */
