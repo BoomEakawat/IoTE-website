@@ -1,3 +1,8 @@
+.body {
+    max-width: 1400px;
+    margin: 20px auto 50px;
+}
+
 /* --- Faculty Home --- */
 
 .faculty-grid {
@@ -84,11 +89,6 @@
     color: var(--accent-orange);
 }
 
-.profile-content.container {
-    max-width: 1400px; /* Focused width for detail pages */
-    margin: 20px auto 50px;
-}
-
 .info-card {
     background: #fff;
     border: 1px solid #ddd;
@@ -135,4 +135,51 @@
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #f0f0f0;
+}
+
+/* Responsive Adjustments */
+
+/* For Tablets and smaller screens (under 992px) */
+@media (max-width: 992px) {
+    .highlight-title {
+        font-size: 1.8rem; /* Shrink title size */
+        text-align: center;
+    }
+
+    .info-card-body {
+        padding: 25px; /* Reduce padding */
+    }
+
+    .split-view {
+        flex-direction: column-reverse; /* Stack image on top of text */
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .details-list li {
+        text-align: left; /* Keep list items left-aligned for readability */
+        display: inline-block; /* Helps centering the block if needed */
+        width: 100%;
+    }
+}
+
+/* For Mobile Phones (under 600px) */
+@media (max-width: 600px) {
+    .body {
+        margin: 10px;
+    }
+
+    .highlight-title {
+        font-size: 1.4rem;
+    }
+
+    .profile-large {
+        width: 180px; /* Smaller image for mobile */
+        height: 180px;
+    }
+
+    .info-card-header {
+        justify-content: center; /* Center header icon/text */
+    }
 }

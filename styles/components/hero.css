@@ -1,5 +1,31 @@
 /* --- SHARED HERO STRUCTURE (Global) --- */
 
+.breadcrumb-container{
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+}
+
+.breadcrumb:hover {
+    color: var(--accent-orange);
+}
+
+#breadcrumb-last:hover {
+    color: var(--text-light);
+}
+
 .page-title {
     color: black;
     font-size: 2rem;
@@ -7,7 +33,7 @@
 }
 
 #home {
-    padding-top: 20px; /* Space for fixed navbar */
+    padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 20px;
     background-color: var(--white);

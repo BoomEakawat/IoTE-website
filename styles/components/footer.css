@@ -17,7 +17,8 @@
 .footer-brand {
     color: var(--accent-orange);
     font-family: 'Prompt', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    /* font-weight: bold; */
     margin-bottom: 5px;
 }
 

@@ -1,3 +1,11 @@
+.body {
+    font-family: 'Sarabun', sans-serif;
+}
+
+#physiot-title {
+    font-size: 1.5rem;
+}
+
 /* The Floating Box */
 .floating-container {
     /* margin-left: 50px;
@@ -5,7 +13,6 @@
     background-color: #fff;
     border-radius: 4px; /* Subtle rounding */
     box-shadow: 0 15px 45px rgba(0,0,0,0.1); /* Floating shadow */
-    margin-top: -120px; /* Pulls container up over hero */
     position: relative;
     z-index: 10;
     overflow: hidden; /* Clips children to rounded corners */
@@ -64,8 +71,9 @@
 .admission-main-title {
     color: var(--accent-orange);
     font-size: 2rem;
-    margin-bottom: 50px;
     font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .tcas-wrapper {
@@ -140,13 +148,6 @@
     display: inline-block;
 }
 
-/* Responsive adjustment */
-@media (max-width: 768px) {
-    .tcas-steps { flex-direction: column; gap: 40px; }
-    .tcas-line { display: none; }
-    .tcas-node { width: 100%; }
-}
-
 /* Academic Component Styles */
 .academic-detail-section {
     background-color: var(--light-accent-orange);
@@ -199,4 +200,44 @@
 .register-btn:hover {
     background-color: #e65c00;
     transform: translateY(-2px);
+}
+
+/* For Mobile Phones (up to 600px) */
+@media (max-width: 768px) {
+    #physiot-title {
+        font-size: 1.1rem !important; /* Makes the long degree name fit better */
+        line-height: 1.4;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .tcas-steps { flex-direction: column; gap: 40px; }
+    .tcas-line { display: none; }
+    .tcas-node { width: 100%; }
+    .page-title { font-size: 1.8rem;}
+    
+    .programs-grid {
+        grid-template-columns: 1fr; /* Single column stack */
+    }
+
+    .floating-container {
+        margin: 0; /* Adds margin so the box doesn't touch screen edges */
+        /* margin-right: 30px; */
+    }
+
+    .program-card {
+        padding: 30px 10px;
+        border-right: none; /* Vertical Dividers */
+        border-bottom: 1px solid #eee; /* Vertical Dividers */
+    }
+
+    .program-title-en {
+        min-height: auto; /* Removes the fixed height to save vertical space */
+        font-size: 0.95rem;
+    }
+
+    /* Centers the header text specifically for the academics list */
+    .header .container {
+        text-align: center;
+    }
 }
