@@ -1,4 +1,9 @@
-/* --- CE Faculty Card Style --- */
+/* --- Faculty Home --- */
+
+.faculty-grid {
+    margin-top: 15px;    
+    margin-bottom: 15px;    
+}
 
 .faculty-card {
     max-width: 400px;
@@ -69,16 +74,18 @@
     text-align: center;
 }
 
-/* Faculty Profile Refactor */
+/* Profile */
 
 .highlight-title {
+    padding-left: 10px;
+    padding-bottom: 10px;
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--accent-orange);
 }
 
 .profile-content.container {
-    max-width: 1140px; /* Focused width for detail pages */
+    max-width: 1400px; /* Focused width for detail pages */
     margin: 20px auto 50px;
 }
 

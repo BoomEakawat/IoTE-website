@@ -5,7 +5,7 @@
 /* Container spacing and background */
 .programs-section {
     background-color: var(--bg-light); /* Light grey background to make white card pop */
-    padding: 0 0 80px 0;
+    padding: 109px 0 80px 0;
     position: relative;
     margin-left: 50px;
     margin-right: 50px;
@@ -184,7 +184,7 @@
 }
 
 .academic-title {
-    color: var(--accent-orange);
+    color: var(--white);
     font-size: 2rem;
     font-family: 'Prompt', sans-serif;
     margin-bottom: 25px;
