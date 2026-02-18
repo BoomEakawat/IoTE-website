@@ -67,19 +67,64 @@
 <script>
     const params = new URLSearchParams(window.location.search);
     const profId = params.get('id');
-    const prof = facultyData[profId];
+    const prof_1 = IoT_Aj[profId];
+    const prof_2 = IoT_STF[profId];
+    const prof_3 = Physiot_Aj[profId];
+    const prof_4 = Physiot_Aj[profId];
 
-    if (prof) {
-        document.getElementById('display-breadcrumb-name').innerText = prof.nameTH;
-        document.getElementById('display-name-th').innerText = prof.nameTH;
-        document.getElementById('display-name-en').innerText = prof.nameEN;
-        document.getElementById('display-full-title').innerText = prof.nameTH + ' (' + prof.nameEN + ')';
-        document.getElementById('display-position').innerText = prof.position;
-        document.getElementById('display-email').innerText = prof.email;
-        document.getElementById('display-room').innerText = prof.room;
-        document.getElementById('display-image').src = prof.image;
-        document.getElementById('display-bachelor').innerText = prof.bachelor;
-        document.getElementById('display-master').innerText = prof.master;
-        document.getElementById('display-doctor').innerText = prof.doctor;
+    if (prof_1) {
+        document.getElementById('display-breadcrumb-name').innerText = prof_1.nameTH;
+        document.getElementById('display-name-th').innerText = prof_1.nameTH;
+        document.getElementById('display-name-en').innerText = prof_1.nameEN;
+        document.getElementById('display-full-title').innerText = prof_1.nameTH + ' (' + prof_1.nameEN + ')';
+        document.getElementById('display-position').innerText = prof_1.position;
+        document.getElementById('display-email').innerText = prof_1.email;
+        document.getElementById('display-room').innerText = prof_1.room;
+        document.getElementById('display-image').src = prof_1.image;
+        document.getElementById('display-bachelor').innerText = prof_1.bachelor;
+        document.getElementById('display-master').innerText = prof_1.master;
+        document.getElementById('display-doctor').innerText = prof_1.doctor;
+    }
+
+    if (prof_2) {
+        document.getElementById('display-breadcrumb-name').innerText = prof_2.nameTH;
+        document.getElementById('display-name-th').innerText = prof_2.nameTH;
+        document.getElementById('display-name-en').innerText = prof_2.nameEN;
+        document.getElementById('display-full-title').innerText = prof_2.nameTH + ' (' + prof_2.nameEN + ')';
+        document.getElementById('display-position').innerText = prof_2.position;
+        document.getElementById('display-email').innerText = prof_2.email;
+        document.getElementById('display-room').innerText = prof_2.room;
+        document.getElementById('display-image').src = prof_2.image;
+        document.getElementById('display-bachelor').innerText = prof_2.bachelor;
+        document.getElementById('display-master').innerText = prof_2.master;
+        document.getElementById('display-doctor').innerText = prof_2.doctor;
+    }
+
+    if (prof_3) {
+        document.getElementById('display-breadcrumb-name').innerText = prof_3.nameTH;
+        document.getElementById('display-name-th').innerText = prof_3.nameTH;
+        document.getElementById('display-name-en').innerText = prof_3.nameEN;
+        document.getElementById('display-full-title').innerText = prof_3.nameTH + ' (' + prof_3.nameEN + ')';
+        document.getElementById('display-position').innerText = prof_3.position;
+        document.getElementById('display-email').innerText = prof_3.email;
+        document.getElementById('display-room').innerText = prof_3.room;
+        document.getElementById('display-image').src = prof_3.image;
+        document.getElementById('display-bachelor').innerText = prof_3.bachelor;
+        document.getElementById('display-master').innerText = prof_3.master;
+        document.getElementById('display-doctor').innerText = prof_3.doctor;
+    }
+
+    if (prof_4) {
+        document.getElementById('display-breadcrumb-name').innerText = prof_4.nameTH;
+        document.getElementById('display-name-th').innerText = prof_4.nameTH;
+        document.getElementById('display-name-en').innerText = prof_4.nameEN;
+        document.getElementById('display-full-title').innerText = prof_4.nameTH + ' (' + prof_4.nameEN + ')';
+        document.getElementById('display-position').innerText = prof_4.position;
+        document.getElementById('display-email').innerText = prof_4.email;
+        document.getElementById('display-room').innerText = prof_4.room;
+        document.getElementById('display-image').src = prof_4.image;
+        document.getElementById('display-bachelor').innerText = prof_4.bachelor;
+        document.getElementById('display-master').innerText = prof_4.master;
+        document.getElementById('display-doctor').innerText = prof_4.doctor;
     }
 </script>

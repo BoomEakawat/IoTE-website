@@ -22,24 +22,18 @@
             <div class="breadcrumb-container">
                 <a href="/index.html" class="breadcrumb">Home</a>•<span class="breadcrumb" id="breadcrumb-last">Faculty-IoTE</span>
             </div>
-            <div class="container">
-                <p class="page-title">คณาจารย์ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
-            </div>
         </section>
 
         <section class="body">
-            <!-- <p class="category-title">คณาจารย์ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p> -->
-            <div id="faculty-list" class="faculty-grid"></div>
-            
-            <!-- <p class="category-title">บุคลากรภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p> -->
-            <div id="faculty-list" class="faculty-grid"></div>
-            
-        </section>
-
-        <section class="header">
-            <div class="container">
+            <div class="container" id="header">
+                <p class="page-title">คณาจารย์ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
+            </div>
+            <div id="iot-aj" class="faculty-grid"></div>
+            <br>
+            <div class="container" id="header">
                 <p class="page-title">บุคลากรภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
             </div>
+            <div id="iot-stf" class="faculty-grid"></div>
         </section>
     </main>
 
@@ -51,13 +45,36 @@
 </html>
 
 <script>
-    const listContainer = document.getElementById('faculty-list');
-    
-    for (let id in facultyData) {
-        const prof = facultyData[id];
+    const List_IoT_Aj = document.getElementById('iot-aj');
+    for (let id in IoT_Aj) {
+        const prof = IoT_Aj[id];
         // Only show if category is 'iot'
         if (prof.category === 'iot') {
-            listContainer.innerHTML += `
+            List_IoT_Aj.innerHTML += `
+                <a href="profile.html?id=${id}" class="faculty-card">
+                    <div class="card-top-accent"></div>
+                    <div class="card-main-content">
+                        <div class="profile-section"><img src="${prof.image}" class="profile-img"></div>
+                        <div class="info-section">
+                            <h4 class="name-th">${prof.nameTH}</h4>
+                            <p class="name-en">${prof.nameEN}</p>
+                        </div>
+                    </div>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> ${prof.position}</p>
+                        <p><i class="fas fa-envelope"></i> ${prof.email}</p>
+                        <p><i class="fas fa-envelope"></i> ${prof.room}</p>
+                    </div>
+                </a>`;
+        }
+    }
+
+    const List_IoT_STF = document.getElementById('iot-stf');
+    for (let id in IoT_STF) {
+        const prof = IoT_STF[id];
+        // Only show if category is 'iot'
+        if (prof.category === 'iot') {
+            List_IoT_STF.innerHTML += `
                 <a href="profile.html?id=${id}" class="faculty-card">
                     <div class="card-top-accent"></div>
                     <div class="card-main-content">

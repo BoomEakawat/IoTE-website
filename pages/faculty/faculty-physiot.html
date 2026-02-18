@@ -20,19 +20,20 @@
     <main class="hero-subpage fade-in">
         <section class="header">
             <div class="breadcrumb-container">
-                <a href="/index.html" class="breadcrumb">Home</a>•<span class="breadcrumb" id="breadcrumb-last">Faculty-Physiot</span>
-            </div>
-            <div class="container">
-                <p class="page-title">คณาจารย์</p>
+                <a href="/index.html" class="breadcrumb">Home</a>•<span class="breadcrumb" id="breadcrumb-last">Faculty-IoTE</span>
             </div>
         </section>
 
         <section class="body">
-            <p class="category-title">หัวหน้าภาควิชา</p>
-            <div id="faculty-list" class="faculty-grid"></div>
-            
-            <p class="category-title">อาจารย์</p>
-            <div id="faculty-list" class="faculty-grid"></div>
+            <div class="container" id="header">
+                <p class="page-title">คณาจารย์ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
+            </div>
+            <div id="physiot-aj" class="faculty-grid"></div>
+            <br>
+            <div class="container" id="header">
+                <p class="page-title">คณาจารย์ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
+            </div>
+            <div id="physiot-stf" class="faculty-grid"></div>
         </section>
     </main>
 
@@ -44,13 +45,12 @@
 </html>
 
 <script>
-    const listContainer = document.getElementById('faculty-list');
-    
-    for (let id in facultyData) {
-        const prof = facultyData[id];
+    const List_Physiot_Aj = document.getElementById('physiot-aj');
+    for (let id in Physiot_Aj) {
+        const prof = Physiot_Aj[id];
         // Only show if category is 'iot'
-        if (prof.category === 'physiot') {
-            listContainer.innerHTML += `
+        if (prof.category === 'iot') {
+            List_Physiot_Aj.innerHTML += `
                 <a href="profile.html?id=${id}" class="faculty-card">
                     <div class="card-top-accent"></div>
                     <div class="card-main-content">
@@ -61,8 +61,33 @@
                         </div>
                     </div>
                     <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> ${prof.position}</p>
                         <p><i class="fas fa-envelope"></i> ${prof.email}</p>
-                        <p><i class="fas fa-envelope"></i> ${prof.category}</p>
+                        <p><i class="fas fa-envelope"></i> ${prof.room}</p>
+                    </div>
+                </a>`;
+        }
+    }
+
+    const List_Physiot_STF = document.getElementById('physiot-stf');
+    for (let id in Physiot_STF) {
+        const prof = Physiot_STF[id];
+        // Only show if category is 'iot'
+        if (prof.category === 'iot') {
+            List_Physiot_STF.innerHTML += `
+                <a href="profile.html?id=${id}" class="faculty-card">
+                    <div class="card-top-accent"></div>
+                    <div class="card-main-content">
+                        <div class="profile-section"><img src="${prof.image}" class="profile-img"></div>
+                        <div class="info-section">
+                            <h4 class="name-th">${prof.nameTH}</h4>
+                            <p class="name-en">${prof.nameEN}</p>
+                        </div>
+                    </div>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> ${prof.position}</p>
+                        <p><i class="fas fa-envelope"></i> ${prof.email}</p>
+                        <p><i class="fas fa-envelope"></i> ${prof.room}</p>
                     </div>
                 </a>`;
         }

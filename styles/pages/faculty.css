@@ -3,6 +3,10 @@
     margin: 20px auto 50px;
 }
 
+#header {
+    margin-left: -20px;
+}
+
 /* --- Faculty Home --- */
 
 .category-title {
@@ -92,6 +96,10 @@
 }
 
 /* Profile */
+
+#display-breadcrumb-name:hover {
+    color: var( --text-light);
+}
 
 .highlight-title {
     padding-left: 10px;
