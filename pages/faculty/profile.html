@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT and Information Engineering, KMITL</title>
+    <link rel="icon" type="images/jpg" href="images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/components/navbar.html">
+    <link rel="stylesheet" href="/components/footer.html">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/components/navbar.css">
+    <link rel="stylesheet" href="/styles/components/hero.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/pages/faculty.css">
+    <script src="data.js"></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="hero-subpage fade-in">
+        <section class="header">
+            <div class="breadcrumb-container">
+                <a href="/index.html" class="breadcrumb">Home</a>•
+                <a href="/pages/faculty/faculty-iot.html" class="breadcrumb">Faculty-IoTE</a>•
+                <span class="breadcrumb" id="display-breadcrumb-name">Loading...</span>
+            </div>
+        </section>
+
+        <section class="body">
+            <p class="highlight-title" id="display-full-title">Loading...</p>
+            <div class="info-card">
+                <div class="info-card-header"><i class="fas fa-user"></i> ข้อมูลติดต่อ</div>
+                <div class="info-card-body split-view">
+                    <ul class="details-list">
+                        <li><strong>ชื่อ - นามสกุล :</strong> <span id="display-name-th"></span> (<span id="display-name-en"></span>)</li>
+                        <li><strong>ตำแหน่ง :</strong> <span id="display-position"></span></li>
+                        <li><strong>E-MAIL :</strong> <span id="display-email"></span></li>
+                        <li><strong>ห้องพัก :</strong> <span id="display-room"></span></li>
+                    </ul>
+                    <img src="" alt="Profile Image" id="display-image" class="profile-large">
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-header"><i class="fas fa-user"></i> ประวัติการศึกษา</div>
+                <div class="info-card-body split-view">
+                    <ul class="details-list">
+                        <li><strong>ปริญญาตรี :</strong> <span id="display-bachelor"></span></li>
+                        <li><strong>ปริญญาโท :</strong> <span id="display-master"></span></li>
+                        <li><strong>ปริญญาเอก :</strong> <span id="display-doctor"></span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/script.js"></script>
+    <script src="/js/data.js"></script>
+</body>
+</html>
+
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const profId = params.get('id');
+    const prof = facultyData[profId];
+
+    if (prof) {
+        document.getElementById('display-breadcrumb-name').innerText = prof.nameTH;
+        document.getElementById('display-name-th').innerText = prof.nameTH;
+        document.getElementById('display-name-en').innerText = prof.nameEN;
+        document.getElementById('display-full-title').innerText = prof.nameTH + ' (' + prof.nameEN + ')';
+        document.getElementById('display-position').innerText = prof.position;
+        document.getElementById('display-email').innerText = prof.email;
+        document.getElementById('display-room').innerText = prof.room;
+        document.getElementById('display-image').src = prof.image;
+        document.getElementById('display-bachelor').innerText = prof.bachelor;
+        document.getElementById('display-master').innerText = prof.master;
+        document.getElementById('display-doctor').innerText = prof.doctor;
+    }
+</script>

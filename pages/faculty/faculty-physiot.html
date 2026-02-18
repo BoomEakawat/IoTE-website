@@ -23,14 +23,48 @@
                 <a href="/index.html" class="breadcrumb">Home</a>•<span class="breadcrumb" id="breadcrumb-last">Faculty-Physiot</span>
             </div>
             <div class="container">
-                <p class="page-title">Faculty-physiot</p>
+                <p class="page-title">คณาจารย์</p>
             </div>
         </section>
-        <section class="body"></section>
+
+        <section class="body">
+            <p class="category-title">หัวหน้าภาควิชา</p>
+            <div id="faculty-list" class="faculty-grid"></div>
+            
+            <p class="category-title">อาจารย์</p>
+            <div id="faculty-list" class="faculty-grid"></div>
+        </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
     <script src="/script.js"></script>
+    <script src="/js/data.js"></script>
 </body>
 </html>
+
+<script>
+    const listContainer = document.getElementById('faculty-list');
+    
+    for (let id in facultyData) {
+        const prof = facultyData[id];
+        // Only show if category is 'iot'
+        if (prof.category === 'physiot') {
+            listContainer.innerHTML += `
+                <a href="profile.html?id=${id}" class="faculty-card">
+                    <div class="card-top-accent"></div>
+                    <div class="card-main-content">
+                        <div class="profile-section"><img src="${prof.image}" class="profile-img"></div>
+                        <div class="info-section">
+                            <h4 class="name-th">${prof.nameTH}</h4>
+                            <p class="name-en">${prof.nameEN}</p>
+                        </div>
+                    </div>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> ${prof.email}</p>
+                        <p><i class="fas fa-envelope"></i> ${prof.category}</p>
+                    </div>
+                </a>`;
+        }
+    }
+</script>
