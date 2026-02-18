@@ -113,14 +113,23 @@
 .info-card {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 15px; /* Keeps the main card rounded */
+    overflow: hidden;    /* Essential: clips the header to the card's corners */
+    margin-top: 15px;
     margin-bottom: 35px;
 }
 
 .info-card-header {
-    background: #f8f8f8; /* Light gray header bar */
+    background: #f8f8f8;
     padding: 12px 25px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* The line separating the areas */
+    
+    /* FIX: Only round the top corners to match the parent card */
+    border-top-left-radius: 14px; 
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -128,7 +137,7 @@
 }
 
 .info-card-body {
-    padding: 40px 50px; /* Spacious internal padding */
+    padding: 30px 30px; /* Spacious internal padding */
 }
 
 .split-view {

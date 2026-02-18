@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/styles/components/hero.css">
     <link rel="stylesheet" href="/styles/components/footer.css">
     <link rel="stylesheet" href="/styles/pages/faculty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="data.js"></script>
 </head>
 <body>
@@ -42,7 +43,17 @@
                 </div>
             </div>
             <div class="info-card">
-                <div class="info-card-header"><i class="fas fa-user"></i> ประวัติการศึกษา</div>
+                <div class="info-card-header"><i class="fa-solid fa-graduation-cap"></i> ประวัติการศึกษา</div>
+                <div class="info-card-body split-view">
+                    <ul class="details-list">
+                        <li><strong>ปริญญาตรี :</strong> <span id="display-bachelor"></span></li>
+                        <li><strong>ปริญญาโท :</strong> <span id="display-master"></span></li>
+                        <li><strong>ปริญญาเอก :</strong> <span id="display-doctor"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-header"><i class="fa-solid fa-book-open"></i> งานวิจัย</div>
                 <div class="info-card-body split-view">
                     <ul class="details-list">
                         <li><strong>ปริญญาตรี :</strong> <span id="display-bachelor"></span></li>
