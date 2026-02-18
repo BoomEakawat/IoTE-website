@@ -29,33 +29,42 @@
 
         <section class="body">
             <p class="category-title">หัวหน้าภาควิชา</p>
-            <div class="faculty-grid">
-                <a href="/pages/faculty/profiles/amnach.html" class="faculty-card">
-                    <div class="card-top-accent"></div>
-                    <div class="card-main-content">
-                        <div class="profile-section">
-                            <img src="/images/amnach-large.png" alt="Amnach Khawne" class="profile-img">
-                        </div>
-                        <div class="info-section">
-                            <h4 class="name-th">ผศ. ดร. อำนาจ ขาวเน</h4>
-                            <p class="name-en">Asst.Prof.Dr. Amnach Khawne</p>
-                        </div>
-                    </div>
-                    <div class="contact-details">
-                        <p><i class="fa-solid fa-phone"></i> 02-7392400~2 ต่อ 126</p>
-                        <p><i class="fas fa-map-marker-alt"></i> ECC 914</p>
-                        <p><i class="fas fa-envelope"></i> amnach.kh@kmitl.ac.th</p>
-                    </div>
-                </a>
-            </div>
+            <div id="faculty-list" class="faculty-grid"></div>
+            
             <p class="category-title">อาจารย์</p>
-            <div class="faculty-grid">
-            </div>
+            <div id="faculty-list" class="faculty-grid"></div>
         </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
     <script src="/script.js"></script>
+    <script src="/js/data.js"></script>
 </body>
 </html>
+
+<script>
+    const listContainer = document.getElementById('faculty-list');
+    
+    for (let id in facultyData) {
+        const prof = facultyData[id];
+        // Only show if category is 'iot'
+        if (prof.category === 'iot') {
+            listContainer.innerHTML += `
+                <a href="profile.html?id=${id}" class="faculty-card">
+                    <div class="card-top-accent"></div>
+                    <div class="card-main-content">
+                        <div class="profile-section"><img src="${prof.image}" class="profile-img"></div>
+                        <div class="info-section">
+                            <h4 class="name-th">${prof.name}</h4>
+                            <p class="name-en">${prof.fullName.split('(')[1].replace(')', '')}</p>
+                        </div>
+                    </div>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> ${prof.email}</p>
+                        <p><i class="fas fa-envelope"></i> ${prof.category}</p>
+                    </div>
+                </a>`;
+        }
+    }
+</script>
