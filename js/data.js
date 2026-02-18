@@ -2,6 +2,8 @@
 const facultyData = {
     "amnat": {
         category: "iot",
+        nameTH: "นาย สมชาย ใจดี",
+        nameEN: "นาย Somchai Jaidee",
         name: "ผศ. ดร. อำนาจ ขาวเน",
         fullName: "ผศ. ดร. อำนาจ ขาวเน (Asst.Prof.Dr. Amnach Khawne)",
         position: "อาจารย์",
