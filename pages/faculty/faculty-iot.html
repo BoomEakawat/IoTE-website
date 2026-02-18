@@ -28,11 +28,18 @@
         </section>
 
         <section class="body">
-            <p class="category-title">หัวหน้าภาควิชา</p>
+            <!-- <p class="category-title">คณาจารย์ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p> -->
             <div id="faculty-list" class="faculty-grid"></div>
             
-            <p class="category-title">อาจารย์</p>
+            <!-- <p class="category-title">บุคลากรภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p> -->
             <div id="faculty-list" class="faculty-grid"></div>
+            
+        </section>
+
+        <section class="header">
+            <div class="container">
+                <p class="page-title">บุคลากรภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
+            </div>
         </section>
     </main>
 
@@ -61,8 +68,9 @@
                         </div>
                     </div>
                     <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> ${prof.position}</p>
                         <p><i class="fas fa-envelope"></i> ${prof.email}</p>
-                        <p><i class="fas fa-envelope"></i> ${prof.category}</p>
+                        <p><i class="fas fa-envelope"></i> ${prof.room}</p>
                     </div>
                 </a>`;
         }

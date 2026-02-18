@@ -1,31 +1,245 @@
-// /js/data.js
 const facultyData = {
-    "amnat": {
+    "boonchana": {
         category: "iot",
-        nameTH: "นาย สมชาย ใจดี",
-        nameEN: "นาย Somchai Jaidee",
-        name: "ผศ. ดร. อำนาจ ขาวเน",
-        fullName: "ผศ. ดร. อำนาจ ขาวเน (Asst.Prof.Dr. Amnach Khawne)",
-        position: "อาจารย์",
-        email: "amnach.kh@kmitl.ac.th",
+        nameTH: "รศ.ดร.บุณย์ชนะ ภู่ระหงษ์",
+        nameEN: "Assoc.Prof.Dr.Boonchana Purahong",
+        position: "ประธานหลักสูตรวิศวกรรมระบบไอโอทีและสารสนเทศ",
+        email: "boonchana.pu@kmitl.ac.th",
+        room: "ECC 908",
+        phone: "-",
+        image: "/images/faculty-iot/boonchana.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "Ph.D. (Electrical Engineering) KMITL"
+    },
+    "pikulkaew": {
+        category: "iot",
+        nameTH: "ผศ.ดร.พิกุลแก้ว ตังติสานนท์",
+        nameEN: "Asst.Prof.Dr.Pikulkaew Tangtisanon",
+        position: "หัวหน้าภาควิชา",
+        email: "pikulkaew.ta@kmitl.ac.th",
         room: "ECC 914",
         phone: "02-7392400~2 ต่อ 126",
-        image: "/images/amnach-large.png",
-        bachelor: "วศ.บ. (สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง)",
-        master: "วศ.ม. (สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง)",
-        doctor: "Ph.D. (Electrical Engineering)"
+        image: "/images/faculty-iot/pikulkaew.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "D.Eng. (Science and Technology) Tokai University, JAPAN"
     },
-    "eakawat": {
+    "thanavit": {
         category: "iot",
-        name: "ดร. บูม", 
-        fullName: "ดร. สมชาย ใจดี (Dr. Somchai Jaidee)",
-        position: "อาจารย์",
-        email: "eakawat.j@kmitl.ac.th",
-        room: "E12",
-        phone: "096-361-6549",
-        image: "/images/amnach-large.png", // Replace with actual image path later
-        bachelor: "B.Eng. (Computer Engineering)",
-        master: "M.Eng. (Information Technology)",
-        doctor: "D.Eng. (IoT Systems)"
+        nameTH: "ผศ.ดร.ธนวิชญ์ อนุวงศ์พินิจ",
+        nameEN: "Asst.Prof.Dr.Thanavit Anuwongpinit",
+        position: "รองหัวหน้าภาควิชา (ฝ่ายวิชาการ)",
+        email: "thanavit.an@kmitl.ac.th",
+        room: "ECC 804",
+        phone: "-",
+        image: "/images/faculty-iot/thanavit.png",
+        bachelor: "วศ.บ. (วิศวกรรมคอมพิวเตอร์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "Ph.D. (Electrical Engineering) KMITL"
+    },
+    "nitjaree": {
+        category: "iot",
+        nameTH: "ผศ.นิจจารีย์ สัตยารักษ์",
+        nameEN: "Asst.Prof.Nitjaree Satayarak",
+        position: "รองหัวหน้าภาควิชา (ฝ่ายกิจการนักศึกษา)",
+        email: "nitjaree.sa@kmitl.ac.th",
+        room: "ECC 701",
+        phone: "-",
+        image: "/images/faculty-iot/nitjaree.png",
+        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "-"
+    },
+    "vanvisa": {
+        category: "iot",
+        nameTH: "ผศ.ดร.วันวิสา ชัชวงษ์",
+        nameEN: "Asst.Prof.Dr.Vanvisa Chutchavong",
+        position: "รองหัวหน้าภาควิชา (ฝ่ายการเงิน)",
+        email: "vanvisa.ch@kmitl.ac.th",
+        room: "ECC 910",
+        phone: "-",
+        image: "/images/faculty-iot/vanvisa.png",
+        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "Ph.D. (Electronics) KMITL"
+    },
+    "apirat": {
+        category: "iot",
+        nameTH: "ศ.ดร.อภิรัฐ ศิริธราธิวัตร",
+        nameEN: "Prof.Dr.Apirat Siritaratiwat",
+        position: "รองหัวหน้าภาควิชา (ฝ่ายวิจัยและนวัตกรรม)",
+        email: "apirat.si@kmitl.ac.th",
+        room: "ECC 802",
+        phone: "-",
+        image: "/images/faculty-iot/apirat.png",
+        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "M.Sc. (Physics) University of Essex, UK",
+        doctor: "Ph.D. (Electronic Engineering) University of Nottingham, UK"
+    },
+    "natchanai": {
+        category: "iot",
+        nameTH: "ผศ.ดร.นัชนัยน์ รุ่งเหมือนฟ้า",
+        nameEN: "Asst.Prof.Dr.Natchanai Roongmuanpha",
+        position: "รองหัวหน้าภาควิชา (ฝ่ายต่างประเทศและกิจกรรมคณะ)",
+        email: "natchanai.ro@kmitl.ac.th",
+        room: "ECC 913",
+        phone: "-",
+        image: "/images/faculty-iot/natchanai.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมสารสนเทศ) KMITL",
+        doctor: "Ph.D. (Computer Science and Engineering) Toyohashi University of Technology, JAPAN"
+    },
+    "suwilai": {
+        category: "iot",
+        nameTH: "ดร.สุวิไล พุ่มโพธิ์",
+        nameEN: "Dr.Suwilai Phumpho",
+        position: "รองหัวหน้าภาควิชา (ฝ่ายกิจการภายนอก)",
+        email: "suwilai.ph@kmitl.ac.th",
+        room: "ECC 704",
+        phone: "-",
+        image: "/images/faculty-iot/suwilai.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "Ph.D. (Electrical Engineering) KMITL"
+    },
+    "pitikhate": {
+        category: "iot",
+        nameTH: "ศ.ดร.ปิติเขต สู้รักษา",
+        nameEN: "Prof.Dr.Pitikhate Sooraksa",
+        position: "อาจารย์ประจำ",
+        email: "pitikhate.so@kmitl.ac.th",
+        room: "ECC 812",
+        phone: "-",
+        image: "/images/faculty-iot/pitikhate.png",
+        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) KMITL",
+        master: "M.S. (Electrical Engineering) University of Houston, USA",
+        doctor: "Ph.D. (Electrical Engineering) University of Houston, USA"
+    },
+    "attasit": {
+        category: "iot",
+        nameTH: "รศ.ดร.อรรถสิทธิ์ เหล่าสกุล",
+        nameEN: "Assoc.Prof.Dr.Attasit Lasakul",
+        position: "อาจารย์ประจำ",
+        email: "attasit.la@kmitl.ac.th",
+        room: "ECC 911",
+        phone: "-",
+        image: "/images/faculty-iot/attasit.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "Ph.D. (Electrical Engineering) KMITL"
+    },
+    "kleddao": {
+        category: "iot",
+        nameTH: "ผศ.ดร.เกล็ดดาว สัตย์เจริญ",
+        nameEN: "Asst.Prof.Dr.Kleddao Satcharoen",
+        position: "อาจารย์ประจำ",
+        email: "kleddao.sa@kmitl.ac.th",
+        room: "ECC 701",
+        phone: "-",
+        image: "/images/faculty-iot/kleddao.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "Ph.D. (Electrical and Computer Engineering) Yokohama National University, JAPAN"
+    },
+    "auttapon": {
+        category: "iot",
+        nameTH: "ผศ.ดร.อรรถพล ป้อมสถิตย์",
+        nameEN: "Asst.Prof.Dr.Auttapon Pomsathit",
+        position: "อาจารย์ประจำ",
+        email: "auttapon.po@kmitl.ac.th",
+        room: "ECC 904",
+        phone: "-",
+        image: "/images/faculty-iot/auttapon.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "Ph.D. (Electrical Engineering) KMITL"
+    },
+    "panarat": {
+        category: "iot",
+        nameTH: "ผศ.ดร.พนา รัตน์ เชิญถนอมวงศ์",
+        nameEN: "Asst.Prof.Dr.Panarat Cherntanomwong",
+        position: "อาจารย์ประจำ",
+        email: "panarat.ch@kmitl.ac.th",
+        room: "ECC 902",
+        phone: "-",
+        image: "/images/faculty-iot/panarat.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมสารสนเทศ) KMITL",
+        doctor: "Ph.D. (Information and Communication Technology) Asian Institute of Technology (AIT)"
+    },
+    "sorapong": {
+        category: "iot",
+        nameTH: "ผศ.สรพงษ์ วชิรรัตนพรกุล",
+        nameEN: "Asst.Prof.Sorapong Wachirattanapornkul",
+        position: "อาจารย์ประจำ",
+        email: "sorapong.wa@kmitl.ac.th",
+        room: "ECC 803",
+        phone: "-",
+        image: "/images/faculty-iot/sorapong.png",
+        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "-"
+    },
+    "paisan": {
+        category: "iot",
+        nameTH: "ผศ.ไพศาล สิทธิโยภาสกุล",
+        nameEN: "Asst.Prof.Paisan Sithiyopasakul",
+        position: "อาจารย์ประจำ",
+        email: "paisan.si@kmitl.ac.th",
+        room: "ECC 912",
+        phone: "-",
+        image: "/images/faculty-iot/paisan.png",
+        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "-"
     }
+};
+
+const IoT_STF = {
+    "boonchana": {
+        category: "iot",
+        nameTH: "รศ.ดร.บุณย์ชนะ ภู่ระหงษ์",
+        nameEN: "Assoc.Prof.Dr.Boonchana Purahong",
+        position: "ประธานหลักสูตรวิศวกรรมระบบไอโอทีและสารสนเทศ",
+        email: "boonchana.pu@kmitl.ac.th",
+        room: "ECC 908",
+        phone: "-",
+        image: "/images/faculty-iot/boonchana.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "Ph.D. (Electrical Engineering) KMITL"
+    },
+};
+
+const Physiot_Aj = {
+    "boonchana": {
+        category: "iot",
+        nameTH: "รศ.ดร.บุณย์ชนะ ภู่ระหงษ์",
+        nameEN: "Assoc.Prof.Dr.Boonchana Purahong",
+        position: "ประธานหลักสูตรวิศวกรรมระบบไอโอทีและสารสนเทศ",
+        email: "boonchana.pu@kmitl.ac.th",
+        room: "ECC 908",
+        phone: "-",
+        image: "/images/faculty-iot/boonchana.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "Ph.D. (Electrical Engineering) KMITL"
+    },
+};
+
+const Physiot_STF = {
+    "boonchana": {
+        category: "iot",
+        nameTH: "รศ.ดร.บุณย์ชนะ ภู่ระหงษ์",
+        nameEN: "Assoc.Prof.Dr.Boonchana Purahong",
+        position: "ประธานหลักสูตรวิศวกรรมระบบไอโอทีและสารสนเทศ",
+        email: "boonchana.pu@kmitl.ac.th",
+        room: "ECC 908",
+        phone: "-",
+        image: "/images/faculty-iot/boonchana.png",
+        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
+        doctor: "Ph.D. (Electrical Engineering) KMITL"
+    },
 };

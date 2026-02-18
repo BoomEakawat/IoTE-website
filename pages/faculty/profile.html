@@ -33,7 +33,7 @@
                 <div class="info-card-header"><i class="fas fa-user"></i> ข้อมูลติดต่อ</div>
                 <div class="info-card-body split-view">
                     <ul class="details-list">
-                        <li><strong>ชื่อ - นามสกุล :</strong> <span id="display-name"></span></li>
+                        <li><strong>ชื่อ - นามสกุล :</strong> <span id="display-name-th"></span> (<span id="display-name-en"></span>)</li>
                         <li><strong>ตำแหน่ง :</strong> <span id="display-position"></span></li>
                         <li><strong>E-MAIL :</strong> <span id="display-email"></span></li>
                         <li><strong>ห้องพัก :</strong> <span id="display-room"></span></li>
@@ -70,11 +70,10 @@
     const prof = facultyData[profId];
 
     if (prof) {
-        document.getElementById('display-breadcrumb-name').innerText = prof.name;
-        // document.getElementById('display-name-th').innerText = prof.nameTH;
-        // document.getElementById('display-name-th').innerText = prof.nameEN;
-        document.getElementById('display-name').innerText = prof.name;
-        document.getElementById('display-full-title').innerText = prof.fullName;
+        document.getElementById('display-breadcrumb-name').innerText = prof.nameTH;
+        document.getElementById('display-name-th').innerText = prof.nameTH;
+        document.getElementById('display-name-en').innerText = prof.nameEN;
+        document.getElementById('display-full-title').innerText = prof.nameTH + ' (' + prof.nameEN + ')';
         document.getElementById('display-position').innerText = prof.position;
         document.getElementById('display-email').innerText = prof.email;
         document.getElementById('display-room').innerText = prof.room;
