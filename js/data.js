@@ -86,9 +86,22 @@ const IoT_Aj = {
         room: "E12-907",
         phone: "-",
         image: "/images/faculty-iot/nitjaree.png",
-        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        bachelor: "วศ.บ. (วิศวกรรมคอมพิวเตอร์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบังง",
         master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        doctor: "-"
+        doctor: "-",
+        expertise: ["Software Engineering", "Distributed Testing System"],
+        researchData: [
+            {
+                link: "https://www.researchgate.net/publication/342540183_Blood_Vessel_Extraction_and_Optic_Disk_Localization_for_Diabetic_Retinopathy",
+                title: "Blood Vessel Extraction and Optic Disk Localization for Diabetic Retinopathy",
+                img: "/images/faculty-iot/research/nitjaree-blood.png"
+            },
+            {
+                link: "https://www.researchgate.net/publication/367156079_Optic_Disk_and_Fovea_Localization_by_Using_the_Direction_of_Blood_Vessels_and_Morphology_Operation",
+                title: "Optic Disk and Fovea Localization by Using the Direction of Blood Vessels and Morphology Operation",
+                img: "/images/faculty-iot/research/nitjaree-optic.png"
+            }
+        ]
     },
     "vanvisa": {
         category: "iot",
@@ -99,9 +112,22 @@ const IoT_Aj = {
         room: "E12-909",
         phone: "-",
         image: "/images/faculty-iot/vanvisa.png",
-        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        doctor: "Ph.D. (Electronics) KMITL"
+        bachelor: "อส.บ. เกียรตินิยมอันดับ 2 (เทคโนโลยีอิเล็กทรอนิกส์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "วศ.ด. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        expertise: ["Electronic", "Bernstein Filter", "Railway Signaling and Operation", "Pattern recognition", "Railway Communications"],
+        researchData: [
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09021909",
+                title: "",
+                img: "/images/faculty-iot/research/vanvisa-1.png"
+            },
+            {
+                link: "https://www.researchgate.net/publication/359396914_Optimized_Gaussian_Pulse_Design_for_UWB_System_Using_Particle_Swarm_Optimization_Based-on_Generalized_Bessel_Polynomials",
+                title: "Optimized Gaussian Pulse Design for UWB System Using Particle Swarm Optimization Based-on Generalized Bessel Polynomials",
+                img: "/images/faculty-iot/research/vanvisa-pulse.png"
+            }
+        ]
     },
     "apirat": {
         category: "iot",
@@ -112,9 +138,11 @@ const IoT_Aj = {
         room: "-",
         phone: "-",
         image: "/images/faculty-iot/apirat.png",
-        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        master: "M.Sc. (Physics) University of Essex, UK",
-        doctor: "Ph.D. (Electronic Engineering) University of Nottingham, UK"
+        bachelor: "",
+        master: "",
+        doctor: "",
+        expertise: [],
+        researchData: []
     },
     "natchanai": {
         category: "iot",
@@ -125,9 +153,22 @@ const IoT_Aj = {
         room: "E12-1109",
         phone: "-",
         image: "/images/faculty-iot/natchanai.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมสารสนเทศ) KMITL",
-        doctor: "Ph.D. (Computer Science and Engineering) Toyohashi University of Technology, JAPAN"
+        bachelor: "B.Eng.(Electronics Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        master: "M.Eng.(Control Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        doctor: "D.Eng.(Electrical Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        expertise: ["Immittance Function Simulators", "Active Analog Filters", "Oscillator Design", "Chaotic Circuit Realization"],
+        researchData: [
+            {
+                link: "https://www.mdpi.com/1424-8220/24/10/3125",
+                title: "Design of Mixed-Mode Analog PID Controller with CFOAs",
+                img: "/images/faculty-iot/research/natchanai-pid.png"
+            },
+            {
+                link: "https://www.mdpi.com/1424-8220/23/5/2759",
+                title: "Single VDGA-Based Mixed-Mode Electronically Tunable First-Order Universal Filter",
+                img: "/images/faculty-iot/research/natchanai-vdga.png"
+            }
+        ]
     },
     "suwilai": {
         category: "iot",
@@ -135,12 +176,14 @@ const IoT_Aj = {
         nameEN: "Dr.Suwilai Phumpho",
         position: "รองหัวหน้าภาควิชา (ฝ่ายกิจการภายนอก)",
         email: "suwilai.ph@kmitl.ac.th",
-        room: "-",
-        phone: "-",
+        room: "",
+        phone: "",
         image: "/images/faculty-iot/suwilai.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "Ph.D. (Electrical Engineering) KMITL"
+        bachelor: "",
+        master: "",
+        doctor: "",
+        expertise: [],
+        researchData: []
     },
     "pitikhate": {
         category: "iot",
@@ -151,9 +194,22 @@ const IoT_Aj = {
         room: "-",
         phone: "-",
         image: "/images/faculty-iot/pitikhate.png",
-        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) KMITL",
-        master: "M.S. (Electrical Engineering) University of Houston, USA",
-        doctor: "Ph.D. (Electrical Engineering) University of Houston, USA"
+        bachelor: "วท.ม. (ฟิสิกส์) มหาวิทยาลัยศรีนครินทรวิโรฒ ประสานมิตร",
+        master: "M.S. (Electrical Engineering) George Washington University, USA",
+        doctor: "Ph.D. (Electrical Engineering) University of Houston, USA",
+        expertise: ["IT Automation", "Industrial Informatics"],
+        researchData: [
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09000480",
+                title: "",
+                img: "/images/faculty-iot/research/pitikhate-1.png"
+            },
+            {
+                link: "https://www.researchgate.net/publication/335361939_Design_of_a_Cyber-Physical_System_using_STEM_Chicken_Egg_Incubator",
+                title: "Design of a Cyber-Physical System using STEM: Chicken Egg Incubator",
+                img: "/images/faculty-iot/research/pitikhate-egg.png"
+            }
+        ]
     },
     "attasit": {
         category: "iot",
@@ -164,9 +220,22 @@ const IoT_Aj = {
         room: "E12-1110",
         phone: "-",
         image: "/images/faculty-iot/attasit.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "Ph.D. (Electrical Engineering) KMITL"
+        bachelor: "อส.บ. (เทคโนโลยีอิเล็กทรอนิกส์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "D.Eng. (Electrical Engineering) Tokai University, JAPAN",
+        expertise: ["Digital Processing", "Image Watermarking", "Embedded Systems", "Image Processing", "Machine Vision"],
+        researchData: [
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09002345",
+                title: "เครื่องเฝ้าระวังผู้ป่วยแบบใหม่",
+                img: "/images/faculty-iot/research/attasit-observe.png"
+            },
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09001626",
+                title: "เครื่องบันทึกการเข้าสอน",
+                img: "/images/faculty-iot/research/attasit-teaching.png"
+            }
+        ]
     },
     "kleddao": {
         category: "iot",
@@ -177,9 +246,22 @@ const IoT_Aj = {
         room: "E12-1215",
         phone: "-",
         image: "/images/faculty-iot/kleddao.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "Ph.D. (Electrical and Computer Engineering) Yokohama National University, JAPAN"
+        bachelor: "Bachelor of Science in Management Technology, KMITL, THAILAND",
+        master: "Master of Science in Computing (MERIT), University of Buckingham, UK",
+        doctor: "Doctoral of Philosophy in Computer Science, University of Buckingham, UK",
+        expertise: ["Human computer interaction", "User Interfaces"],
+        researchData: [
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09029232",
+                title: "ระบบการจัดการธุรกิจรถเช่าของฝ่ายบัญชีและฝ่ายควบคุมรถ",
+                img: "/images/faculty-iot/research/kleddao-car.png"
+            },
+            {
+                link: "https://www.researchgate.net/publication/374225582_The_Redesigning_Icons_to_Reduce_User_Confusion",
+                title: "The Redesigning Icons to Reduce User Confusion",
+                img: "/images/faculty-iot/research/kleddao-redesigning.png"
+            }
+        ]
     },
     "auttapon": {
         category: "iot",
@@ -190,9 +272,22 @@ const IoT_Aj = {
         room: "E12-1218",
         phone: "-",
         image: "/images/faculty-iot/auttapon.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "Ph.D. (Electrical Engineering) KMITL"
+        bachelor: "B.Eng.(Electronics Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        master: "M.Eng.(Information Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        doctor: "D.Eng.(Electrical Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        expertise: ["Cyber Security", "Internetworkind Design", "Information Security"],
+        researchData: [
+            {
+                link: "images/faculty-iot/research/attapon-manage.png",
+                title: "แนวทางการบริหารจัดการระบบสารสนเทศเพื่อการคุ้มครองข้อมูลส่วนบุคคลของหน่วยงานรัฐ",
+                img: "/images/faculty-iot/research/attapon-manage.png"
+            },
+            {
+                link: "https://rsucon.rsu.ac.th/proceeding/article/2271",
+                title: "การวิเคราะห์ประสิทธิภาพการโจมตีระบบโทรศัพท์ผ่านอินเทอร์เน็ตด้วยระบบตรวจจับการบุกรุก",
+                img: "/images/faculty-iot/research/attapon-attack.png"
+            }
+        ]
     },
     "panarat": {
         category: "iot",
@@ -203,9 +298,11 @@ const IoT_Aj = {
         room: "-",
         phone: "-",
         image: "/images/faculty-iot/panarat.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมสารสนเทศ) KMITL",
-        doctor: "Ph.D. (Information and Communication Technology) Asian Institute of Technology (AIT)"
+        bachelor: "",
+        master: "",
+        doctor: "",
+        expertise: [],
+        researchData: []
     },
     "sorapong": {
         category: "iot",
@@ -216,9 +313,22 @@ const IoT_Aj = {
         room: "E12-1107",
         phone: "-",
         image: "/images/faculty-iot/sorapong.png",
-        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "-"
+        bachelor: "อส.บ.(เทคโนโลยีอิเล็กทรอนิกส์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "",
+        expertise: ["Analog and Digital Filter", "Embedded System", "RFID and Application", "Pattern recognition", "Information for Energy"],
+        researchData: [
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09026093",
+                title: "ระบบการระบุเอกลักษณ์สัตว์เศรษฐกิจโดยลายพิมพ์จมูก และอาร์เอฟไอดี",
+                img: "/images/faculty-iot/research/sorapong-animal.png"
+            },
+            {
+                link: "https://www.researchgate.net/publication/335212933_The_Voltage-Mode_TITO_Biquadratic_Filter_Based_on_CCDCVC_and_URC",
+                title: "The Voltage-Mode TITO Biquadratic FilterBased on CCDCVC and URC",
+                img: "/images/faculty-iot/research/sorapong-voltage.png"
+            }
+        ]
     },
     "paisan": {
         category: "iot",
@@ -229,9 +339,22 @@ const IoT_Aj = {
         room: "E12-1109",
         phone: "-",
         image: "/images/faculty-iot/paisan.png",
-        bachelor: "วศ.บ. (วิศวกรรมไฟฟ้า) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "-"
+        bachelor: "อส.บ. (เทคโนโลยีคอมพิวเตอร์อุตสาหกรรม) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "ววศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "",
+        expertise: ["Wireless Communication", "Microprocessor Applications", "Digital Filter"],
+        researchData: [
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09001350",
+                title: "การออกแบบและการประยุกต์ใช้งานของวงจรแอกทีฟดิสทริบิวท์อาซีไลน์ฟิลเตอร์",
+                img: "/images/faculty-iot/research/paisan-filter.png"
+            },
+            {
+                link: "https://ieeexplore.ieee.org/document/10127100/authors#authors",
+                title: "Performance Evaluation of Infrastructure as a Service across Cloud Service Providers",
+                img: "/images/faculty-iot/research/paisan-iass.png"
+            }
+        ]
     }
 };
 
@@ -245,9 +368,11 @@ const IoT_STF = {
         room: "E12-1009",
         phone: "-",
         image: "/images/faculty-iot/thanart.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "Ph.D. (Electrical Engineering) KMITL"
+        bachelor: "",
+        master: "",
+        doctor: "",
+        expertise: [],
+        researchData: []
     },
     "theerasit": {
         category: "iot",
@@ -258,9 +383,11 @@ const IoT_STF = {
         room: "E12-1110",
         phone: "-",
         image: "/images/faculty-iot/theerasit.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "Ph.D. (Electrical Engineering) KMITL"
+        bachelor: "",
+        master: "",
+        doctor: "",
+        expertise: [],
+        researchData: []
     },
 };
 
