@@ -97,10 +97,6 @@
 
 /* Profile */
 
-#display-breadcrumb-name:hover {
-    color: var( --text-light);
-}
-
 .highlight-title {
     padding-left: 10px;
     padding-top: 5px;
@@ -165,6 +161,30 @@
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #f0f0f0;
+}
+
+#display-breadcrumb-name:hover {
+    color: var( --text-light);
+}
+
+#experience {
+    
+}
+
+#display-expertise,
+#display-research {
+    margin-top: 20px;
+    margin-left: 10px;
+    /* line-height: 1.6; */
+}
+
+.research-image {
+    width: 180px; /* Large sizing from reference */
+    /* border-radius: 50%; */
+    object-fit: contain;
+    /* border: 5px solid #f0f0f0; */
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Responsive Adjustments */

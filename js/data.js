@@ -8,9 +8,16 @@ const IoT_Aj = {
         room: "E12-1106",
         phone: "-",
         image: "/images/faculty-iot/boonchana.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "Ph.D. (Electrical Engineering) KMITL"
+        bachelor: "วศ.บ. (วิศวกรรมคอมพิวเตอร์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "Ph.D. (Electrical Engineering) KMITL",
+        expertise: ["Microprocessor", "Application", "Microcontroller", "Robotic", "Internet of Things and Smart System"],
+        research: ["หุ่นยนต์เลียนแบบพฤติกรรมนำทางของมด", "Comparison of logistic regression and artificial neural network model for apron allocation assignment"],
+        researchImages: [
+            // "/images/research/ant-robot.png",
+            "/images/faculty-iot/research/boonchana-comparison.png",
+            "/images/faculty-iot/research/boonchana-comparison.png",
+        ]
     },
     "pikulkaew": {
         category: "iot",
@@ -23,7 +30,9 @@ const IoT_Aj = {
         image: "/images/faculty-iot/pikulkaew.png",
         bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
         master: "วศ.ม. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        doctor: "D.Eng. (Science and Technology) Tokai University, JAPAN"
+        doctor: "D.Eng. (Science and Technology) Tokai University, JAPAN",
+        expertise: ["Internet of Things", "Signal Processing", "fds"],
+        research: ["Smart City using IoT", "Machine Learning for Sensors"]
     },
     "thanavit": {
         category: "iot",
@@ -36,7 +45,9 @@ const IoT_Aj = {
         image: "/images/faculty-iot/thanavit.png",
         bachelor: "วศ.บ. (วิศวกรรมคอมพิวเตอร์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
         master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        doctor: "Ph.D. (Electrical Engineering) KMITL"
+        doctor: "Ph.D. (Electrical Engineering) KMITL",
+        expertise: ["IoT", "Signal Processing", "fds"],
+        research: ["Smart City using IoT", "Machine Learning for Sensors"]
     },
     "nitjaree": {
         category: "iot",
@@ -226,7 +237,7 @@ const IoT_STF = {
 };
 
 const Physiot_Aj = {
-    "boonchana": {
+    "boonfdchana": {
         category: "iot",
         nameTH: "รศ.ดร.บุณย์ชนะ ภู่ระหงษ์",
         nameEN: "Assoc.Prof.Dr.Boonchana Purahong",
@@ -242,7 +253,7 @@ const Physiot_Aj = {
 };
 
 const Physiot_STF = {
-    "boonchana": {
+    "booncfhana": {
         category: "iot",
         nameTH: "รศ.ดร.บุณย์ชนะ ภู่ระหงษ์",
         nameEN: "Assoc.Prof.Dr.Boonchana Purahong",
