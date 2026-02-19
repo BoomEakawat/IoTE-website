@@ -136,7 +136,14 @@
     padding: 30px 30px; /* Spacious internal padding */
 }
 
-.split-view {
+.split-view-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.split-view-body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -237,11 +244,15 @@
         padding: 25px; /* Reduce padding */
     }
 
-    .split-view {
-        flex-direction: column; /* Stack image on top of text */
+    .split-view-profile {
+        flex-direction: column-reverse; /* Stack image on top of text */
         align-items: center;
         text-align: center;
         gap: 30px;
+    }
+
+    .split-view-body {
+        flex-direction: column;
     }
 
     .details-list li {
