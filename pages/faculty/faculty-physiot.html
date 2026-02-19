@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/styles/components/hero.css">
     <link rel="stylesheet" href="/styles/components/footer.css">
     <link rel="stylesheet" href="/styles/pages/faculty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -26,12 +28,12 @@
 
         <section class="body">
             <div class="container" id="header">
-                <p class="page-title">คณาจารย์ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
+                <p class="page-title">คณาจารย์หลักสูตรฟิสิกส์อุตสาหกรรม</p>
             </div>
             <div id="physiot-aj" class="faculty-grid"></div>
             <br>
             <div class="container" id="header">
-                <p class="page-title">คณาจารย์ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
+                <p class="page-title">บุคลากรหลักสูตรฟิสิกส์อุตสาหกรรม</p>
             </div>
             <div id="physiot-stf" class="faculty-grid"></div>
         </section>
@@ -48,8 +50,8 @@
     const List_Physiot_Aj = document.getElementById('physiot-aj');
     for (let id in Physiot_Aj) {
         const prof = Physiot_Aj[id];
-        // Only show if category is 'iot'
-        if (prof.category === 'iot') {
+        // Only show if category is 'physiot'
+        if (prof.category === 'physiot') {
             List_Physiot_Aj.innerHTML += `
                 <a href="profile.html?id=${id}" class="faculty-card">
                     <div class="card-top-accent"></div>
@@ -73,7 +75,7 @@
     for (let id in Physiot_STF) {
         const prof = Physiot_STF[id];
         // Only show if category is 'iot'
-        if (prof.category === 'iot') {
+        if (prof.category === 'physiot') {
             List_Physiot_STF.innerHTML += `
                 <a href="profile.html?id=${id}" class="faculty-card">
                     <div class="card-top-accent"></div>

@@ -392,24 +392,37 @@ const IoT_STF = {
 };
 
 const Physiot_Aj = {
-    "boonfdchana": {
-        category: "iot",
-        nameTH: "รศ.ดร.บุณย์ชนะ ภู่ระหงษ์",
-        nameEN: "Assoc.Prof.Dr.Boonchana Purahong",
-        position: "ประธานหลักสูตรวิศวกรรมระบบไอโอทีและสารสนเทศ",
-        email: "boonchana.pu@kmitl.ac.th",
-        room: "ECC 908",
+    "sorapong": {
+        category: "physiot",
+        nameTH: "ผศ.สรพงษ์ วชิรรัตนพรกุล",
+        nameEN: "Asst.Prof.Sorapong Wachirattanapornkul",
+        position: "อาจารย์ประจำ",
+        email: "sorapong.wa@kmitl.ac.th",
+        room: "E12-1107",
         phone: "-",
-        image: "/images/faculty-iot/boonchana.png",
-        bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) KMITL",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) KMITL",
-        doctor: "Ph.D. (Electrical Engineering) KMITL"
+        image: "/images/faculty-iot/sorapong.png",
+        bachelor: "อส.บ.(เทคโนโลยีอิเล็กทรอนิกส์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "",
+        expertise: ["Analog and Digital Filter", "Embedded System", "RFID and Application", "Pattern recognition", "Information for Energy"],
+        researchData: [
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09026093",
+                title: "ระบบการระบุเอกลักษณ์สัตว์เศรษฐกิจโดยลายพิมพ์จมูก และอาร์เอฟไอดี",
+                img: "/images/faculty-iot/research/sorapong-animal.png"
+            },
+            {
+                link: "https://www.researchgate.net/publication/335212933_The_Voltage-Mode_TITO_Biquadratic_Filter_Based_on_CCDCVC_and_URC",
+                title: "The Voltage-Mode TITO Biquadratic FilterBased on CCDCVC and URC",
+                img: "/images/faculty-iot/research/sorapong-voltage.png"
+            }
+        ]
     },
 };
 
 const Physiot_STF = {
-    "booncfhana": {
-        category: "iot",
+    "booncfhjhhana": {
+        category: "physiot",
         nameTH: "รศ.ดร.บุณย์ชนะ ภู่ระหงษ์",
         nameEN: "Assoc.Prof.Dr.Boonchana Purahong",
         position: "ประธานหลักสูตรวิศวกรรมระบบไอโอทีและสารสนเทศ",
