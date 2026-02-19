@@ -167,24 +167,61 @@
     color: var( --text-light);
 }
 
-#experience {
-    
-}
-
-#display-expertise,
-#display-research {
+#display-expertise {
     margin-top: 20px;
     margin-left: 10px;
     /* line-height: 1.6; */
 }
 
-.research-image {
-    width: 180px; /* Large sizing from reference */
-    /* border-radius: 50%; */
-    object-fit: contain;
-    /* border: 5px solid #f0f0f0; */
+/* Container for the research items */
+#display-research {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.research-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers image and text horizontally */
+    text-align: center;
+}
+
+.research-thumb {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.research-caption {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.research-link {
+    text-decoration: none; /* Removes default underline */
+    color: inherit;        /* Keeps your original text color */
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.research-link:hover {
+    opacity: 0.8;          /* Gives a slight fade effect when hovering */
+}
+
+.research-link:hover .research-caption {
+    color: var(--accent-orange); /* Changes text color on hover */
+    text-decoration: underline;
+}
+
+.placeholder-text {
     margin-left: 10px;
-    margin-right: 10px;
 }
 
 /* Responsive Adjustments */
@@ -233,3 +270,4 @@
         justify-content: center; /* Center header icon/text */
     }
 }
+

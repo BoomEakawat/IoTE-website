@@ -90,10 +90,9 @@
     function renderList(listId, dataArray) {
         const listElement = document.getElementById(listId);
         if (!listElement) return;
-
-        listElement.innerHTML = ""; // Clear existing content
-
-        // Check if data exists and is an array with items
+        
+        listElement.innerHTML = ""; 
+        
         if (dataArray && Array.isArray(dataArray) && dataArray.length > 0) {
             dataArray.forEach(item => {
                 const li = document.createElement('li');
@@ -101,9 +100,8 @@
                 listElement.appendChild(li);
             });
         } else {
-            // Display a dash if no data is found
-            // listElement.innerHTML = "<li><strong>•</strong> <span>-</span></li>";
-            listElement.innerHTML = "<li></li>";
+            // Placeholder text if no data exists
+            listElement.innerHTML = "<li class='placeholder-text'>ยังไม่มีข้อมูลในส่วนนี้ (No information available)</li>";
         }
     }
 
@@ -127,20 +125,30 @@
 
         // Render the Lists
         renderList('display-expertise', prof.expertise);
-        renderList('display-research', prof.research);
 
         // Render Multiple Research Images
-        const gallery = document.getElementById('research-image-gallery');
-        gallery.innerHTML = ""; // Clear existing
-
-        if (prof.researchImages && Array.isArray(prof.researchImages)) {
-            prof.researchImages.forEach(imgSrc => {
-                const img = document.createElement('img');
-                img.src = imgSrc;
-                img.className = "research-image"; // Use your existing CSS class
-                img.style.marginBottom = "10px"; // Add some spacing between them
-                gallery.appendChild(img);
+        const researchGallery = document.getElementById('display-research');
+        researchGallery.innerHTML = ""; 
+            
+        if (prof.researchData && prof.researchData.length > 0) {
+            prof.researchData.forEach(item => {
+                const itemContainer = document.createElement('div');
+                itemContainer.className = "research-item";
+                
+                // Provide a default placeholder image if item.img is missing
+                const displayImg = item.img || "/images/placeholders/no-image.png";
+                
+                itemContainer.innerHTML = `
+                    <a href="${item.link || '#'}" target="_blank" class="research-link">
+                        <img src="${displayImg}" class="research-thumb">
+                        <p class="research-caption">${item.title || "Untitled Research"}</p>
+                    </a>
+                `;
+                researchGallery.appendChild(itemContainer);
             });
+        } else {
+            // Show an empty state placeholder for the whole gallery
+            researchGallery.innerHTML = "<p class='placeholder-text'>ไม่มีข้อมูลงานวิจัย (No research data found)</p>";
         }
     } else {
         console.error("Professor ID not found in data.");

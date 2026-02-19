@@ -12,11 +12,17 @@ const IoT_Aj = {
         master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
         doctor: "Ph.D. (Electrical Engineering) KMITL",
         expertise: ["Microprocessor", "Application", "Microcontroller", "Robotic", "Internet of Things and Smart System"],
-        research: ["หุ่นยนต์เลียนแบบพฤติกรรมนำทางของมด", "Comparison of logistic regression and artificial neural network model for apron allocation assignment"],
-        researchImages: [
-            // "/images/research/ant-robot.png",
-            "/images/faculty-iot/research/boonchana-comparison.png",
-            "/images/faculty-iot/research/boonchana-comparison.png",
+        researchData: [
+        {
+            link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09022566",
+            title: "หุ่นยนต์เลียนแบบพฤติกรรมนำทางของมด",
+            img: "/images/faculty-iot/research/boonchana-robot.png"
+        },
+        {
+            link: "https://www.researchgate.net/publication/371016333_Comparison_of_logistic_regression_and_artificial_neural_network_model_for_apron_allocation_assignment",
+            title: "Comparison of logistic regression and artificial neural network model for apron allocation assignment",
+            img: "/images/faculty-iot/research/boonchana-comparison.png"
+        }
         ]
     },
     "pikulkaew": {
@@ -31,8 +37,19 @@ const IoT_Aj = {
         bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
         master: "วศ.ม. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
         doctor: "D.Eng. (Science and Technology) Tokai University, JAPAN",
-        expertise: ["Internet of Things", "Signal Processing", "fds"],
-        research: ["Smart City using IoT", "Machine Learning for Sensors"]
+        expertise: ["Microprocessor", "Application", "Microcontroller", "Robotic", "Internet of Things and Smart System"],
+        researchData: [
+        {
+            link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09022566",
+            title: "หุ่นยนต์เลียนแบบพฤติกรรมนำทางของมด",
+            img: "/images/faculty-iot/research/boonchana-robot.png"
+        },
+        {
+            link: "https://www.researchgate.net/publication/371016333_Comparison_of_logistic_regression_and_artificial_neural_network_model_for_apron_allocation_assignment",
+            title: "Comparison of logistic regression and artificial neural network model for apron allocation assignment",
+            img: "/images/faculty-iot/research/boonchana-comparison.png"
+        }
+    ]
     },
     "thanavit": {
         category: "iot",
