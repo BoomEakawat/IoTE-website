@@ -6,23 +6,23 @@ const IoT_Aj = {
         position: "ประธานหลักสูตรวิศวกรรมระบบไอโอทีและสารสนเทศ",
         email: "boonchana.pu@kmitl.ac.th",
         room: "E12-1106",
-        phone: "-",
+        phone: "",
         image: "/images/faculty-iot/boonchana.png",
-        bachelor: "วศ.บ. (วิศวกรรมคอมพิวเตอร์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        doctor: "Ph.D. (Electrical Engineering) KMITL",
-        expertise: ["Microprocessor", "Application", "Microcontroller", "Robotic", "Internet of Things and Smart System"],
+        bachelor: "อส.บ. (เทคโนโลยีอิเล็กทรอนิกส์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        master: "วศ.ม. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
+        doctor: "",
+        expertise: ["Microprocessor Application", "Microcontroller", "Robotic", "Internet of Things and Smart System"],
         researchData: [
-        {
-            link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09022566",
-            title: "หุ่นยนต์เลียนแบบพฤติกรรมนำทางของมด",
-            img: "/images/faculty-iot/research/boonchana-robot.png"
-        },
-        {
-            link: "https://www.researchgate.net/publication/371016333_Comparison_of_logistic_regression_and_artificial_neural_network_model_for_apron_allocation_assignment",
-            title: "Comparison of logistic regression and artificial neural network model for apron allocation assignment",
-            img: "/images/faculty-iot/research/boonchana-comparison.png"
-        }
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09022566",
+                title: "หุ่นยนต์เลียนแบบพฤติกรรมนำทางของมด",
+                img: "/images/faculty-iot/research/boonchana-robot.png"
+            },
+            {
+                link: "https://www.researchgate.net/publication/371016333_Comparison_of_logistic_regression_and_artificial_neural_network_model_for_apron_allocation_assignment",
+                title: "Comparison of logistic regression and artificial neural network model for apron allocation assignment",
+                img: "/images/faculty-iot/research/boonchana-comparison.png"
+            }
         ]
     },
     "pikulkaew": {
@@ -32,24 +32,24 @@ const IoT_Aj = {
         position: "หัวหน้าภาควิชา",
         email: "pikulkaew.ta@kmitl.ac.th",
         room: "E12-1214",
-        phone: "02-7392400~2 ต่อ 126",
+        phone: "",
         image: "/images/faculty-iot/pikulkaew.png",
         bachelor: "วศ.บ. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
         master: "วศ.ม. (วิศวกรรมสารสนเทศ) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
         doctor: "D.Eng. (Science and Technology) Tokai University, JAPAN",
-        expertise: ["Microprocessor", "Application", "Microcontroller", "Robotic", "Internet of Things and Smart System"],
+        expertise: ["Web Application", "Mobile Application", "Information Security"],
         researchData: [
-        {
-            link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09022566",
-            title: "หุ่นยนต์เลียนแบบพฤติกรรมนำทางของมด",
-            img: "/images/faculty-iot/research/boonchana-robot.png"
-        },
-        {
-            link: "https://www.researchgate.net/publication/371016333_Comparison_of_logistic_regression_and_artificial_neural_network_model_for_apron_allocation_assignment",
-            title: "Comparison of logistic regression and artificial neural network model for apron allocation assignment",
-            img: "/images/faculty-iot/research/boonchana-comparison.png"
-        }
-    ]
+            {
+                link: "https://ebook.lib.kmitl.ac.th/library/book_detail/09002343",
+                title: "ค้นหาความถนัดในอาชีพของเด็กบนสมาร์ททีวี",
+                img: "/images/faculty-iot/research/pikulkaew-predict.png"
+            },
+            {
+                link: "https://ebook.lib.kmitl.ac.th/library/book_detail/09026079",
+                title: "แอพพลิเคชั่นแนะนำวิศวกรรมศาสตร์บนสมาร์ทโฟนแบบปฏิสัมพันธ์",
+                img: "/images/faculty-iot/research/pikulkaew-interactive.png"
+            }
+        ]
     },
     "thanavit": {
         category: "iot",
@@ -60,11 +60,22 @@ const IoT_Aj = {
         room: "E12-1105",
         phone: "-",
         image: "/images/faculty-iot/thanavit.png",
-        bachelor: "วศ.บ. (วิศวกรรมคอมพิวเตอร์) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        master: "วศ.ม. (วิศวกรรมไฟฟ้า) สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
-        doctor: "Ph.D. (Electrical Engineering) KMITL",
-        expertise: ["IoT", "Signal Processing", "fds"],
-        research: ["Smart City using IoT", "Machine Learning for Sensors"]
+        bachelor: "B.Eng.(Information Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        master: "M.Eng.(Information Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        doctor: "D.Eng.(Electrical Engineering) King Mongkuts Institute of Technology Ladkrabang",
+        expertise: ["Microprocessor Application", "Internet of Things", "Embedded Systems", "Integrated System", "Railway Signaling (Communication and Operation)"],
+        researchData: [
+            {
+                link: "https://ebook.lib.kmitl.ac.th/library/book_detail/09004977",
+                title: "",
+                img: "/images/faculty-iot/research/thanavit-1.png"
+            },
+            {
+                link: "http://ebook.lib.kmitl.ac.th/library/book_detail/09023386",
+                title: "",
+                img: "/images/faculty-iot/research/thanavit-2.png"
+            }
+        ]
     },
     "nitjaree": {
         category: "iot",
