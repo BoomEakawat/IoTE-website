@@ -1,12 +1,4 @@
-.body {
-    font-family: 'Sarabun', sans-serif;
-}
-
-#physiot-title {
-    font-size: 1.5rem;
-}
-
-/* The Floating Box */
+/* Base Academics */
 .floating-container {
     /* margin-left: 50px;
     margin-right: 50px; */
@@ -17,13 +9,11 @@
     z-index: 10;
     overflow: hidden; /* Clips children to rounded corners */
 }
-
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 Columns */
     text-align: center;
 }
-
 .program-card {
     padding: 60px 20px;
     display: flex;
@@ -32,11 +22,9 @@
     border-right: 1px solid #eee; /* Vertical Dividers */
     text-decoration: none;
 }
-
 .program-card:last-child {
     border-right: none;
 }
-
 .icon-box i {
     width: 50px;
     height: 50px;
@@ -44,7 +32,6 @@
     color: var(--accent-orange);
     margin-bottom: 40px;
 }
-
 .program-title-en {
     font-family: 'Prompt', sans-serif;
     font-size: 1rem;
@@ -54,7 +41,6 @@
     font-weight: 600;
     min-height: 4.5em; /* Keeps text aligned regardless of length */
 }
-
 .program-title-th {
     font-family: 'Sarabun', sans-serif;
     font-size: 0.85rem;
@@ -62,12 +48,52 @@
     line-height: 1.8;
 }
 
+/* Base */
+.body {
+    font-family: 'Sarabun', sans-serif;
+}
+
+#physiot-title {
+    font-size: 1.5rem;
+}
+
+/* Button */
+.header-content {
+    display: flex;             /* Enables Flexbox */
+    justify-content: space-between; /* Pushes title left and button right */
+    align-items: center;       /* Aligns them vertically */
+    padding-bottom: 20px;      /* Space below the title bar */
+}
+.top-right-btn {
+    background-color: var(--accent-orange); /* Uses your IoT orange variable */
+    color: #ffffff !important;              /* White text */
+    padding: 10px 15px;
+    border-radius: 8px;                    /* Creates the pill shape */
+    text-decoration: none;                  /* Removes link underline */
+    font-family: 'Prompt', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;                          /* Flexbox for icon and text alignment */
+    align-items: center;
+    gap: 10px;                              /* Space between icon and text */
+    /* box-shadow: 0 4px 12px rgba(255, 119, 0, 0.3); */
+    transition: all 0.3s ease;              /* Smooth animation for hover */
+    z-index: 10;                            /* Keeps button above other elements */
+}
+.top-right-btn i {
+    color: #ffffff; 
+}
+.top-right-btn:hover {
+    background-color: #e66a00;              /* Slightly darker orange */
+    transform: translateY(-2px);            /* Lifts the button slightly */
+    box-shadow: 0 6px 18px rgba(255, 119, 0, 0.4);
+}
+
 /* --- ADMISSION TIMELINE (TCAS STYLE) --- */
 .admission-timeline-container {
     margin-top: 60px;
     text-align: center;
 }
-
 .admission-main-title {
     color: var(--accent-orange);
     font-size: 2rem;
@@ -75,12 +101,10 @@
     font-weight: bold;
     margin-bottom: 50px;
 }
-
 .tcas-wrapper {
     position: relative;
     padding: 40px 0;
 }
-
 /* Horizontal dotted line */
 .tcas-line {
     position: absolute;
@@ -90,33 +114,28 @@
     border-top: 1px dashed #ccc;
     z-index: 1;
 }
-
 .tcas-steps {
     display: flex;
     justify-content: space-around;
     position: relative;
     z-index: 2;
 }
-
 .tcas-node {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 30%;
 }
-
 .tcas-date {
     font-size: 0.9rem;
     line-height: 1.4;
     margin-bottom: 15px;
     color: #333;
 }
-
 .tcas-date strong {
     font-size: 1.3rem;
     color: #000;
 }
-
 .tcas-dot {
     width: 14px;
     height: 14px;
@@ -125,20 +144,17 @@
     margin-bottom: 30px;
     border: 4px solid var(--white); /* Masks the line behind the dot */
 }
-
 .tcas-code {
     font-size: 2rem;
     font-weight: 800;
     color: var(--accent-orange);
     font-family: 'Prompt';
 }
-
 .tcas-name {
     font-size: 1.1rem;
     color: #333;
     margin-bottom: 15px;
 }
-
 .tcas-capacity {
     background: #000;
     color: #fff;
@@ -148,43 +164,27 @@
     display: inline-block;
 }
 
-/* Academic Component Styles */
-.academic-detail-section {
-    background-color: var(--light-accent-orange);
-    padding: 80px 0;
-}
-
-.academic-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Media on left, text on right */
-    gap: 50px;
-    align-items: center;
-}
-
+/* Price */
 .featured-pic {
     width: 100%;
     border-radius: 4px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-
 .academic-content {
     text-align: center; /* Centered content like the image */
 }
-
 .academic-title {
     color: var(--white);
     font-size: 2rem;
     font-family: 'Prompt', sans-serif;
     margin-bottom: 25px;
 }
-
 .academic-text {
     font-family: 'Sarabun', sans-serif;
     line-height: 1.8;
     color: #444;
     margin-bottom: 40px;
 }
-
 .register-btn {
     background-color: var(--accent-orange);
     color: white;
@@ -196,13 +196,10 @@
     box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
     transition: all 0.3s ease;
 }
-
 .register-btn:hover {
     background-color: #e65c00;
     transform: translateY(-2px);
 }
-
-/* The "Transparent" layer */
 .tuition-card::before {
     content: "";
     position: absolute;
@@ -211,13 +208,6 @@
     background-color: rgba(255, 132, 0, 0.536); /* Black with 60% transparency */
     z-index: 0;
 }
-
-/* Keep your text above the transparency */
-.tuition-info {
-    
-    z-index: 2;
-}
-
 .tuition-info {
     position: relative;
     flex: 1;
@@ -225,19 +215,16 @@
     color: var(--white);
     z-index: 2;
 }
-
 .tuition-title {
     font-size: 2.2rem;
     font-family: 'Sarabun', sans-serif;
     margin-bottom: 5px;
 }
-
 .program-label {
     font-size: 1.2rem;
     margin-bottom: 30px;
     opacity: 0.9;
 }
-
 .price {
     font-size: 4.5rem; /* Large impact font */
     font-weight: 800;
@@ -245,12 +232,10 @@
     display: block;
     line-height: 1;
 }
-
 .unit {
     font-size: 1.3rem;
     margin-top: 10px;
 }
-
 /* --- Photo Stack --- */
 .tuition-images {
     flex: 1;
@@ -258,7 +243,6 @@
     height: 100%;
     margin-bottom: 190px;
 }
-
 .photo-frame {
     background: white;
     padding: 10px 10px 30px 10px; /* Polaroid style */
@@ -267,21 +251,18 @@
     width: 250px;
     border-radius: 5px;
 }
-
 /* Position frames like the reference */
 .photo-1 {
     top: -40px;
     right: 180px;
     transform: rotate(-5deg);
 }
-
 .photo-2 {
     top: 20px;
     right: 40px;
     transform: rotate(3deg);
     z-index: 3;
 }
-
 .photo-frame img {
     width: 100%;
     height: 180px;
@@ -289,8 +270,168 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+/* --- Tuition Card*/
+.tuition-card {
+    position: relative; /* Removed the duplicate declaration */
+    background-image: url('/images/academics/engineering-building.jpg');
+    background-size: cover;
+    background-position: center; /* Added for better image centering */
+    border-radius: 20px;
+    display: flex;
+    min-height: 350px;
+    align-items: center;
+    overflow: hidden;
+    margin: 50px 50px; /* Added 'auto' to ensure it centers on large screens */
+}
+.tuition-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* Switched to a slightly deeper orange for better contrast */
+    background-color: rgba(255, 119, 0, 0.75); 
+    z-index: 0;
+}
+.tuition-info {
+    position: relative;
+    z-index: 2;
+}
+.tuition-title-text {
+    font-size: 2.2rem;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 700; /* Replaces h2 bolding */
+    margin: 0 0 5px 0;
+    color: white;
+}
+.program-label-text {
+    font-size: 1.2rem;
+    font-family: 'Sarabun', sans-serif;
+    margin: 0 0 30px 0;
+    color: white;
+    opacity: 0.9;
+}
+.price-amount {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-family: 'Sarabun', sans-serif;
+    margin: 0;
+    color: white;
+    line-height: 1;
+}
+.unit-text {
+    font-size: 1.3rem;
+    font-family: 'Sarabun', sans-serif;
+    margin: 10px 0 0 0;
+    color: white;
+}
+.photo-frame {
+    background: white;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: absolute;
+    width: 250px;
+    border-radius: 5px;
+}
+
+/* Info */
+.info-section {
+    margin-top: 50px;
+    padding: 40px;
+    background: #fff; /* White background for the content block */
+    border-radius: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.info-header {
+    color: #a04000; /* Darker orange/brown title */
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.info-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.info-media {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Photo on left, text on right */
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.media-box {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.media-box img {
+    width: 100%;
+    display: block;
+}
+
+.media-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, var(--accent-orange));
+}
+
+.media-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.media-secondary-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .tuition-card { 
+        flex-direction: column; 
+        text-align: center;
+        margin-top: 100px;
+        margin: 0;
+        /* padding: 20px; */
+    }
+    .tuition-images { 
+        display: none; /* Hide photos on small mobile to save space */
+    }
+}
+
 /* For Mobile Phones (up to 600px) */
 @media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;             /* Stacks title and button on mobile */
+        gap: 15px;
+        text-align: center;
+    }
+
     #physiot-title {
         font-size: 1.1rem !important; /* Makes the long degree name fit better */
         line-height: 1.4;
@@ -342,93 +483,8 @@
     .header .container {
         text-align: center;
     }
-}
 
-/* Mobile Responsiveness */
-@media (max-width: 992px) {
-    .tuition-card { 
-        flex-direction: column; 
-        text-align: center;
-        margin-top: 100px;
-        margin: 0;
-        /* padding: 20px; */
+    .info-media {
+        grid-template-columns: 1fr; /* Stack on mobile */
     }
-    .tuition-images { 
-        display: none; /* Hide photos on small mobile to save space */
-    }
-}
-
-/* --- Tuition Component (Refactored for p tags) --- */
-/* Optimized Tuition Card */
-.tuition-card {
-    position: relative; /* Removed the duplicate declaration */
-    background-image: url('/images/academics/engineering-building.jpg');
-    background-size: cover;
-    background-position: center; /* Added for better image centering */
-    border-radius: 20px;
-    display: flex;
-    min-height: 350px;
-    align-items: center;
-    overflow: hidden;
-    margin: 50px auto; /* Added 'auto' to ensure it centers on large screens */
-}
-
-/* Enhanced Overlay */
-.tuition-card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    /* Switched to a slightly deeper orange for better contrast */
-    background-color: rgba(255, 119, 0, 0.75); 
-    z-index: 0;
-}
-
-/* Keep your text above the transparency */
-.tuition-info {
-    position: relative;
-    z-index: 2;
-}
-
-/* Force p tags to look like headings */
-.tuition-title-text {
-    font-size: 2.2rem;
-    font-family: 'Sarabun', sans-serif;
-    font-weight: 700; /* Replaces h2 bolding */
-    margin: 0 0 5px 0;
-    color: white;
-}
-
-.program-label-text {
-    font-size: 1.2rem;
-    font-family: 'Sarabun', sans-serif;
-    margin: 0 0 30px 0;
-    color: white;
-    opacity: 0.9;
-}
-
-.price-amount {
-    font-size: 4.5rem;
-    font-weight: 800;
-    font-family: 'Sarabun', sans-serif;
-    margin: 0;
-    color: white;
-    line-height: 1;
-}
-
-.unit-text {
-    font-size: 1.3rem;
-    font-family: 'Sarabun', sans-serif;
-    margin: 10px 0 0 0;
-    color: white;
-}
-
-/* Keep the photo styles the same as before */
-.photo-frame {
-    background: white;
-    padding: 10px 10px 30px 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    position: absolute;
-    width: 250px;
-    border-radius: 5px;
 }
