@@ -4,7 +4,8 @@
 }
 
 #header {
-    margin-left: -20px;
+    /* margin-left: -20px; */
+    padding: 0;
 }
 
 /* --- Faculty Home --- */
@@ -240,6 +241,11 @@
         text-align: center;
     }
 
+    .page-title { 
+        font-size: 1.68rem;
+        margin: auto;
+    }
+
     .info-card-body {
         padding: 25px; /* Reduce padding */
     }
@@ -265,7 +271,16 @@
 /* For Mobile Phones (under 600px) */
 @media (max-width: 600px) {
     .body {
-        margin: 10px;
+        margin: 5px;
+    }
+
+    .page-title { 
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    #long-title {
+        font-size: 1.2rem;
     }
 
     .highlight-title {
