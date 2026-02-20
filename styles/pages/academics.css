@@ -202,6 +202,93 @@
     transform: translateY(-2px);
 }
 
+/* The "Transparent" layer */
+.tuition-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 132, 0, 0.536); /* Black with 60% transparency */
+    z-index: 0;
+}
+
+/* Keep your text above the transparency */
+.tuition-info {
+    
+    z-index: 2;
+}
+
+.tuition-info {
+    position: relative;
+    flex: 1;
+    padding: 60px;
+    color: var(--white);
+    z-index: 2;
+}
+
+.tuition-title {
+    font-size: 2.2rem;
+    font-family: 'Sarabun', sans-serif;
+    margin-bottom: 5px;
+}
+
+.program-label {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.price {
+    font-size: 4.5rem; /* Large impact font */
+    font-weight: 800;
+    font-family: 'Sarabun', sans-serif;
+    display: block;
+    line-height: 1;
+}
+
+.unit {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+/* --- Photo Stack --- */
+.tuition-images {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    margin-bottom: 190px;
+}
+
+.photo-frame {
+    background: white;
+    padding: 10px 10px 30px 10px; /* Polaroid style */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: absolute;
+    width: 250px;
+    border-radius: 5px;
+}
+
+/* Position frames like the reference */
+.photo-1 {
+    top: -40px;
+    right: 180px;
+    transform: rotate(-5deg);
+}
+
+.photo-2 {
+    top: 20px;
+    right: 40px;
+    transform: rotate(3deg);
+    z-index: 3;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+
 /* For Mobile Phones (up to 600px) */
 @media (max-width: 768px) {
     #physiot-title {
@@ -221,8 +308,15 @@
     }
 
     .floating-container {
-        margin: 0; /* Adds margin so the box doesn't touch screen edges */
-        /* margin-right: 30px; */
+        margin-left: 5%;  /* Responsive spacing on left */
+        margin-right: 5%; /* Responsive spacing on right */
+        /* margin-bottom: 50px; */
+        background-color: #fff;
+        border-radius: 8px; /* Slightly more rounded to match the CE reference */
+        box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
     }
 
     .program-card {
@@ -236,8 +330,105 @@
         font-size: 0.95rem;
     }
 
+    .tuition-title {
+    font-size: 1.8rem;
+    }
+
+    .price {
+        font-size: 3rem;
+    }
+
     /* Centers the header text specifically for the academics list */
     .header .container {
         text-align: center;
     }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .tuition-card { 
+        flex-direction: column; 
+        text-align: center;
+        margin-top: 100px;
+        margin: 0;
+        /* padding: 20px; */
+    }
+    .tuition-images { 
+        display: none; /* Hide photos on small mobile to save space */
+    }
+}
+
+/* --- Tuition Component (Refactored for p tags) --- */
+/* Optimized Tuition Card */
+.tuition-card {
+    position: relative; /* Removed the duplicate declaration */
+    background-image: url('/images/academics/engineering-building.jpg');
+    background-size: cover;
+    background-position: center; /* Added for better image centering */
+    border-radius: 20px;
+    display: flex;
+    min-height: 350px;
+    align-items: center;
+    overflow: hidden;
+    margin: 50px auto; /* Added 'auto' to ensure it centers on large screens */
+}
+
+/* Enhanced Overlay */
+.tuition-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* Switched to a slightly deeper orange for better contrast */
+    background-color: rgba(255, 119, 0, 0.75); 
+    z-index: 0;
+}
+
+/* Keep your text above the transparency */
+.tuition-info {
+    position: relative;
+    z-index: 2;
+}
+
+/* Force p tags to look like headings */
+.tuition-title-text {
+    font-size: 2.2rem;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 700; /* Replaces h2 bolding */
+    margin: 0 0 5px 0;
+    color: white;
+}
+
+.program-label-text {
+    font-size: 1.2rem;
+    font-family: 'Sarabun', sans-serif;
+    margin: 0 0 30px 0;
+    color: white;
+    opacity: 0.9;
+}
+
+.price-amount {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-family: 'Sarabun', sans-serif;
+    margin: 0;
+    color: white;
+    line-height: 1;
+}
+
+.unit-text {
+    font-size: 1.3rem;
+    font-family: 'Sarabun', sans-serif;
+    margin: 10px 0 0 0;
+    color: white;
+}
+
+/* Keep the photo styles the same as before */
+.photo-frame {
+    background: white;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: absolute;
+    width: 250px;
+    border-radius: 5px;
 }
