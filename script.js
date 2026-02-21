@@ -90,3 +90,19 @@ function highlightActiveLink() {
         }
     });
 }
+
+function toggleDropdown() {
+    var content = document.getElementById("dropdown-content");
+    var arrow = document.getElementById("dropdown-arrow");
+    
+    // Toggle the display of the content
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        arrow.style.transform = "rotate(135deg)"; // Arrow points down
+        arrow.style.marginTop = "0";
+    } else {
+        content.style.display = "block";
+        arrow.style.transform = "rotate(-45deg)"; // Arrow points up
+        arrow.style.marginTop = "6px";
+    }
+}

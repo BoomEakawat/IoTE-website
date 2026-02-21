@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="/styles/components/navbar.css">
     <link rel="stylesheet" href="/styles/components/hero.css">
     <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/pages/academics.css">
     <link rel="stylesheet" href="/styles/pages/admission.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -20,16 +23,130 @@
     <main class="hero-subpage fade-in">
         <section class="header">
             <div class="breadcrumb-container">
-                <a href="/index.html" class="breadcrumb">Home</a>•<a href="/pages/academics/academics.html" class="breadcrumb">Academics</a>•<a href="/pages/academics/academics-iot.html" class="breadcrumb">IoTE</a><span class="breadcrumb" id="breadcrumb-last">Admission</span>
+                <a href="/index.html" class="breadcrumb">Home</a>•<a href="/pages/academics/academics.html" class="breadcrumb">Academics</a>•<a href="/pages/academics/academics-iot.html" class="breadcrumb">IoTE</a>•<span class="breadcrumb" id="breadcrumb-last">Admission</span>
             </div>
-            <div class="container">
-                <p class="page-title">Admission-iot</p>
+            <div class="container header-content">
+                <div>
+                    <p class="page-title"><span class="full-text">Bachelor of Engineering</span><span class="short-text">B.Eng</span> (IoT System and Information Engineering)</p>
+                </div>
             </div>
         </section>
-        <section class="body"></section>
+        <section class="body">
+
+            <div class="admission-timeline-container">
+                <p class="admission-main-title">Admission Schedule</p>
+                <div class="tcas-wrapper">
+                    <div class="tcas-line"></div>
+                    <div class="tcas-steps">
+                        <div class="tcas-node">
+                            <div class="tcas-date">1 มกราคม 2513<br><strong>20 ธันวาคม 2567</strong></div>
+                            <div class="tcas-dot"></div>
+                            <div class="tcas-box">
+                                <span class="tcas-code">TCAS1</span>
+                                <p class="tcas-name">Portfolio</p>
+                                <div class="tcas-capacity">จำนวน 30 ผู้สมัคร</div>
+                            </div>
+                        </div>
+                    
+                        <div class="tcas-node">
+                            <div class="tcas-date">1 มกราคม 2513<br><strong>14 มีนาคม 2568</strong></div>
+                            <div class="tcas-dot"></div>
+                            <div class="tcas-box">
+                                <span class="tcas-code">TCAS2</span>
+                                <p class="tcas-name">Quota</p>
+                                <div class="tcas-capacity">จำนวน 15 ผู้สมัคร</div>
+                            </div>
+                        </div>
+                    
+                        <div class="tcas-node">
+                            <div class="tcas-date">6-12 เมษายน<br><strong>พ.ศ. 2568</strong></div>
+                            <div class="tcas-dot"></div>
+                            <div class="tcas-box">
+                                <span class="tcas-code">TCAS3</span>
+                                <p class="tcas-name">Admission</p>
+                                <div class="tcas-capacity">จำนวน 5 ผู้สมัคร</div>
+                            </div>
+                        </div>
+
+                        <div class="tcas-node">
+                            <div class="tcas-date">6-12 เมษายน<br><strong>พ.ศ. 2568</strong></div>
+                            <div class="tcas-dot"></div>
+                            <div class="tcas-box">
+                                <span class="tcas-code">TCAS4</span>
+                                <p class="tcas-name">Direct Admission</p>
+                                <div class="tcas-capacity">ไม่เปิดรับสมัครในรอบนี้</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-container">
+                <h2>รอบที่ 1 PORTFOLIO</h2>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการ Young Engineering Talent
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                                <li>ผู้สมัครจะต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อย 5 ภาคการศึกษา ไม่น้อยกว่า 3.50</li>
+                                <li>เป็นผู้ที่เคยได้รับรางวัลการแข่งขันในระดับชาติหรือระดับนานาชาติอย่างน้อย 1 รายการ ทางด้านคณิตศาสตร์ – วิทยาศาสตร์ หรือเทคโนโลยีที่เกี่ยวข้องกับสาขาวิชาที่สมัคร ทั้งนี้ต้องเป็นงานที่จัดขึ้นโดยหน่วยงานซึ่งเป็นที่ยอมรับ อย่างกว้างขวาง</li>
+                                <li>เป็นผู้ไม่มีโรคสำคัญที่เป็นอุปสรรคต่อการศึกษา</li>
+                            </ul>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>30 คน (รับร่วมกัน)</p>
+                            
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="accordion-container">
+                <h2>รอบที่ 2 QUATA</h2>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการ Young Engineering Talent
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                                <li>ผู้สมัครจะต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อย 5 ภาคการศึกษา ไม่น้อยกว่า 3.50</li>
+                                <li>เป็นผู้ที่เคยได้รับรางวัลการแข่งขันในระดับชาติหรือระดับนานาชาติอย่างน้อย 1 รายการ ทางด้านคณิตศาสตร์ – วิทยาศาสตร์ หรือเทคโนโลยีที่เกี่ยวข้องกับสาขาวิชาที่สมัคร ทั้งนี้ต้องเป็นงานที่จัดขึ้นโดยหน่วยงานซึ่งเป็นที่ยอมรับ อย่างกว้างขวาง</li>
+                                <li>เป็นผู้ไม่มีโรคสำคัญที่เป็นอุปสรรคต่อการศึกษา</li>
+                            </ul>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>30 คน (รับร่วมกัน)</p>
+                            
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
     </main>
 
     <div id="footer-placeholder"></div>
     <script src="/script.js"></script>
 </body>
 </html>
+
