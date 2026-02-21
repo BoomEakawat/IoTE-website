@@ -48,13 +48,22 @@
     line-height: 1.8;
 }
 
-/* Base */
+/* Title */
+.header {
+    /* margin: 0; */
+}
 .body {
     font-family: 'Sarabun', sans-serif;
+    /* margin: 0; */
 }
-
 #physiot-title {
     font-size: 1.5rem;
+}
+.short-text {
+    display: none;
+}
+.full-text {
+    display: inline;
 }
 
 /* Button */
@@ -72,7 +81,7 @@
     gap: 10px;              /* This is the magic property for spacing! */
     align-items: flex-end;  /* Keeps buttons aligned to the right like in your image */
 }
-.top-right-btn {
+.btn {
     background-color: var(--accent-orange); /* Uses your IoT orange variable */
     color: #ffffff !important;              /* White text */
     padding: 15px 15px;
@@ -87,11 +96,12 @@
     /* box-shadow: 0 4px 12px rgba(255, 119, 0, 0.3); */
     transition: all 0.3s ease;              /* Smooth animation for hover */
     z-index: 10;                            /* Keeps button above other elements */
+    min-width: 205px;
 }
-.top-right-btn i {
+.btn i {
     color: #ffffff; 
 }
-.top-right-btn:hover {
+.btn:hover {
     background-color: #e66a00;              /* Slightly darker orange */
     transform: translateY(-2px);            /* Lifts the button slightly */
     box-shadow: 0 3px 8px rgba(255, 119, 0, 0.4);
@@ -107,7 +117,8 @@
     font-size: 2rem;
     font-family: 'Prompt', sans-serif;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 .tcas-wrapper {
     position: relative;
@@ -279,9 +290,9 @@
 }
 
 /* --- Tuition Card*/
-.tuition-card {
+.tuition-card-eng {
     position: relative; /* Removed the duplicate declaration */
-    background-image: url('/images/academics/engineering-building.jpg');
+    background-image: url('/images/academics/iote/engineering-building.jpg');
     background-size: cover;
     background-position: center; /* Added for better image centering */
     border-radius: 20px;
@@ -289,9 +300,9 @@
     min-height: 350px;
     align-items: center;
     overflow: hidden;
-    margin: 50px 50px; /* Added 'auto' to ensure it centers on large screens */
+    margin: 38px 50px; /* Added 'auto' to ensure it centers on large screens */
 }
-.tuition-card::before {
+.tuition-card-eng::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -344,11 +355,11 @@
 /* Info */
 .info-section {
     margin-top: 0px;
-    padding: 40px;
+    padding: 40px 40px 0px 40px;
     margin: 50px;
-    background: #fff; /* White background for the content block */
+    background: #c36b002c; /* White background for the content block */
     border-radius: 30px;
-    color: #333;
+    /* color: #333; */
     text-align: center;
     border: 1px solid black;
     /* gap: 50px; */
@@ -366,7 +377,7 @@
 }
 .info-description {
     font-size: 1rem;
-    color: #666;
+    color: var(--text-dark);
     line-height: 1.8;
     max-width: 1100px;
     margin: 0 auto 50px;
@@ -387,6 +398,9 @@
 }
 .media-img img {
     width: 100%;
+    /* width: 1000px; */
+    /* height: 500px; */
+    /* object-fit: contain; */
     display: block;
 }
 .media-overlay {
@@ -401,22 +415,63 @@
     color: #a04000;
     font-weight: 700;
     font-size: 1.5rem;
-    margin-left: -20px;
+    /* margin-left: -20px; */
 }
 .media-text {
     font-size: 0.95rem;
     line-height: 1.8;
-    color: #555;
+    color: var(--text-dark);
     max-width: 800px;
+    margin-left: 20px;
 }
-#info-career {
+/* #info-career {
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     margin: 0 auto 50px;
+} */
+
+#info-career {
+    display: grid;
+    /* Changed from 2fr 1fr to 1.2fr 1fr to make the image side wider */
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 40px; /* Increased gap for a cleaner look */
+    align-items: center; /* Aligns image vertically with the list */
+    margin: 0 auto 50px;
+    max-width: 1200px;
 }
+
+/* Specific styling for the career image container */
+.career-img-container {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Limits the maximum growth */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Slightly deeper shadow for depth */
+}
+
+.career-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container without stretching */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Subtle hover effect to make it look professional */
+/* .career-img-container:hover img {
+    transform: scale(1.03);
+} */
+
 
 /* Mobile Responsiveness */
 @media (max-width: 992px) {
+    .full-text {
+        display: none; /* Hide 'Bachelor' */
+    }
+    .short-text {
+        display: inline; /* Show 'B.' */
+    }
     .tuition-card { 
         flex-direction: column; 
         text-align: center;
@@ -429,6 +484,14 @@
     }
     .info-section {
         margin: 5px;
+    }
+    .info-media {
+        grid-template-columns: 1fr; /* Stack on mobile */
+        gap: 20px;
+    }
+    #info-career {
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
     }
 }
 
@@ -493,10 +556,12 @@
         text-align: center;
     }
 
-    .info-media {
-        grid-template-columns: 1fr; /* Stack on mobile */
+    .career-img-container {
+        max-width: 100%;
     }
+
     #info-career {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
