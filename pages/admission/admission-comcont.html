@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="/styles/components/navbar.css">
     <link rel="stylesheet" href="/styles/components/hero.css">
     <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/pages/academics.css">
     <link rel="stylesheet" href="/styles/pages/admission.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -20,17 +23,419 @@
     <main class="hero-subpage fade-in">
         <section class="header">
             <div class="breadcrumb-container">
-                <a href="/index.html" class="breadcrumb">Home</a>•<a href="/pages/academics/academics.html" class="breadcrumb">Academics</a>•<a href="/pages/academics/academics-comcont.html" class="breadcrumb">Computer (continue)</a><span class="breadcrumb" id="breadcrumb-last">Admission</span>
+                <a href="/index.html" class="breadcrumb">Home</a>•<a href="/pages/academics/academics.html" class="breadcrumb">Academics</a>•<a href="/pages/academics/academics-iot.html" class="breadcrumb">IoTE</a>•<span class="breadcrumb" id="breadcrumb-last">Admission</span>
             </div>
-            <div class="container">
-                <p class="page-title">Admission-ComCont</p>
+            <div class="container header-content">
+                <div>
+                    <p class="page-title"><span class="full-text">Bachelor of Engineering</span><span class="short-text">B.Eng</span> (Computer Engineering and IoT)</p>
+                    <p class="page-title"><span class="full-text">วิศวกรรมศาสตรบัณฑิต</span><span class="short-text">วศ.บ.</span> (วิศวกรรมคอมพิวเตอร์และไอโอที) </p>
+                </div>
             </div>
         </section>
-        <section class="body"></section>
+        <section class="body">
+
+            <div class="admission-timeline-container">
+                <p class="admission-main-title">Admission Schedule</p>
+                <div class="tcas-wrapper">
+                    <div class="tcas-line"></div>
+                    <div class="tcas-steps">
+                        <div class="tcas-node">
+                            <div class="tcas-date">1 มกราคม 2513<br><strong>20 ธันวาคม 2567</strong></div>
+                            <div class="tcas-dot"></div>
+                            <div class="tcas-box">
+                                <span class="tcas-code">TCAS1</span>
+                                <p class="tcas-name">Portfolio</p>
+                                <div class="tcas-capacity">จำนวน 30 ผู้สมัคร</div>
+                            </div>
+                        </div>
+                    
+                        <div class="tcas-node">
+                            <div class="tcas-date">1 มกราคม 2513<br><strong>14 มีนาคม 2568</strong></div>
+                            <div class="tcas-dot"></div>
+                            <div class="tcas-box">
+                                <span class="tcas-code">TCAS2</span>
+                                <p class="tcas-name">Quota</p>
+                                <div class="tcas-capacity">จำนวน 15 ผู้สมัคร</div>
+                            </div>
+                        </div>
+                    
+                        <div class="tcas-node">
+                            <div class="tcas-date">6-12 เมษายน<br><strong>พ.ศ. 2568</strong></div>
+                            <div class="tcas-dot"></div>
+                            <div class="tcas-box">
+                                <span class="tcas-code">TCAS3</span>
+                                <p class="tcas-name">Admission</p>
+                                <div class="tcas-capacity">จำนวน 5 ผู้สมัคร</div>
+                            </div>
+                        </div>
+
+                        <div class="tcas-node">
+                            <div class="tcas-date">6-12 เมษายน<br><strong>พ.ศ. 2568</strong></div>
+                            <div class="tcas-dot"></div>
+                            <div class="tcas-box">
+                                <span class="tcas-code">TCAS4</span>
+                                <p class="tcas-name">Direct Admission</p>
+                                <div class="tcas-capacity">ไม่เปิดรับสมัครในรอบนี้</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 1 -->
+            <div class="accordion-container">
+                <h2>รอบที่ 1 PORTFOLIO</h2>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการ Young Engineering Talent
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                                <li>ผู้สมัครจะต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อย 5 ภาคการศึกษา ไม่น้อยกว่า 3.50</li>
+                                <li>เป็นผู้ที่เคยได้รับรางวัลการแข่งขันในระดับชาติหรือระดับนานาชาติอย่างน้อย 1 รายการ ทางด้านคณิตศาสตร์ – วิทยาศาสตร์ หรือเทคโนโลยีที่เกี่ยวข้องกับสาขาวิชาที่สมัคร ทั้งนี้ต้องเป็นงานที่จัดขึ้นโดยหน่วยงานซึ่งเป็นที่ยอมรับ อย่างกว้างขวาง</li>
+                                <li>เป็นผู้ไม่มีโรคสำคัญที่เป็นอุปสรรคต่อการศึกษา</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>30 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการเรียนดี ช้างเผือก กลุ่มโรงเรียนสายสามัญ
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>โรงเรียนมีสิทธิ์เสนอชื่อนักเรียนได้ตามจํานวนและต้องให้นักเรียนที่มีผลการเรียนเฉลี่ยรวมอย่างน้อย 5 ภาคการศึกษา (ในระดับชั้นมัธยมศึกษาปีที่ 4-6) สูงที่สุด ได้รับสิทธิ์ในการส่งรายชื่อก่อนเสมอ</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>30 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการรางวัลและประกาศนียบัตรทางวิชาการ
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>เป็นผู้ไม่มีโรคสำคัญที่เป็นอุปสรรคต่อการศึกษา</li>
+                                <li>ผู้สมัครจะต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อย 5 ภาคการศึกษา ไม่น้อยกว่า 3.00</li>
+                                <li>เป็นผู้ที่มีผลงาน รางวัล หรือประกาศนียบัตร</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>30 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการโรงเรียนวิทยาศาสตร์
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>เป็นผู้ไม่มีโรคสำคัญที่เป็นอุปสรรคต่อการศึกษา</li>
+                                <li>ผู้สมัครจะต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อย 5 ภาคการศึกษา ไม่น้อยกว่า 3.00</li>
+                                <li>เป็นผู้ที่กำลังศึกษาระดับชั้นมัธยมศึกษาปีที่ 6 (สายวิทยาศาสตร์-คณิตศาสตร์) ในโรงเรียนวิทยาศาสตร์ หรือโรงเรียนที่มีโครงการห้องเรียนพิเศษด้านวิทยาศาสตร์-คณิตศาสตร์ หรือโรงเรียนที่มีการจัดการเรียนสอนให้แก่ผู้มีความสามารถ พิเศษด้านคณิตศาสตร์และวิทยาศาสตร์</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>30 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการ Engineering Pathway
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                                <li>เป็นผู้ที่เข้าร่วมเรียนในโครงการ Pre-Engineering School ที่จัดโดยคณะวิศวกรรมศาสตร์ สจล. และได้คะแนนเฉลี่ยสะสมรวมอย่างน้อย 3.5 จากการเรียน 6 วิช</li>
+                                <li>เป็นผู้ไม่มีโรคสำคัญที่เป็นอุปสรรคต่อการศึกษา</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>30 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการ Young Engineering Talent
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                                <li>ผู้สมัครจะต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อย 5 ภาคการศึกษา ไม่น้อยกว่า 3.50</li>
+                                <li>เป็นผู้ที่เคยได้รับรางวัลการแข่งขันในระดับชาติหรือระดับนานาชาติอย่างน้อย 1 รายการ ทางด้านคณิตศาสตร์ – วิทยาศาสตร์ หรือเทคโนโลยีที่เกี่ยวข้องกับสาขาวิชาที่สมัคร ทั้งนี้ต้องเป็นงานที่จัดขึ้นโดยหน่วยงานซึ่งเป็นที่ยอมรับ อย่างกว้างขวาง</li>
+                                <li>เป็นผู้ไม่มีโรคสำคัญที่เป็นอุปสรรคต่อการศึกษา</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>30 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการการให้โควตานักเรียนมูลนิธิส่งเสริมโอลิมปิกวิชาการและพัฒนามาตรฐานวิทยาศาสตร์ศึกษาในพระอุปถัมภ์สมเด็จพระเจ้าพี่นางเธอ เจ้าฟ้ากัลยาณิวัฒนากรมหลวงนราธิวาสราชนครินทร์(สอวน.)
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>สำเร็จการศึกษาหรือกำลังศึกษาระดับชั้นมัธยมศึกษาปีที่ 6 (สายวิทยาศาสตร์-คณิตศาสตร์และแผนการเรียนศิลป์-คำนวณ) </li>
+                                <li>ผู้สมัครจะต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อย 5 ภาคการศึกษา ไม่น้อยกว่า 3.50</li>
+                                <li>ต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อยรวม 4 ภาคการศึกษา ไม่น้อยกว่า 2.75</li>
+                                <li>เป็นผู้สำเร็จการอบรมค่าย 2 ของมูลนิธิ สอวน.</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>40 คน (รวมทุกหลักสูตร)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โครงการบุตรของบุคลากรสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>เป็นผู้ที่กำลังศึกษาระดับชั้นมัธยมศึกษาปีที่ 6 (สายวิทยาศาสตร์-คณิตศาสตร์) </li>
+                                <li>ต้องมีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อยรวม 5 ภาคการศึกษา ไม่น้อยกว่า 2.75</li>
+                                <li>เป็นผู้ไม่มีโรคสำคัญที่เป็นอุปสรรคต่อการศึกษา</li>
+                                <li>ผู้สมัครต้องเป็นบุตรโดยชอบด้วยกฎหมายของพนักงานสถาบัน ข้าราชการ หรือลูกจ้างประจำของสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบังเท่านั้น ซึ่งยกเว้นบุตรบุญธรรม</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>5 คน (รวมทุกหลักสูตร)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- 2 -->
+            <div class="accordion-container">
+                <h2>รอบที่ 2 QUOTA</h2>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โควตาเรียนดี
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                                <li>มีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อยรวม 5 ภาคการศึกษา ไม่น้อยกว่า 3.00</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>15 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โควตากิจกรรม K-Engineering
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                                <li>มีผลการเรียนเฉลี่ยสะสมรวมอย่างน้อยรวม 5 ภาคการศึกษา ไม่น้อยกว่า 2.75</li>
+                                <li>เป็นผู้ที่ผ่านการเข้าร่วมกิจกรรมและได้รับประกาศนียบัตรในโครงการทางวิชาการกับ คณะ วิศวกรรมศาสตร์ สจล.</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>15 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> โควตา KMITL One
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                                <li>มีผลการเรียนเฉลี่ยสะสมรวม 5 ภาคการศึกษา มากกว่า 3.00 หรือมากกว่า 2.75 สำหรับผู้สมัครโครงการ K-Engineering</li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>15 คน (รับร่วมกัน)</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- 3 -->
+            <div class="accordion-container">
+                <h2>รอบที่ 3 ADMISSION</h2>
+                <details class="custom-dropdown" close>
+                    <summary>
+                        <span class="arrow"></span> Admission
+                    </summary>
+                    <div class="custom-accordion">
+                        <div class="accordion-header" onclick="toggleDropdown()">
+                            <!-- <span class="arrow" id="dropdown-arrow"></span> โครงการ Young Engineering Talent -->
+                        </div>
+
+                        <div class="accordion-content" id="dropdown-content-admission">
+                            <h4>คุณสมบัติ</h4>
+                            <ul>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรแกนกลาง</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรนานาชาติ</li>
+                                <li>รับผู้สมัครที่จบจาก รร. หลักสูตรอาชีวะ</li>
+                            </ul>
+                            <br>
+                            <h4>เงื่อนไขการรับ</h4>
+                            <p class="condition">กำลังศึกษาหรือสำเร็จการศึกษาระดับมัธยมศึกษาตอนปลายสาย วิทย์-คณิต หรือประกาศนียบัตรวิชาชีพ (ปวช.) สายช่างอุตสาหกรรม ผู้สมัครต้องมีคะแนน TGAT , TPAT3 , A-level Math 1 และ Physics</p>
+                            <br>
+                            <h4>การคำนวณคะแนน</h4>
+                            <ul>
+                                <li><span>ความถนัดทั่วไป (TGAT)</span><span>20 %</span></li>
+                                <li><span>ความถนัดวิทยาศาสตร์ เทคโนโลยี วิศวกรรมศาสตร์ (TPAT3)</span><span>25 %</span></li>
+                                <li><span>A-Level คณิตศาสตร์ประยุกต์ 1 (พื้นฐาน+เพิ่มเติม)</span><span>25 %</span></li>
+                                <li><span>A-Level ฟิสิกส์</span><span>30 %</span></li>
+                            </ul>
+                            <br>
+                            <h4>จำนวนที่เปิดรับ</h4>
+                            <p>5 คน</p>
+                            <br>
+                            <h4>รายละเอียดเพิ่มเติม</h4>
+                            <p><a href="https://new.reg.kmitl.ac.th/admission/#/" target="_blank">https://new.reg.kmitl.ac.th/admission/#/</a></p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- 4 -->
+            <div class="accordion-container">
+                <h2>รอบที่ 4 DIRCT ADMISSION</h2>
+            </div>
+        </section>
     </main>
 
     <div id="footer-placeholder"></div>
-
     <script src="/script.js"></script>
 </body>
 </html>
+
