@@ -15,6 +15,12 @@
     font-weight: bold;
     margin-top: 30px;
 }
+.full-text {
+    display: inline; /* Hide 'Bachelor' */
+}
+.short-text {
+    display: none; /* Show 'B.' */
+}
 
 /* Update this section in faculty.css */
 
@@ -236,6 +242,7 @@
 
 /* For Tablets and smaller screens (under 992px) */
 @media (max-width: 992px) {
+
     .highlight-title {
         font-size: 1.8rem; /* Shrink title size */
         text-align: center;
@@ -272,6 +279,13 @@
 @media (max-width: 600px) {
     .body {
         margin: 5px;
+    }
+
+    .full-text {
+        display: none; /* Hide 'Bachelor' */
+    }
+    .short-text {
+        display: inline; /* Show 'B.' */
     }
 
     .page-title { 
