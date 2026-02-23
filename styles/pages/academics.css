@@ -302,7 +302,20 @@
     overflow: hidden;
     margin: 38px 50px; /* Added 'auto' to ensure it centers on large screens */
 }
-.tuition-card-eng::before {
+.tuition-card-sci {
+    position: relative; /* Removed the duplicate declaration */
+    background-image: url('/images/academics/physiot/science-building.jpg');
+    background-size: cover;
+    background-position: center; /* Added for better image centering */
+    border-radius: 20px;
+    display: flex;
+    min-height: 350px;
+    align-items: center;
+    overflow: hidden;
+    margin: 38px 50px; /* Added 'auto' to ensure it centers on large screens */
+}
+.tuition-card-eng::before,
+.tuition-card-sci::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -472,12 +485,12 @@
     .short-text {
         display: inline; /* Show 'B.' */
     }
-    .tuition-card { 
+    .tuition-card-eng, 
+    .tuition-card-sci { 
         flex-direction: column; 
         text-align: center;
-        margin-top: 100px;
-        margin: 0;
-        /* padding: 20px; */
+        margin: 0 20px 50px 20px;
+        padding: -20px;
     }
     .tuition-images { 
         display: none; /* Hide photos on small mobile to save space */
@@ -521,8 +534,6 @@
     }
 
     .floating-container {
-        margin-left: 5%;  /* Responsive spacing on left */
-        margin-right: 5%; /* Responsive spacing on right */
         /* margin-bottom: 50px; */
         background-color: #fff;
         border-radius: 8px; /* Slightly more rounded to match the CE reference */
