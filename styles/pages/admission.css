@@ -9,6 +9,16 @@ body {
     margin: 40px auto;
 }
 
+.accordion-content {
+    padding: 20px;
+}
+ul {
+    padding-left: 20px;
+}
+h4 {
+    margin-bottom: 10px;
+}
+
 h2 {
     font-weight: normal;
     color: #1a252f;
@@ -49,51 +59,51 @@ h2 {
     height: 10px;
     border-top: 3px solid white;
     border-right: 3px solid white;
-    transform: rotate(135deg); /* Points down when closed */
+    transform: rotate(45deg);
     margin-right: 15px;
     transition: transform 0.3s ease;
 }
 
 /* Arrow points up when dropdown is open */
 .custom-dropdown[open] summary .arrow {
-    transform: rotate(-45deg);
-    margin-top: 6px;
+    transform: rotate(135deg);
+    /* margin-top: 6px; */
 }
 
 /* The Content Inside */
-.dropdown-content {
+.dropdown-content-admission {
     padding: 25px;
     background-color: #ffffff;
 }
 
-.dropdown-content h4 {
+.dropdown-content-admission h4 {
     color: #2980b9; /* The blue text color for subheadings */
     font-size: 16px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.dropdown-content h4:first-child {
+.dropdown-content-admission h4:first-child {
     margin-top: 0;
 }
 
-.dropdown-content ul {
+.dropdown-content-admission ul {
     padding-left: 20px;
     color: #555;
     line-height: 1.8;
 }
 
-.dropdown-content p {
+.dropdown-content-admission p {
     color: #555;
     margin-bottom: 0;
 }
 
-.dropdown-content a {
+.dropdown-content-admission a {
     color: #2c3e50;
     font-weight: bold;
     text-decoration: none;
 }
 
-.dropdown-content a:hover {
+.dropdown-content-admission a:hover {
     text-decoration: underline;
 }
