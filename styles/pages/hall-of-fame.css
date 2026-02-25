@@ -77,7 +77,7 @@
     margin: 3% auto; /* ปรับ margin ให้เลื่อนขึ้นบนนิดหน่อย */
     padding: 40px;
     width: 90%;
-    max-width: 1000px; /* ขยายความกว้างให้ใหญ่ขึ้น */
+    max-width: 1500px; /* ขยายความกว้างให้ใหญ่ขึ้น */
     border-radius: 20px; /* มนขึ้นตามตัวอย่าง */
     position: relative;
     box-shadow: 0 25px 50px rgba(0,0,0,0.2);
@@ -85,8 +85,8 @@
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(0); }
+    to { opacity: 1; transform: translateY(30px); }
 }
 
 .close-btn {

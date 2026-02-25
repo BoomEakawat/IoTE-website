@@ -106,3 +106,33 @@ function toggleDropdown() {
         arrow.style.marginTop = "6px";
     }
 }
+
+// Script สำหรับจัดการ Popup
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('fame-modal');
+    const closeBtn = document.querySelector('.close-btn');
+    const cards = document.querySelectorAll('.fame-card');
+    cards.forEach(card => {
+        card.onclick = function() {
+            const title = this.querySelector('.fame-title').innerText;
+            const img = this.querySelector('img').src;
+            const date = this.querySelector('.fame-meta').innerText;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-img').src = img;
+            document.getElementById('modal-date').innerText = date;
+            
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // ปิด scroll หน้าจอหลัก
+        }
+    });
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    };
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    };
+});
