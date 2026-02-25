@@ -1,45 +1,56 @@
-/* --- HOME SPECIFIC HERO (Cinematic) --- */
-.hero-home {
-    position: relative;
-    padding-top: 70px;
-    padding-left: 30px;
-    height: 85vh; /* Taller for impact */
-    display: flex;
-    align-items: center;
-    background-image: url('/images/home-img1.jpg'); /* Root-relative path */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* ### 2. Update the CSS (`styles/pages/home.css`)
+Open your `home.css` file and add this new code to the very bottom. This will center your video, give it rounded corners, and make sure it automatically resizes for mobile phones.
+
+```css */
+/* --- Video Section --- */
+.video-section {
+    padding: 80px 20px 40px 20px;
+    text-align: center;
 }
 
-.hero-home .hero-overlay {
+.video-header {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    font-family: var(--font-en);
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin: 0;
+    font-family: var(--font-th);
+}
+
+/* The Responsive Video Wrapper */
+.video-container {
+    max-width: 900px; /* Prevents the video from becoming too massive on large screens */
+    margin: 0 auto;
+    border-radius: var(--radius-md); /* Rounds the corners of the video player */
+    overflow: hidden;
+    box-shadow: var(--shadow-float); /* Adds a premium floating shadow */
+    background-color: #000; /* Shows black while the video is loading */
+    aspect-ratio: 16 / 9; /* Forces the perfect widescreen YouTube ratio */
+    position: relative;
+}
+
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,80,0.85) 0%, rgba(0,0,0,0.3) 100%);
-    z-index: 1;
+    border: none;
 }
 
-.hero-home .container {
-    position: relative;
-    z-index: 2;
-    color: var(--white);
-}
-
-/* CTA Button Specific to Home */
-.cta-button {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 2px solid var(--white);
-    color: var(--white);
-    text-decoration: none;
-    font-family: 'Prompt', sans-serif;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background: var(--bg-light);
-    color: var(--accent-orange-hover);
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .section-title { font-size: 1.8rem; }
+    .section-subtitle { font-size: 1rem; }
+    .video-section { padding: 50px 20px 20px 20px; }
 }

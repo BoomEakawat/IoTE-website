@@ -48,6 +48,25 @@
     line-height: 1.8;
 }
 
+.roadmap {
+    max-width: 1100px; /* กำหนดความกว้างสูงสุด (ปรับตัวเลข 800px ลงได้ถ้ายังใหญ่ไป) */
+    margin: 20px auto; /* จัดกล่องให้อยู่กึ่งกลาง (auto) และเว้นระยะบนล่าง 40px */
+    text-align: center;
+}
+
+.roadmap img {
+    width: 100%; /* ให้รูปภาพกว้างเต็มพื้นที่ max-width */
+    height: auto; /* รักษาสัดส่วนของรูปไว้ ไม่ให้ยืดหรือเบี้ยว */
+    border-radius: 10px; /* (ตัวเลือกเสริม) ทำให้มุมรูปภาพโค้งมนดูสวยขึ้น */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* (ตัวเลือกเสริม) เพิ่มเงาให้รูปดูนูนขึ้นมา */
+}
+#roadmap-com {
+    max-width: 800px; /* กำหนดความกว้างสูงสุด (ปรับตัวเลข 800px ลงได้ถ้ายังใหญ่ไป) */
+    margin: 20px auto; /* จัดกล่องให้อยู่กึ่งกลาง (auto) และเว้นระยะบนล่าง 40px */
+    text-align: center;
+}
+
+
 /* Title */
 .header {
     /* margin: 0; */
@@ -74,7 +93,6 @@
     padding-bottom: 0;
     gap: 20px;
 }
-
 .button {
     display: flex;
     flex-direction: column; /* Stacks the buttons vertically */
@@ -290,7 +308,8 @@
 }
 
 /* --- Tuition Card*/
-.tuition-card-eng {
+.tuition-card-iot,
+.tuition-card-com {
     position: relative; /* Removed the duplicate declaration */
     background-image: url('/images/academics/iote/engineering-building.jpg');
     background-size: cover;
@@ -314,14 +333,31 @@
     overflow: hidden;
     margin: 50px 50px; /* Added 'auto' to ensure it centers on large screens */
 }
-.tuition-card-eng::before,
+.tuition-card-iot::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* Switched to a slightly deeper orange for better contrast */
+    background-color: rgba(255, 119, 0, 0.5); 
+    z-index: 0;
+}
 .tuition-card-sci::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
     /* Switched to a slightly deeper orange for better contrast */
-    background-color: rgba(255, 119, 0, 0.75); 
+    background-color: rgba(255, 213, 0, 0.5); 
+    z-index: 0;
+}
+.tuition-card-com::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* Switched to a slightly deeper orange for better contrast */
+    background-color: rgba(255, 81, 33, 0.5); 
     z-index: 0;
 }
 .tuition-info {
@@ -368,13 +404,13 @@
 /* Info */
 .info-section {
     margin-top: 0px;
-    padding: 40px 40px 0px 40px;
+    /* padding: 40px 40px 0px 40px; */
     margin: 50px;
-    background: #c36b002c; /* White background for the content block */
+    /* background: #4040402c; */
     border-radius: 30px;
     /* color: #333; */
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* gap: 50px; */
     display: flex;
     flex-direction: column; /* Stacks the buttons vertically */
@@ -391,7 +427,7 @@
 .info-description {
     font-size: 1rem;
     color: var(--text-dark);
-    line-height: 1.8;
+    line-height: 2;
     max-width: 1100px;
     margin: 0 auto 50px;
 }
@@ -402,6 +438,11 @@
     align-items: center;
     text-align: left;
     margin: 0 auto 50px;
+    max-width: 1200px;
+    line-height: 2;
+}
+li {
+    line-height: 2;
 }
 .media-img {
     position: relative;
@@ -446,7 +487,7 @@
 #info-career {
     display: grid;
     /* Changed from 2fr 1fr to 1.2fr 1fr to make the image side wider */
-    grid-template-columns: 1.2fr 1fr; 
+    grid-template-columns: 1fr 1fr; 
     gap: 40px; /* Increased gap for a cleaner look */
     align-items: center; /* Aligns image vertically with the list */
     margin: 0 auto 50px;

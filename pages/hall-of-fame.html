@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="/styles/components/hero.css">
     <link rel="stylesheet" href="/styles/components/footer.css">
     <link rel="stylesheet" href="/styles/pages/hall-of-fame.css">
+    <style>
+        /* สไตล์เพิ่มเติมสำหรับปุ่มปิดและ Layout ใน Modal */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .modal-content { background: white; margin: 5% auto; padding: 30px; width: 90%; max-width: 800px; border-radius: 15px; position: relative; animation: fadeIn 0.3s; }
+        .close-btn { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; color: #333; }
+        .modal-body { display: flex; gap: 25px; flex-wrap: wrap; }
+        .modal-img { width: 100%; max-width: 350px; border-radius: 10px; object-fit: cover; }
+        .modal-text { flex: 1; min-width: 280px; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -27,9 +37,10 @@
                 <p class="page-subtitle">Our students' achievements and success stories in the world of IoT.</p>
             </div>
         </section>
+
         <section class="body">
             <div class="fame-grid">
-                <article class="fame-card">
+                <article class="fame-card" style="cursor: pointer;">
                     <div class="fame-img-box">
                         <img src="/images/measurement-multimeter.png" alt="Award Ceremony">
                     </div>
@@ -42,7 +53,7 @@
                     </div>
                 </article>
             
-                <article class="fame-card">
+                <article class="fame-card" style="cursor: pointer;">
                     <div class="fame-img-box">
                         <img src="/images/safety-cap.png" alt="Student Project">
                     </div>
@@ -55,7 +66,7 @@
                     </div>
                 </article>
             
-                <article class="fame-card">
+                <article class="fame-card" style="cursor: pointer;">
                     <div class="fame-img-box">
                         <img src="/images/automatic-blending-machine.png" alt="Award Ceremony">
                     </div>
@@ -68,7 +79,7 @@
                     </div>
                 </article>
                 
-                <article class="fame-card">
+                <article class="fame-card" style="cursor: pointer;">
                     <div class="fame-img-box">
                         <img src="/images/ถังวัดปริมาณ.png" alt="Award Ceremony">
                     </div>
@@ -84,8 +95,58 @@
         </section>
     </main>
 
+    <div id="fame-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" class="modal-img" src="" alt="Detail Image">
+                <div class="modal-text">
+                    <h2 id="modal-title" style="color: var(--primary-blue); margin-bottom: 10px;"></h2>
+                    <p id="modal-date" style="color: #666; font-size: 0.9rem; margin-bottom: 15px;"></p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+                    <p>รายละเอียดเพิ่มเติมเกี่ยวกับผลงานชิ้นนี้ จะช่วยให้ผู้เข้าชมเข้าใจถึงนวัตกรรมและเทคโนโลยีที่ใช้ในโปรเจกต์ IoT ของนักศึกษา</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="footer-placeholder"></div>
 
+    <script>
+        // Script สำหรับจัดการ Popup
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('fame-modal');
+            const closeBtn = document.querySelector('.close-btn');
+            const cards = document.querySelectorAll('.fame-card');
+
+            cards.forEach(card => {
+                card.onclick = function() {
+                    const title = this.querySelector('.fame-title').innerText;
+                    const img = this.querySelector('img').src;
+                    const date = this.querySelector('.fame-meta').innerText;
+
+                    document.getElementById('modal-title').innerText = title;
+                    document.getElementById('modal-img').src = img;
+                    document.getElementById('modal-date').innerText = date;
+                    
+                    modal.style.display = "block";
+                    document.body.style.overflow = "hidden"; // ปิด scroll หน้าจอหลัก
+                }
+            });
+
+            closeBtn.onclick = () => {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            };
+
+            window.onclick = (event) => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    document.body.style.overflow = "auto";
+                }
+            };
+        });
+    </script>
     <script src="/script.js"></script>
 </body>
 </html>
