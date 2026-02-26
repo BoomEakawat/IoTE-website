@@ -4,7 +4,7 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
 ```css */
 /* --- Video Section --- */
 .video-section {
-    padding: 50px 20px;
+    padding: 50px 20px 50px 20px;
     text-align: center;
 }
 
@@ -61,11 +61,70 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
     .section-title { font-size: 1.8rem; }
     .section-subtitle { font-size: 1rem; }
     .video-section { padding: 50px 20px 20px 20px; }
+    .chart-v-wrapper {
+        height: 180px; /* จากเดิมอาจจะ 250px-300px ลดลงมาให้พอดี */
+        margin-bottom: 10px;
+    }
+
+    /* ปรับขนาดตัวเลขให้เล็กลงนิดนึงเพื่อให้สมดุล */
+    .big-number-display {
+        font-size: 1.5rem;
+    }
+
+    /* ปรับ padding ของการ์ดให้เล็กลงเพื่อประหยัดพื้นที่ */
+    .stat-card {
+        padding: 15px;
+    }
+    .top-row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* ระยะห่างระหว่างการ์ดบนกับล่าง */
+    }
+
+    .stat-right-col {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* ลดขนาดตัวเลขเปอร์เซ็นต์หลัก */
+    .big-number-display {
+        font-size: 1.8rem !important; /* ปรับลดจากเดิมที่อาจจะเป็น 2.5rem - 3rem */
+    }
+
+    /* กรณีตัวเลขในกล่องย่อยที่ต้องการให้เล็กกว่าเดิม */
+    .big-number-display.small {
+        font-size: 1.5rem !important;
+    }
+
+    /* 1. ลดความสูงของกราฟแนวตั้ง (อัตราการสำเร็จการศึกษา) */
+    .chart-v-wrapper {
+        margin-top: 40px;
+        height: 150px !important; /* ลดความสูงรวมของพื้นที่กราฟ */
+    }
+    
+    .chart-v-bar-bg {
+        width: 35px !important; /* ลดความกว้างของแท่งกราฟลง */
+    }
+
+    /* 2. ลดความหนาของกราฟแนวนอน (ได้งานทำ / ความพึงพอใจ) */
+    .chart-h-bg {
+        height: 15px !important; /* ปรับให้แถบดูเรียวบางลง */
+    }
+    
+    /* ปรับระยะห่างระหว่างตัวเลขกับแถบให้ชิดขึ้น */
+    .stat-row {
+        gap: 10px;
+    }
 }
 
 /* --- Dashboard Styles --- */
 .dashboard-section {
-    padding: 50px 20px;
+    padding: 50px 20px 0 20px;
+}
+.academics-dashboard {
+    padding: 0px 20px 20px 20px;
+    margin: 0;
 }
 
 .dashboard-wrapper {
@@ -122,10 +181,14 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
     background-color: #660000; /* สีแดงเข้ม */
 }
 
-/* .stat-icon {
+.stat-icon {
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 1.5rem;
     background-color: #e67e22;
     color: white;
-} */
+    margin-bottom: 15px;
+}
 
 .stat-val {
     color: #e67e22; /* สีส้มสำหรับตัวเลขค่าเทอม/เงินเดือน */
@@ -138,6 +201,7 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
     padding: 25px;
     box-shadow: var(--shadow-sm);
     border: 1px solid #eee;
+    margin-bottom: 20px;
 }
 
 .stat-card.info-box {
