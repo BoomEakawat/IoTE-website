@@ -138,38 +138,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const data = {
-    '2565': {
-        gradRate: '90.41%', jobRate: '93.22%', jobYear: '2564',
-        satRate: '87%', satYear: '2564', tuition: '25,000 บาท',
-        salary: '28,050', compete: '7', courseSat: '80.4'
-    },
-    '2564': {
-        gradRate: '67.74%', jobRate: '100%', jobYear: '2563',
-        satRate: '70.33%', satYear: '2563', tuition: '35,000 บาท',
-        salary: '34,000', compete: '8.67', courseSat: '78'
-    }
-};
-
-function updateDashboard(year) {
-    const d = data[year];
-    d = {
-    '2565': {
-        gradRate: '98.41%', 
-        jobRate: '93.22%', 
-        jobYear: '2564', // ข้อมูลจากปีก่อนหน้า
-        satRate: '87%', 
-        satYear: '2564', 
+    'iote': {
+        gradRate: '90.41%',
+        jobRate: '93.22%',
+        jobYear: '2564',
+        satRate: '87%',
+        satYear: '2564',
         tuition: '25,000 บาท',
-        salary: '28,050', 
-        compete: '7', 
+        salary: '28,050',
+        compete: '7',
         courseSat: '80.4'
     },
-    '2564': {
-        // ข้อมูลจากรูปภาพใหม่ที่คุณเพิ่งส่งมา
-        gradRate: '67.74%', 
-        jobRate: '100%', 
-        jobYear: '2563', 
-        satRate: '70.33%', 
+    'physiot': {
+        gradRate: '82.46%',
+        jobRate: '86.96%',
+        jobYear: '2563',
+        satRate: '69%',
+        satYear: '2563', 
+        tuition: '40,000 บาท',
+        salary: '23,144.44', 
+        compete: '2.81', 
+        courseSat: '78.2'
+    },
+    'com': {
+        gradRate: '67.74%',
+        jobRate: '100%',
+        jobYear: '2563',
+        satRate: '70.33%',
         satYear: '2563', 
         tuition: '35,000 บาท',
         salary: '34,000', 
@@ -177,8 +172,13 @@ function updateDashboard(year) {
         courseSat: '78'
     }
 };
+
+
+
+function updateDashboard(year) {
+    const d = data[year];
     
-    // อัปเดตตัวเลข
+    // --- โค้ดส่วนอัปเดตตัวเลขเดิมของคุณ ---
     document.getElementById('grad-rate').innerText = d.gradRate;
     document.getElementById('job-rate').innerText = d.jobRate;
     document.getElementById('sat-rate').innerText = d.satRate;
@@ -187,15 +187,21 @@ function updateDashboard(year) {
     document.getElementById('compete').innerText = d.compete;
     document.getElementById('course-sat').innerText = d.courseSat;
     
-    // อัปเดตกราฟ (ความกว้าง/ความสูง)
     document.getElementById('grad-bar').style.height = d.gradRate;
     document.getElementById('job-bar').style.width = d.jobRate;
     document.getElementById('sat-bar').style.width = d.satRate;
 
-    // เปลี่ยนสถานะปุ่ม Active
+    // --- ส่วนที่ต้องแก้เพื่อให้ Active ติด ---
+    // 1. เอา class 'active' ออกจากทุกปุ่มก่อน
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
-        if(btn.innerText.includes(year)) btn.classList.add('active');
     });
+
+    // 2. ใส่ class 'active' ให้กับปุ่มที่ถูกกด โดยหาจาก attribute 'onclick' ที่ตรงกับค่าที่ส่งมา
+    const activeBtn = document.querySelector(`button[onclick*="'${year}'"]`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+    }
 }
+
 
