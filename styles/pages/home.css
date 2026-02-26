@@ -78,7 +78,7 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
     .top-row {
         display: flex;
         flex-direction: column;
-        gap: 15px; /* ระยะห่างระหว่างการ์ดบนกับล่าง */
+        gap: 15px; 
     }
 
     .stat-right-col {
@@ -115,6 +115,10 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
     /* ปรับระยะห่างระหว่างตัวเลขกับแถบให้ชิดขึ้น */
     .stat-row {
         gap: 10px;
+    }
+
+    .stat-info-grid {
+        gap: 0px;
     }
 }
 
@@ -219,7 +223,7 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
 }
 
 .big-number-display {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--kmitl-red);
     margin: 10px 0;
