@@ -1,0 +1,158 @@
+.fame-grid {
+    display: grid;
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.fame-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.fame-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.fame-img-box {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes the image square like the reference */
+    overflow: hidden;
+}
+
+.fame-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fame-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fame-title {
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.fame-meta {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px); /* เบลอหลังพื้นหลังเหมือนในรูป */
+}
+
+.modal-content {
+    background: #fff;
+    margin: 3% auto; /* ปรับ margin ให้เลื่อนขึ้นบนนิดหน่อย */
+    padding: 40px;
+    width: 90%;
+    max-width: 1500px; /* ขยายความกว้างให้ใหญ่ขึ้น */
+    border-radius: 20px; /* มนขึ้นตามตัวอย่าง */
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(0); }
+    to { opacity: 1; transform: translateY(30px); }
+}
+
+.close-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #444;
+    transition: 0.2s;
+}
+
+.close-btn:hover { color: #000; }
+
+.modal-body {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.modal-image-container {
+    flex: 1.2; /* ให้พื้นที่รูปภาพกว้างขึ้น */
+}
+
+.modal-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.modal-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-title {
+    font-size: 2.2rem; /* ขนาดหัวข้อใหญ่ขึ้น */
+    color: #000080; /* สีน้ำเงินเข้ม */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.modal-meta-info {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.modal-meta-info p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-description {
+    line-height: 1.8;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+/* ปรับแต่งสำหรับมือถือ */
+@media (max-width: 850px) {
+    .modal-body { flex-direction: column; }
+    .modal-image-container { width: 100%; }
+    .modal-content { padding: 20px; margin: 10% auto; }
+}

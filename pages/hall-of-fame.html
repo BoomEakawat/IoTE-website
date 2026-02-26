@@ -27,10 +27,9 @@
                 <p class="page-subtitle">Our students' achievements and success stories in the world of IoT.</p>
             </div>
         </section>
-
         <section class="body">
             <div class="fame-grid">
-                <article class="fame-card" style="cursor: pointer;">
+                <article class="fame-card">
                     <div class="fame-img-box">
                         <img src="/images/measurement-multimeter.png" alt="Award Ceremony">
                     </div>
@@ -43,7 +42,7 @@
                     </div>
                 </article>
             
-                <article class="fame-card" style="cursor: pointer;">
+                <article class="fame-card">
                     <div class="fame-img-box">
                         <img src="/images/safety-cap.png" alt="Student Project">
                     </div>
@@ -56,7 +55,7 @@
                     </div>
                 </article>
             
-                <article class="fame-card" style="cursor: pointer;">
+                <article class="fame-card">
                     <div class="fame-img-box">
                         <img src="/images/automatic-blending-machine.png" alt="Award Ceremony">
                     </div>
@@ -69,7 +68,7 @@
                     </div>
                 </article>
                 
-                <article class="fame-card" style="cursor: pointer;">
+                <article class="fame-card">
                     <div class="fame-img-box">
                         <img src="/images/ถังวัดปริมาณ.png" alt="Award Ceremony">
                     </div>
@@ -82,26 +81,143 @@
                     </div>
                 </article>
             </div>
+            <div class="slider-container">
+
+             <!-- ปุ่มเลื่อน -->
+                <button class="nav-btn prev" onclick="moveSlide(-1)" aria-label="Previous">❮</button>
+                <button class="nav-btn next" onclick="moveSlide(1)" aria-label="Next">❯</button>
+
+                <!-- ตัว Slider -->
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <ul id="list" class="slider-track">
+
+                        <li class="slider-item">
+                            <figure class="active">
+                                <div class="slider-image">
+                                    <img src="/images/measurement-multimeter.png" alt="Measurement Multimeter">
+                                </div>
+                                <figcaption>
+                                    <h2>Measurement Multimeter</h2>
+                                    <p>15 Feb 2026 • Achievement</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="slider-item">
+                            <figure>
+                                <div class="slider-image">
+                                    <img src="/images/safety-cap.png" alt="Safety Cap">
+                                </div>
+                                <figcaption>
+                                    <h2>Safety Cap</h2>
+                                    <p>10 Feb 2026 • Achievement</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="slider-item">
+                            <figure>
+                                <div class="slider-image">
+                                    <img src="/images/automatic-blending-machine.png" alt="Automatic Blending Machine">
+                                </div>
+                                <figcaption>
+                                    <h2>Automatic Blending Machine</h2>
+                                    <p>15 Feb 2026 • Achievement</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="slider-item">
+                            <figure>
+                                <div class="slider-image">
+                                    <img src="/images/ถังวัดปริมาณ.png" alt="ถังวัดปริมาณ">
+                                </div>
+                                <figcaption>
+                                    <h2>ถังวัดปริมาณ</h2>
+                                    <p>15 Feb 2026 • Achievement</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
         </section>
     </main>
-
-    <div id="fame-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-body">
-                <img id="modal-img" class="modal-img" src="" alt="Detail Image">
-                <div class="modal-text">
-                    <h2 id="modal-title" style="color: var(--primary-blue); margin-bottom: 10px;"></h2>
-                    <p id="modal-date" style="color: #666; font-size: 0.9rem; margin-bottom: 15px;"></p>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
-                    <p>รายละเอียดเพิ่มเติมเกี่ยวกับผลงานชิ้นนี้ จะช่วยให้ผู้เข้าชมเข้าใจถึงนวัตกรรมและเทคโนโลยีที่ใช้ในโปรเจกต์ IoT ของนักศึกษา</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="footer-placeholder"></div>
 
     <script src="/script.js"></script>
+    <script>
+        const wrapper = document.getElementById('sliderWrapper');
+        const list = document.getElementById('list');
+        const figures = document.querySelectorAll('#list figure');
+        
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        // ฟังก์ชันจัดตำแหน่งให้การ์ดที่คลิกอยู่ตรงกลาง
+        const centerCard = (card) => {
+            figures.forEach(f => f.classList.remove('active'));
+            card.classList.add('active');
+
+            const wrapperRect = wrapper.getBoundingClientRect();
+            const cardRect = card.getBoundingClientRect();
+            const offset = cardRect.left - wrapperRect.left - (wrapperRect.width / 2) + (cardRect.width / 2);
+            
+            wrapper.scrollBy({
+                left: offset,
+                behavior: 'smooth'
+            });
+        };
+
+        // คลิกเพื่อเลือกการ์ด
+        figures.forEach(figure => {
+            figure.addEventListener('click', () => centerCard(figure));
+        });
+
+        // ปุ่มกดเลื่อน ซ้าย-ขวา
+        window.moveSlide = (direction) => {
+            const scrollAmount = 310; // ความกว้างการ์ด + gap
+            wrapper.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        };
+
+        // ระบบ Drag to Scroll (ลากด้วยเมาส์)
+        wrapper.addEventListener('mousedown', (e) => {
+            isDown = true;
+            wrapper.classList.add('active');
+            startX = e.pageX - wrapper.offsetLeft;
+            scrollLeft = wrapper.scrollLeft;
+            wrapper.style.scrollBehavior = 'auto'; // ปิด smooth ชั่วคราวเพื่อให้ลากลื่น
+        });
+
+        wrapper.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        wrapper.addEventListener('mouseup', () => {
+            isDown = false;
+            wrapper.style.scrollBehavior = 'smooth';
+        });
+
+        wrapper.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - wrapper.offsetLeft;
+            const walk = (x - startX) * 2; // ความเร็วในการลาก
+            wrapper.scrollLeft = scrollLeft - walk;
+        });
+
+        // เริ่มต้นให้เลื่อนมาตรงกลาง (ถ้าจำเป็น)
+        window.onload = () => {
+            const activeCard = document.querySelector('figure.active');
+            if (activeCard) centerCard(activeCard);
+        };
+    </script>
 </body>
 </html>
