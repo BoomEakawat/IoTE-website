@@ -29,6 +29,87 @@
                 </div>
             </div>
         </section>
+
+        <section class="dashboard-section container fade-in">
+            <div class="video-header">
+                <h2 class="section-title">Statistics & Performance</h2>
+                <p class="section-subtitle">ข้อมูลสถิติแยกตามปีการศึกษาและสาขาวิชา</p>
+            </div>
+        
+            <div class="dashboard-wrapper">
+                <div class="department-filter">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="updateDashboard('2565')">ปีการศึกษา 2565</button>
+                        <button class="tab-btn" onclick="updateDashboard('2564')">ปีการศึกษา 2564</button>
+                    </div>
+                </div>
+            
+                <div class="stat-top-row">
+                    <div class="stat-card graduation-card">
+                        <h3 class="stat-title">อัตราการสำเร็จการศึกษา</h3>
+                        <div class="big-number-display" id="grad-rate">90.41%</div>
+                        <div class="chart-v-wrapper">
+                    <span class="v-label">100%</span>
+                    <div class="chart-v-bar-bg">
+                        <div id="grad-bar" class="chart-v-fill" style="height: 90.41%;"></div>
+                    </div>
+                    <span class="v-label">0%</span>
+                        </div>
+                    </div>
+                
+                    <div class="stat-right-col">
+                        <div class="stat-card">
+                            <h3 class="stat-title">อัตราการได้งานทำ</h3>
+                            <p class="stat-sub" id="job-year">จากข้อมูลผู้สำเร็จการศึกษาปี 2564</p>
+                            <div class="stat-row">
+                                <div class="big-number-display small" id="job-rate">93.22%</div>
+                                <div class="chart-h-container">
+                                    <div class="chart-h-bg"><div id="job-bar" class="chart-h-fill" style="width: 93.22%;"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-title">ความพึงพอใจของนายจ้าง</h3>
+                            <p class="stat-sub" id="sat-year">จากข้อมูลผู้สำเร็จการศึกษาปี 2564</p>
+                            <div class="stat-row">
+                                <div class="big-number-display small" id="sat-rate">87%</div>
+                                <div class="chart-h-container">
+                                    <div class="chart-h-bg"><div id="sat-bar" class="chart-h-fill" style="width: 87%;"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="stat-info-grid">
+                    <div class="stat-card info-box">
+                        <div class="stat-icon">📋</div>
+                        <p>ค่าธรรมเนียมการศึกษาเฉลี่ย</p>
+                        <div class="stat-val" id="tuition">25,000 บาท</div>
+                        <p class="stat-sub">ต่อภาคเรียนการศึกษา</p>
+                    </div>
+                    <div class="stat-card info-box">
+                        <div class="stat-icon">💰</div>
+                        <p>เงินเดือนเฉลี่ยของนักศึกษา</p>
+                        <div class="stat-val" id="salary">28,050</div>
+                        <p class="stat-sub">ต่อเดือน</p>
+                    </div>
+                    <div class="stat-card info-box">
+                        <div class="stat-icon">👥</div>
+                        <p>อัตราการแข่งขันเฉลี่ย</p>
+                        <div class="stat-val" id="compete">7</div>
+                        <p class="stat-sub">เท่า</p>
+                    </div>
+                    <div class="stat-card info-box">
+                        <div class="stat-icon">👍</div>
+                        <p>ความพึงพอใจต่อหลักสูตร</p>
+                        <div class="stat-val" id="course-sat">80.4</div>
+                        <p class="stat-sub">ร้อยละ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="video-section container fade-in">
             <div class="video-header">
                 <h2 class="section-title">Get to Know IoTE</h2>
