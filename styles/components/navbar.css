@@ -123,6 +123,11 @@ header.scrolled {
     border-bottom: 2px solid var(--accent-orange);
 }
 
+#nav-dropdown:hover {
+    color: var(--accent-orange);
+    border-bottom: none;
+}
+
 .nav-link.active {
     font-weight: bold;
     color: var(--accent-orange) !important;
