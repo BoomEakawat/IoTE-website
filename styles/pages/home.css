@@ -120,6 +120,19 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
     .stat-info-grid {
         gap: 0px;
     }
+
+    .stat-title {
+        font-size: 0.9rem;
+    }
+    
+    .stat-val {
+        /* font-size: 0.9rem; */
+    }
+
+    .stat-sub {
+        font-size: 0.9rem;
+    }
+
 }
 
 /* --- Dashboard Styles --- */
@@ -263,7 +276,7 @@ Open your `home.css` file and add this new code to the very bottom. This will ce
 /* Grid */
 .stat-info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
     gap: 20px;
 }
 
