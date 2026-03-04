@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,210 +14,42 @@
     <link rel="stylesheet" href="/styles/components/footer.css">
     <link rel="stylesheet" href="/styles/pages/hall-of-fame.css">
 </head>
+
 <body>
     <div id="navbar-placeholder"></div>
 
-    <main class="hero-subpage fade-in">
+    <main class="hero-subpage fade-in ">
         <section class="header">
             <div class="breadcrumb-container">
                 <a href="/index.html" class="breadcrumb">Home</a>•<span class="breadcrumb" id="breadcrumb-last">Hall of Fame</span>
             </div>
             <div class="container">
                 <p class="page-title">Hall of Fame</p>
-                <p class="page-subtitle">Our students' achievements and success stories in the world of IoT.</p>
             </div>
         </section>
-        <section class="body">
-            <div class="fame-grid">
-                <article class="fame-card">
-                    <div class="fame-img-box">
-                        <img src="/images/measurement-multimeter.png" alt="Award Ceremony">
-                    </div>
-                    <div class="fame-info">
-                        <h3 class="fame-title">Measurement Multimeter</h3>
-                        <div class="fame-meta">
-                            <span>📅 15 Feb 2026</span>
-                            <span>📁 Achievement</span>
-                        </div>
-                    </div>
-                </article>
-            
-                <article class="fame-card">
-                    <div class="fame-img-box">
-                        <img src="/images/safety-cap.png" alt="Student Project">
-                    </div>
-                    <div class="fame-info">
-                        <h3 class="fame-title">Safety cap</h3>
-                        <div class="fame-meta">
-                            <span>📅 10 Feb 2026</span>
-                            <span>📁 Achievement</span>
-                        </div>
-                    </div>
-                </article>
-            
-                <article class="fame-card">
-                    <div class="fame-img-box">
-                        <img src="/images/automatic-blending-machine.png" alt="Award Ceremony">
-                    </div>
-                    <div class="fame-info">
-                        <h3 class="fame-title">Automatic Blending Machine</h3>
-                        <div class="fame-meta">
-                            <span>📅 15 Feb 2026</span>
-                            <span>📁 Achievement</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="fame-card">
-                    <div class="fame-img-box">
-                        <img src="/images/ถังวัดปริมาณ.png" alt="Award Ceremony">
-                    </div>
-                    <div class="fame-info">
-                        <h3 class="fame-title">ถังวัดปริมาณ</h3>
-                        <div class="fame-meta">
-                            <span>📅 15 Feb 2026</span>
-                            <span>📁 Achievement</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="slider-container">
 
-             <!-- ปุ่มเลื่อน -->
-                <button class="nav-btn prev" onclick="moveSlide(-1)" aria-label="Previous">❮</button>
-                <button class="nav-btn next" onclick="moveSlide(1)" aria-label="Next">❯</button>
-
-                <!-- ตัว Slider -->
-                <div class="slider-wrapper" id="sliderWrapper">
-                    <ul id="list" class="slider-track">
-
-                        <li class="slider-item">
-                            <figure class="active">
-                                <div class="slider-image">
-                                    <img src="/images/measurement-multimeter.png" alt="Measurement Multimeter">
-                                </div>
-                                <figcaption>
-                                    <h2>Measurement Multimeter</h2>
-                                    <p>15 Feb 2026 • Achievement</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li class="slider-item">
-                            <figure>
-                                <div class="slider-image">
-                                    <img src="/images/safety-cap.png" alt="Safety Cap">
-                                </div>
-                                <figcaption>
-                                    <h2>Safety Cap</h2>
-                                    <p>10 Feb 2026 • Achievement</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li class="slider-item">
-                            <figure>
-                                <div class="slider-image">
-                                    <img src="/images/automatic-blending-machine.png" alt="Automatic Blending Machine">
-                                </div>
-                                <figcaption>
-                                    <h2>Automatic Blending Machine</h2>
-                                    <p>15 Feb 2026 • Achievement</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li class="slider-item">
-                            <figure>
-                                <div class="slider-image">
-                                    <img src="/images/ถังวัดปริมาณ.png" alt="ถังวัดปริมาณ">
-                                </div>
-                                <figcaption>
-                                    <h2>ถังวัดปริมาณ</h2>
-                                    <p>15 Feb 2026 • Achievement</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                    </ul>
+        <section class="main-content">
+            <!-- Grid -->
+            <div class="fame-grid" id="fameGrid"></div>
+            <!-- Pagination -->
+            <nav class="pagination" id="pagination"></nav>
+            <!-- Modal -->
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="modal-content">
+                    <div class="modal-body" id="modalBody"></div>
                 </div>
-
             </div>
         </section>
+        
     </main>
-
+    
     <div id="footer-placeholder"></div>
 
-    <script src="/script.js"></script>
-    <script>
-        const wrapper = document.getElementById('sliderWrapper');
-        const list = document.getElementById('list');
-        const figures = document.querySelectorAll('#list figure');
-        
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+    <!-- ✅ Data JS -->
+    <script src="../js/data.js"></script>
 
-        // ฟังก์ชันจัดตำแหน่งให้การ์ดที่คลิกอยู่ตรงกลาง
-        const centerCard = (card) => {
-            figures.forEach(f => f.classList.remove('active'));
-            card.classList.add('active');
+    <!-- ✅ Page JS -->
+    <script src="../js/hall-of-fame.js"></script>
 
-            const wrapperRect = wrapper.getBoundingClientRect();
-            const cardRect = card.getBoundingClientRect();
-            const offset = cardRect.left - wrapperRect.left - (wrapperRect.width / 2) + (cardRect.width / 2);
-            
-            wrapper.scrollBy({
-                left: offset,
-                behavior: 'smooth'
-            });
-        };
-
-        // คลิกเพื่อเลือกการ์ด
-        figures.forEach(figure => {
-            figure.addEventListener('click', () => centerCard(figure));
-        });
-
-        // ปุ่มกดเลื่อน ซ้าย-ขวา
-        window.moveSlide = (direction) => {
-            const scrollAmount = 310; // ความกว้างการ์ด + gap
-            wrapper.scrollBy({
-                left: direction * scrollAmount,
-                behavior: 'smooth'
-            });
-        };
-
-        // ระบบ Drag to Scroll (ลากด้วยเมาส์)
-        wrapper.addEventListener('mousedown', (e) => {
-            isDown = true;
-            wrapper.classList.add('active');
-            startX = e.pageX - wrapper.offsetLeft;
-            scrollLeft = wrapper.scrollLeft;
-            wrapper.style.scrollBehavior = 'auto'; // ปิด smooth ชั่วคราวเพื่อให้ลากลื่น
-        });
-
-        wrapper.addEventListener('mouseleave', () => {
-            isDown = false;
-        });
-
-        wrapper.addEventListener('mouseup', () => {
-            isDown = false;
-            wrapper.style.scrollBehavior = 'smooth';
-        });
-
-        wrapper.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - wrapper.offsetLeft;
-            const walk = (x - startX) * 2; // ความเร็วในการลาก
-            wrapper.scrollLeft = scrollLeft - walk;
-        });
-
-        // เริ่มต้นให้เลื่อนมาตรงกลาง (ถ้าจำเป็น)
-        window.onload = () => {
-            const activeCard = document.querySelector('figure.active');
-            if (activeCard) centerCard(activeCard);
-        };
-    </script>
 </body>
 </html>
