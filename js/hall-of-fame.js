@@ -14,7 +14,7 @@ const allAchievements = [
     { id: 13, title: "Hackathon IoT KMITL 2023", desc: "รางวัลชนะเลิศการออกแบบเซนเซอร์", fullDesc: "vvc", date: "14/01/2023", img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?w=500" },
     { id: 14, title: "Robot Soccer Championship 2022", desc: "รองชนะเลิศอันดับที่ 2", fullDesc: "vvc", date: "20/11/2022", img: "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?w=500" },
     { id: 15, title: "Deep Tech Innovation 2021", desc: "รางวัลชมเชยด้านการแพทย์", fullDesc: "vvc", date: "12/10/2021", img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500" },
-    { id: 16, title: "KMITL Engineering Expo 2026", desc: "รางวัลชนะเลิศนวัตกรรม IoT เพื่อสิ่งแวดล้อมระดับอุดมศึกษา", fullDesc: "vvc", date: "02/03/2026", img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" }
+    { id: 16, title: "KMITL Engineering Expo 2026", desc: "รางวัลชนะเลิศนวัตกรรม IoT เพื่อสิ่งแวดล้อมระดับอุดมศึกษา", fullDesc: "loremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", date: "02/03/2026", img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" }
 ];
 
 const itemsPerPage = 12;
@@ -111,3 +111,28 @@ fetch('/components/footer.html')
         document.getElementById('footer-placeholder').innerHTML = data;
     })
     .catch(error => console.error('Error loading navbar:', error));
+
+// hall-of-fame.js
+
+function openModal(item) {
+    const modalOverlay = document.getElementById("modalOverlay");
+    const modalBody = document.getElementById("modalBody");
+    
+    modalBody.innerHTML = `
+        <img src="${item.img}" alt="${item.title}" style="width:100%; display:block;">
+        <div class="modal-text" style="padding: 30px;">
+            <h2 style="color: var(--primary-orange); margin-top:0;">${item.title}</h2>
+            <p>${item.fullDesc}</p>
+        </div>
+    `;
+    
+    modalOverlay.style.display = "flex"; // Triggers the centering
+    document.body.style.overflow = "hidden"; // Stop background scroll
+}
+
+// Add event listener for the close button
+document.getElementById("closeBtn").onclick = function() {
+    document.getElementById("modalOverlay").style.display = "none";
+    document.body.style.overflow = "auto";
+};
+
