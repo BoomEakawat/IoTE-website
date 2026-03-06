@@ -17,7 +17,7 @@ body {
 .main-content {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 10px 20px;
 }
 
 /* Header */
@@ -280,19 +280,31 @@ body {
 
 /* hall-of-fame.css */
 
+/* ปรับแต่งปุ่ม Slide Nav */
 .slide-nav {
     position: absolute;
-    top: 200px; /* กึ่งกลางความสูงรูป */
-    transform: translateY(-50%);
+    /* เปลี่ยนจากค่าคงที่ (เช่น 200px) เป็น 50% ของความสูงพื้นที่รูป */
+    top: 50%; 
+    transform: translateY(-50%); /* ดึงกลับขึ้นมาครึ่งหนึ่งของตัวปุ่มเพื่อให้กลางเป๊ะ */
+    
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 15px;
+    padding: 15px 10px;
     cursor: pointer;
     font-size: 24px;
-    z-index: 10002; /* ให้อยู่เหนือรูป */
-    border-radius: 5px;
+    z-index: 10002;
+    border-radius: 4px;
+    transition: 0.3s;
 }
+
+.slide-nav:hover {
+    background: #f7941e;
+}
+
+/* ตำแหน่งปุ่ม ซ้าย-ขวา */
+.prev { left: 10px; }
+.next { right: 10px; }
 
 .slide-nav:hover { background: #f7941e; }
 .prev { left: 10px; }
@@ -336,5 +348,63 @@ body {
     max-height: 500px;       /* จำกัดความสูงสูงสุดไม่ให้ล้นจอเกินไป */
     display: block;
     object-fit: contain;     /* ✅ หัวใจสำคัญ: ถ้ารูปสัดส่วนไม่พอดี มันจะรักษาทรงเดิมไว้ ไม่ยืด */
-    background-color: #f0f0f0; /* ใส่สีพื้นหลังกันเหวอะถ้ารูปเล็กกว่าพื้นที่ */
+    background-color: white; /* ใส่สีพื้นหลังกันเหวอะถ้ารูปเล็กกว่าพื้นที่ */
+}
+
+/* สำหรับหน้าจอมือถือ (ความกว้างน้อยกว่า 768px) */
+@media (max-width: 950px) {
+    .modal-content {
+        width: 100%;        /* ให้กว้างเต็มจอ */
+        max-width: 100%;    /* ปลดล็อคความกว้างสูงสุด */
+        height: 100vh;      /* ให้สูงเต็มหน้าจอ */
+        max-height: 100vh;
+        border-radius: 0;   /* ลบขอบมนออกเพื่อให้ดูเป็นหน้าจอใหม่ของมือถือ */
+        margin: 0;          /* ลบช่องว่างรอบๆ ออก */
+    }
+
+    .modal-overlay {
+        padding: 0;         /* ลบช่องว่างของตัวครอบพื้นหลัง */
+    }
+
+    .modal-image-wrapper {
+        height: auto;       /* ให้รูปปรับความสูงตามสัดส่วนจริง */
+    }
+
+    /* ปรับปุ่มปิดให้เด่นชัดขึ้นบนมือถือ */
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        position: fixed;
+        /* fbackground: rgba(0, 0, 0, 0.3);  */
+        /* color: white; */
+        /* border-radius: 50%;  */
+    }
+}
+
+/* 1. ลบ Padding ออกจากตัว Modal Body */
+.modal-body {
+    padding: 0 !important; /* บังคับให้ไม่มีช่องว่างรอบๆ เนื้อหาข้างใน */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. จัดการ Wrapper และรูปภาพให้ไม่มีช่องว่าง */
+.modal-image-wrapper {
+    width: 100%;
+    margin: 0;             /* ลบ Margin ออกให้หมด */
+    padding: 0;            /* ลบ Padding ออกให้หมด */
+    line-height: 0;        /* ป้องกันช่องว่างเล็กๆ ด้านล่างรูปภาพ (Ghost space) */
+}
+
+.modal-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;        /* เปลี่ยนเป็น block เพื่อไม่ให้มีช่องว่างบรรทัดด้านล่าง */
+}
+
+/* 3. (เพิ่มเติม) ถ้าคุณมี Padding ใน modal-content ให้ปรับออกด้วย */
+.modal-content {
+    padding: 0;            /* ตรวจดูว่าไม่ได้เผลอใส่ padding ไว้ตรงนี้ */
+    /* ส่วนประกอบอื่นยังคงเดิม */
 }
