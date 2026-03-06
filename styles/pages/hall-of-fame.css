@@ -148,6 +148,7 @@ body {
 .modal-body {
     background-color: #f9f9f9; 
     text-align: center;   /* Centers the image */
+    /* padding: 20px; */
 }
 
 .modal-text {
@@ -183,27 +184,43 @@ body {
     background: white;
     /* --- EXPAND SIZE HERE --- */
     width: 85%;
-    max-width: 1000px;     /* Increase from 600px to 750px for a "medium-large" feel */
+    max-width: 800px;     /* Increase from 600px to 750px for a "medium-large" feel */
     max-height: 95vh;     /* Allow it to take up more vertical space if needed */
     border-radius: 15px;  /* Slightly more rounded for a modern look */
     box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 
     /* --- CRITICAL: Force vertical behavior --- */
     overflow-x: hidden; /* Hide the horizontal scrollbar */
-    overflow-y: hidden;   /* Show vertical scrollbar when needed */
+    overflow-y: auto;   /* Show vertical scrollbar when needed */
     
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
+/* hall-of-fame.css */
+
 .modal-text {
     padding: 30px;
+    background-color: #ffffff;
     
-    /* --- CRITICAL: Force text to wrap --- */
-    overflow-wrap: break-word; /* Modern standard */
-    word-wrap: break-word;     /* Older browsers */
-    word-break: break-word;    /* Forces breaks in strings with no spaces */
+    /* --- การจัดเรียงข้อความให้เหมือน Facebook --- */
+    text-align: left;           /* ชิดซ้ายเหมือนต้นฉบับ */
+    line-height: 1.6;           /* เพิ่มระยะห่างระหว่างบรรทัดให้อ่านง่ายขึ้น */
+    white-space: pre-line;      /* สำคัญมาก: เพื่อให้ขึ้นบรรทัดใหม่ตามที่เราพิมพ์ใน JS */
+    color: #1c1e21;             /* สีตัวอักษรโทน Facebook */
+    font-size: 1rem;
+}
+
+.modal-text h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #050505;
+}
+
+.modal-text p {
+    margin: 0;                  /* ลด margin ของ p เพื่อให้ควบคุมด้วย pre-line แทน */
 }
 
 /* Ensure the image scales nicely with the larger box */
@@ -211,9 +228,10 @@ body {
     /* width: 100%; */
     width: 100%;
     height: 400px;
-    max-height: 1000px;    /* Increased max-height to match the wider box */
-    object-fit: cover;
+    max-height: 400px;    /* Increased max-height to match the wider box */
+    object-fit: contain;
     display: block;
+
 }
 
 
@@ -239,15 +257,15 @@ body {
     z-index: 9999;          /* Force it to be on the very top layer */
     color: #434343;         /* Make it solid black so you can see it */
     /* background: rgb(255, 0, 0); */
-    width: 50px;            /* Give it some size */
+    width: 50px; 
     height: 50px;
-    border-radius: 50%;     /* Make the background circular */
+    /* border-radius: 50%; */
     display: flex;          /* Center the X inside the circle */
     justify-content: center;
     align-items: center;
     /* ------------------------ */
     
-    font-size: 75px;
+    font-size: 65px;
     font-weight: 200;
     cursor: pointer;
     /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
@@ -276,4 +294,5 @@ body {
 .slide-nav:hover { background: #f7941e; }
 .prev { left: 10px; }
 .next { right: 10px; }
+
 

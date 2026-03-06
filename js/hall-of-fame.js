@@ -2,17 +2,41 @@ const allAchievements = [
     { 
         id: 1, 
         title: "CARC 2025...", 
-        // Change 'img' to 'images' array
         images: [
-            "/images/amnach-large.png",
-            "/images/automatic-blending-machine.png",
-            "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500"
+            "/images/hall-of-fame/test.png",
         ],
-        desc: "...", 
-        fullDesc: "...", 
+        desc: "...",
+        fullDesc: `📣✨ เมื่อวันที่ 9 ก.พ. ที่ผ่านมา นักศึกษาจาก Chuo University...
+
+            🎤 โดยได้รับเกียรติจาก
+            👨‍🏫 Prof. Dr. Jun Lio (Chuo University)
+            👩‍🏫 ผศ.ดร.เกล็ดดาว สัตย์เจริญ...
+
+            บรรยากาศเต็มไปด้วยพลังการเรียนรู้และความร่วมมือ 💡🙌
+            นักศึกษาได้แลกเปลี่ยนมุมมองทางวิจัยร่วมกันอย่างน่าสนใจ...
+
+            ขอขอบคุณทุกท่านที่ร่วมสร้างพื้นที่แลกเปลี่ยนทางวิชาการที่มีคุณค่า... 💪🌟`,
         date: "20/06/2025" 
     },
-    // Update other items similarly...
+    { 
+        id: 1, 
+        title: "CARC 2025...", 
+        images: [
+            "/images/hall-of-fame/test.png",
+        ],
+        desc: "...",
+        fullDesc: `📣✨ เมื่อวันที่ 9 ก.พ. ที่ผ่านมา นักศึกษาจาก Chuo University...
+
+            🎤 โดยได้รับเกียรติจาก
+            👨‍🏫 Prof. Dr. Jun Lio (Chuo University)
+            👩‍🏫 ผศ.ดร.เกล็ดดาว สัตย์เจริญ...
+
+            บรรยากาศเต็มไปด้วยพลังการเรียนรู้และความร่วมมือ 💡🙌
+            นักศึกษาได้แลกเปลี่ยนมุมมองทางวิจัยร่วมกันอย่างน่าสนใจ...
+
+            ขอขอบคุณทุกท่านที่ร่วมสร้างพื้นที่แลกเปลี่ยนทางวิชาการที่มีคุณค่า... 💪🌟`,
+        date: "20/06/2025" 
+    }
 ];
 
 const itemsPerPage = 12;
