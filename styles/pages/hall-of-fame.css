@@ -256,3 +256,23 @@ body {
     color: #f7941e;    /* Changes to orange on hover */
 }
 
+/* hall-of-fame.css */
+
+.slide-nav {
+    position: absolute;
+    top: 200px; /* กึ่งกลางความสูงรูป */
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10002; /* ให้อยู่เหนือรูป */
+    border-radius: 5px;
+}
+
+.slide-nav:hover { background: #f7941e; }
+.prev { left: 10px; }
+.next { right: 10px; }
+
