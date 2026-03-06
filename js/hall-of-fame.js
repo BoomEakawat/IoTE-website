@@ -22,7 +22,7 @@ const allAchievements = [
         id: 1, 
         title: "CARC 2025...", 
         images: [
-            "/images/hall-of-fame/test.png",
+            "/images/hall-of-fame/2.png",
         ],
         desc: "...",
         fullDesc: `📣✨ เมื่อวันที่ 9 ก.พ. ที่ผ่านมา นักศึกษาจาก Chuo University...
