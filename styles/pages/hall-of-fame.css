@@ -232,24 +232,25 @@ body {
 
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 0px;
+    right: 0px;
     
     /* --- FIXES START HERE --- */
     z-index: 9999;          /* Force it to be on the very top layer */
-    color: #000000;         /* Make it solid black so you can see it */
-    background: rgb(255, 0, 0);      /* Add a background if it's over a dark image */
-    width: 30px;            /* Give it some size */
-    height: 30px;
+    color: #434343;         /* Make it solid black so you can see it */
+    /* background: rgb(255, 0, 0); */
+    width: 50px;            /* Give it some size */
+    height: 50px;
     border-radius: 50%;     /* Make the background circular */
     display: flex;          /* Center the X inside the circle */
     justify-content: center;
     align-items: center;
     /* ------------------------ */
     
-    font-size: 24px;
+    font-size: 75px;
+    font-weight: 200;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
 }
 
 .close-btn:hover {
