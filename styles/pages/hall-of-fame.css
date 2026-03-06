@@ -141,7 +141,7 @@ body {
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    display: none; 
+    /* display: none;  */
 }
 
 /* Optional: Add a background to the image area if the image is small */
@@ -168,7 +168,7 @@ body {
     left: 0;
     width: 100vw;    /* Force full width */
     height: 100vh;   /* Force full height of the screen */
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
     display: none; 
     justify-content: center;
     align-items: center;
@@ -182,32 +182,40 @@ body {
 .modal-content {
     background: white;
     /* --- EXPAND SIZE HERE --- */
-    width: 85%;           /* Increase from 70% to 85% for better mobile scaling */
+    width: 85%;
     max-width: 1000px;     /* Increase from 600px to 750px for a "medium-large" feel */
-    
-    max-height: 90vh;     /* Allow it to take up more vertical space if needed */
+    max-height: 95vh;     /* Allow it to take up more vertical space if needed */
     border-radius: 15px;  /* Slightly more rounded for a modern look */
-    
-    position: relative;
-    overflow-y: auto;
     box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
+    /* --- CRITICAL: Force vertical behavior --- */
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+    overflow-y: hidden;   /* Show vertical scrollbar when needed */
+    
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.modal-text {
+    padding: 30px;
+    
+    /* --- CRITICAL: Force text to wrap --- */
+    overflow-wrap: break-word; /* Modern standard */
+    word-wrap: break-word;     /* Older browsers */
+    word-break: break-word;    /* Forces breaks in strings with no spaces */
 }
 
 /* Ensure the image scales nicely with the larger box */
 .modal-body img {
     /* width: 100%; */
-    width: 750px;
-    height: 250px;
+    width: 100%;
+    height: 400px;
     max-height: 1000px;    /* Increased max-height to match the wider box */
     object-fit: cover;
     display: block;
 }
 
-.modal-text {
-    padding: 30px 40px;   /* Added more padding for a more "premium" feel */
-}
 
 * {
     box-sizing: border-box;
@@ -215,5 +223,36 @@ body {
 
 body {
     overflow-x: hidden; /* Prevents side-to-side blank space */
+}
+
+/* hall-of-fame.css */
+
+/* 2. Style the X button and pin it to the top-right */
+/* hall-of-fame.css */
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    
+    /* --- FIXES START HERE --- */
+    z-index: 9999;          /* Force it to be on the very top layer */
+    color: #000000;         /* Make it solid black so you can see it */
+    background: rgb(255, 0, 0);      /* Add a background if it's over a dark image */
+    width: 30px;            /* Give it some size */
+    height: 30px;
+    border-radius: 50%;     /* Make the background circular */
+    display: flex;          /* Center the X inside the circle */
+    justify-content: center;
+    align-items: center;
+    /* ------------------------ */
+    
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.close-btn:hover {
+    color: #f7941e;    /* Changes to orange on hover */
 }
 

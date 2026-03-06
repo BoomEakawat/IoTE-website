@@ -1,5 +1,5 @@
 const allAchievements = [
-    { id: 1, title: "CARC 2025: การแข่งขันสร้างและควบคุมหุ่นยนต์อัตโนมัติ", desc: "รองชนะเลิศอันดับที่ 1 และ 2 และรางวัลชมเชย", fullDesc: "vvc11111111", date: "20/06/2025", img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500" },
+    { id: 1, title: "CARC 2025: การแข่งขันสร้างและควบคุมหุ่นยนต์อัตโนมัติ", desc: "รองชนะเลิศอันดับที่ 1 และ 2 และรางวัลชมเชย", fullDesc: "loremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", date: "20/06/2025", img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500" },
     { id: 2, title: "TESA Top Gun Rally 2024", desc: "รางวัลชนะเลิศระดับประเทศ", fullDesc: "vvc", date: "16/05/2025", img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500" },
     { id: 3, title: "IOT Super Natural Rubber Hackathon 2024", desc: "รางวัลชมเชยการพัฒนาเทคโนโลยี", fullDesc: "vvc", date: "05/02/2025", img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500" },
     { id: 4, title: "The 2nd ASEAN Cyber Shield Hacking Contest", desc: "รองชนะเลิศอันดับที่ 3 ระดับภูมิภาคเอเชียตะวันออกเฉียงใต้", fullDesc: "vvc", date: "22/12/2024", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500" },
@@ -14,7 +14,7 @@ const allAchievements = [
     { id: 13, title: "Hackathon IoT KMITL 2023", desc: "รางวัลชนะเลิศการออกแบบเซนเซอร์", fullDesc: "vvc", date: "14/01/2023", img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?w=500" },
     { id: 14, title: "Robot Soccer Championship 2022", desc: "รองชนะเลิศอันดับที่ 2", fullDesc: "vvc", date: "20/11/2022", img: "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?w=500" },
     { id: 15, title: "Deep Tech Innovation 2021", desc: "รางวัลชมเชยด้านการแพทย์", fullDesc: "vvc", date: "12/10/2021", img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500" },
-    { id: 16, title: "KMITL Engineering Expo 2026", desc: "รางวัลชนะเลิศนวัตกรรม IoT เพื่อสิ่งแวดล้อมระดับอุดมศึกษา", fullDesc: "loremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddloremfsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", date: "02/03/2026", img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" }
+    { id: 16, title: "KMITL Engineering Expo 2026", desc: "รางวัลชนะเลิศนวัตกรรม IoT เพื่อสิ่งแวดล้อมระดับอุดมศึกษา", fullDesc: "fdf", date: "02/03/2026", img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" }
 ];
 
 const itemsPerPage = 12;
@@ -24,6 +24,24 @@ const grid = document.getElementById("fameGrid");
 const pagination = document.getElementById("pagination");
 const modalOverlay = document.getElementById("modalOverlay");
 const modalBody = document.getElementById("modalBody");
+
+// เริ่มต้นการทำงาน
+renderGrid(currentPage);
+renderPagination();
+
+fetch('/components/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+
+fetch('/components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
 
 // ฟังก์ชันแสดงการ์ด
 function renderGrid(page) {
@@ -49,6 +67,7 @@ function renderGrid(page) {
     });
 }
 
+/*
 // ฟังก์ชันเปิด Modal
 function openModal(item) {
     modalBody.innerHTML = `
@@ -67,6 +86,7 @@ function closeModal() {
     modalOverlay.style.display = "none";
     document.body.style.overflow = "auto"; // คืนค่า scroll หน้าหลัก
 }
+*/
 
 // ปิดเมื่อคลิกที่พื้นหลัง (Overlay)
 modalOverlay.onclick = (e) => {
@@ -94,23 +114,7 @@ function renderPagination() {
     }
 }
 
-// เริ่มต้นการทำงาน
-renderGrid(currentPage);
-renderPagination();
 
-fetch('/components/navbar.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
-
-fetch('/components/footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
 
 // hall-of-fame.js
 
@@ -129,10 +133,23 @@ function openModal(item) {
     modalOverlay.style.display = "flex"; // Triggers the centering
     document.body.style.overflow = "hidden"; // Stop background scroll
 }
+// Existing closeModal function for reference
+function closeModal() {
+    modalOverlay.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
 
 // Add event listener for the close button
 document.getElementById("closeBtn").onclick = function() {
     document.getElementById("modalOverlay").style.display = "none";
     document.body.style.overflow = "auto";
+};
+
+// At the bottom of your file
+const closeBtn = document.getElementById("closeBtn");
+
+closeBtn.onclick = function() {
+    closeModal(); // Calls your existing function to hide the modal
 };
 
