@@ -249,7 +249,7 @@ body {
 /* hall-of-fame.css */
 
 .close-btn {
-    position: absolute;
+    position: fixed; 
     top: 0px;
     right: 0px;
     
@@ -269,11 +269,14 @@ body {
     font-weight: 200;
     cursor: pointer;
     /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+    top: 20px; 
+    right: calc(50% - 380px); /* ตัวอย่างการคำนวณให้อยู่ชิดขอบ Modal ที่กว้าง 800px */
 }
 
 .close-btn:hover {
     color: #f7941e;    /* Changes to orange on hover */
 }
+
 
 /* hall-of-fame.css */
 
@@ -295,4 +298,33 @@ body {
 .prev { left: 10px; }
 .next { right: 10px; }
 
+
+/* ส่วนเนื้อหาใน Modal */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+/* แก้ไขส่วน Wrapper ของรูปภาพ */
+.modal-image-wrapper {
+    width: 100%;
+    height: auto;            /* เปลี่ยนจาก 500px เป็น auto เพื่อให้ยืดตามรูป */
+    background-color: #fff;  /* เปลี่ยนจากสีดำเป็นสีขาว (หรือสีพื้น Modal) */
+    display: block;          /* ไม่ต้องใช้ flex จัดกลางแล้วเพราะรูปจะเต็มความกว้าง */
+    overflow: hidden;
+}
+
+.modal-image-wrapper img {
+    width: 100%;             /* ให้รูปขยายเต็มความกว้างของ Modal */
+    height: auto;            /* ให้ความสูงปรับตามอัตราส่วนของรูปจริง */
+    display: block;
+    object-fit: initial;     /* ไม่ต้องใช้ contain แล้ว */
+}
+
+/* ปรับส่วนข้อความด้านล่าง */
+.modal-text {
+    padding: 25px;
+    background: white;
+}
 

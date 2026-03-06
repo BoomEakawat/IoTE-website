@@ -19,7 +19,7 @@ const allAchievements = [
         date: "20/06/2025" 
     },
     { 
-        id: 1, 
+        id: 2, 
         title: "CARC 2025...", 
         images: [
             "/images/hall-of-fame/2.png",
@@ -191,21 +191,24 @@ function openModal(item) {
 
 function showSlide() {
     const modalBody = document.getElementById("modalBody");
-    const item = allAchievements.find(a => (a.images && a.images.includes(currentImages[0])) || a.img === currentImages[0]);
+    const item = allAchievements.find(a => 
+        (a.images && a.images.includes(currentImages[0])) || a.img === currentImages[0]
+    );
 
+    // ตรวจสอบว่าโครงสร้าง HTML สะอาด ไม่มี inline style มาล็อคความสูง
     modalBody.innerHTML = `
-        <img src="${currentImages[currentImgIndex]}" style="width:100%; height:400px; object-fit:cover;">
+        <div class="modal-image-wrapper">
+            <img src="${currentImages[currentImgIndex]}" alt="${item.title}">
+        </div>
         <div class="modal-text">
             <h2>${item.title}</h2>
             <p>${item.fullDesc}</p>
         </div>
     `;
 
-    // Show/Hide buttons based on image count
     const navButtons = document.querySelectorAll('.slide-nav');
     navButtons.forEach(btn => btn.style.display = currentImages.length > 1 ? 'block' : 'none');
 }
-
 // Button Events
 document.getElementById("nextSlide").onclick = (e) => {
     e.stopPropagation();
