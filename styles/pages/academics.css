@@ -526,8 +526,9 @@ li {
     .short-text {
         display: inline; /* Show 'B.' */
     }
-    .tuition-card-eng, 
-    .tuition-card-sci { 
+    .tuition-card-iot,
+    .tuition-card-sci,
+    .tuition-card-com { 
         flex-direction: column; 
         text-align: center;
         margin: 20px 20px 50px 20px;
