@@ -421,3 +421,92 @@ body {
     }
 }
 
+/* Container หลักของ Slider */
+.latest-highlights {
+    margin-bottom: 50px;
+    position: relative;
+    padding: 0 40px;
+}
+
+/* ปุ่มเลื่อนซ้าย-ขวา */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.carousel-btn.prev { left: 0; }
+.carousel-btn.next { right: 0; }
+.carousel-btn:hover { background: var(--primary-orange); color: white; }
+
+/* ค้นหาและแทนที่ส่วนที่เกี่ยวข้องกับ Slider ใน hall-of-fame.css */
+
+
+/* ปรับให้ Responsive ตามขนาดหน้าจอ */
+@media (max-width: 1200px) {
+    .slider-track .fame-card { min-width: calc(75% - 14px); } /* โชว์ 3 อัน */
+}
+@media (max-width: 768px) {
+    .slider-track .fame-card { min-width: calc(50% - 10px); }    /* โชว์ 2 อัน */
+}
+@media (max-width: 480px) {
+    .slider-track .fame-card { min-width: 100%; }                /* โชว์ 1 อัน */
+}
+
+/* --- ชุดโค้ดแก้ไขสำหรับ Home Slider --- */
+
+/* --- ส่วนนี้คือจุดที่ทำให้ก่อนหน้านี้มันเพี้ยน --- */
+.slider-track-viewport {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 50px 0;
+    display: block; /* สำคัญมาก: ห้ามใช้ flex และ justify-content: center ตรงนี้เด็ดขาด */
+}
+
+.slider-track {
+    display: flex;
+    justify-content: flex-start; /* บังคับให้การ์ดเริ่มเรียงจากขอบซ้ายสุดเสมอ */
+    margin: 0;
+    padding: 0;
+    gap: 50px; 
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+    align-items: center; 
+}
+
+/* ส่วนสไตล์การ์ดยังคงเดิม */
+.slider-track .fame-card {
+    width: 260px;
+    min-width: 300px;
+    height: 350px; 
+    flex-shrink: 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer; /* ให้มีลูกศรชี้ว่ากดได้ */
+    
+    /* opacity: 0.6; */
+    opacity: 1;
+    transform: scale(1); 
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slider-track .fame-card.active {
+    opacity: 1;
+    transform: scale(1.15); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+

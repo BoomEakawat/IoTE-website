@@ -520,10 +520,28 @@ function openModal(item) {
     document.body.style.overflow = "hidden"; // Stop background scroll
 }
 // Existing closeModal function for reference
+// =========================================
+// ระบบปิด Modal (ใช้ได้กับทุกหน้าอย่างปลอดภัย)
+// =========================================
 function closeModal() {
-    modalOverlay.style.display = "none";
-    document.body.style.overflow = "auto";
+    const modalOverlay = document.getElementById("modalOverlay");
+    if (modalOverlay) {
+        modalOverlay.style.display = "none";
+        document.body.style.overflow = "auto"; // คืนค่าให้หน้าเว็บเลื่อนขึ้นลงได้
+    }
 }
+
+// ใช้ Event Listener ดักจับการคลิก (ปลอดภัยกว่าการใช้ .onclick ตรงๆ)
+document.addEventListener('click', function(e) {
+    // 1. ปิดเมื่อกดปุ่มกากบาท (X)
+    if (e.target && e.target.id === 'closeBtn') {
+        closeModal();
+    }
+    // 2. ปิดเมื่อคลิกพื้นที่ว่างสีดำ (Overlay) ด้านนอกกล่อง
+    if (e.target && e.target.id === 'modalOverlay') {
+        closeModal();
+    }
+});
 
 
 // Add event listener for the close button
@@ -590,6 +608,7 @@ function showSlide() {
     const navButtons = document.querySelectorAll('.slide-nav');
     navButtons.forEach(btn => btn.style.display = currentImages.length > 1 ? 'flex' : 'none');
 }
+
 // Button Events
 document.getElementById("nextSlide").onclick = (e) => {
     e.stopPropagation();
@@ -634,4 +653,121 @@ function renderGrid(page) {
     });
 }
 
+
+// --- ฟังก์ชันสร้าง Slider (ใช้ร่วมกันได้ทุกหน้า) ---
+// --- วางทับฟังก์ชัน initLatestSlider เดิมใน hall-of-fame.js ---
+// =========================================
+// ส่วน JS สำหรับ Home Slider (แทนที่ initLatestSlider ของเดิม)
+// =========================================
+// =========================================
+// โค้ด Slider อัปเกรดใหม่ล่าสุด (วางทับของเดิม)
+// =========================================
+function initLatestSlider() {
+    const track = document.getElementById('latestSliderTrack');
+    if (!track) return;
+
+    const originalItems = allAchievements.slice(0, 8);
+    
+    const createCardHTML = (item) => {
+        const displayImg = (item.images && item.images.length > 0) ? item.images[0] : (item.img || "");
+        return `
+            <div class="fame-card" data-id="${item.id}">
+                <div class="fame-img-box"><img src="${displayImg}" alt="${item.title}"></div>
+                <div class="fame-info">
+                    <h3 class="fame-title">${item.title}</h3>
+                    <div class="fame-footer">🕒 ${item.date}</div>
+                </div>
+            </div>`;
+    };
+
+    track.innerHTML = originalItems.slice(-4).map(createCardHTML).join('') + 
+                      originalItems.map(createCardHTML).join('') + 
+                      originalItems.slice(0, 4).map(createCardHTML).join('');
+
+    let index = 4; 
+    let isTransitioning = false;
+
+    const moveSlider = (smooth = true) => {
+        const cards = track.querySelectorAll('.fame-card');
+        if (cards.length === 0) return;
+
+        // 1. ดึงความกว้างของการ์ด
+        const baseCardWidth = cards[0].offsetWidth;
+        // 2. ดึงความกว้างของหน้าจอ
+        const viewportWidth = document.querySelector('.slider-track-viewport').offsetWidth;
+        
+        // 3. ฉลาดขึ้น: อ่านค่า Gap จาก CSS อัตโนมัติ ป้องกันเลขไม่ตรงกัน
+        const trackStyle = window.getComputedStyle(track);
+        const dynamicGap = parseFloat(trackStyle.gap) || 0;
+
+        // 4. สูตรดึงการ์ดมาไว้ตรงกลางหน้าจอเป๊ะๆ
+        const centerOffset = (viewportWidth / 2) - (baseCardWidth / 2);
+        const totalMove = (index * (baseCardWidth + dynamicGap)) - centerOffset;
+
+        track.style.transition = smooth ? "transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)" : "none";
+        track.style.transform = `translateX(${-totalMove}px)`;
+
+        cards.forEach((c, i) => {
+            c.style.transition = smooth ? "all 0.5s cubic-bezier(0.25, 1, 0.5, 1)" : "none";
+            if (i === index) {
+                c.classList.add('active');
+                c.style.cursor = "pointer"; // กดดูรูปได้
+            } else {
+                c.classList.remove('active');
+                c.style.cursor = "grab"; // กดเพื่อเลื่อนมาตรงกลาง
+            }
+        });
+    };
+
+    const updateAndCheck = () => {
+        moveSlider(true);
+        isTransitioning = true;
+        
+        setTimeout(() => {
+            if (index >= originalItems.length + 4) {
+                index -= originalItems.length;
+                moveSlider(false);
+            } else if (index < 4) {
+                index += originalItems.length;
+                moveSlider(false);
+            }
+            track.offsetHeight; // บังคับให้เบราว์เซอร์ล้างแอนิเมชันเก่า กันภาพกระตุก
+            isTransitioning = false;
+        }, 500); 
+    };
+
+    const attachClicks = () => {
+        const cards = track.querySelectorAll('.fame-card');
+        cards.forEach((card, i) => {
+            card.addEventListener('click', () => {
+                if (isTransitioning) return; 
+                if (i === index) {
+                    const id = parseInt(card.getAttribute('data-id'));
+                    window.openModalById(id);
+                } else {
+                    index = i;
+                    updateAndCheck();
+                }
+            });
+        });
+    };
+
+    setTimeout(() => {
+        moveSlider(false);
+        attachClicks();
+    }, 50);
+
+    const btnNext = document.getElementById('slideNext');
+    const btnPrev = document.getElementById('slidePrev');
+    if (btnNext) btnNext.onclick = () => { if (!isTransitioning) { index++; updateAndCheck(); } };
+    if (btnPrev) btnPrev.onclick = () => { if (!isTransitioning) { index--; updateAndCheck(); } };
+
+    window.addEventListener('resize', () => moveSlider(false));
+}
+
+// ฟังก์ชันเสริมสำหรับ Slider
+window.openModalById = function(id) {
+    const item = allAchievements.find(a => a.id === id);
+    if (item) openModal(item);
+};
 

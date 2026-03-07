@@ -49,6 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = "auto";
         }
     };
+
+    // ถ้าอยู่หน้า Hall of Fame (มี fameGrid)
+    if (document.getElementById("fameGrid")) {
+        renderGrid(1);
+        renderPagination();
+    }
+
+    // ถ้าอยู่หน้า Home หรือหน้าที่มี Slider
+    if (document.getElementById("latestSliderTrack")) {
+        initLatestSlider();
+    }
+
+    
 });
 
 // 3. Centralized Menu Logic

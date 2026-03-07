@@ -13,8 +13,19 @@
     <link rel="stylesheet" href="/styles/components/footer.css">
     <link rel="stylesheet" href="/styles/pages/home.css">
     <link rel="stylesheet" href="/styles/pages/academics.css">
+    <link rel="stylesheet" href="/styles/pages/hall-of-fame.css">
+    <link rel="stylesheet" href="/styles/js/hall-of-fame.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
+
 <body>
     <div id="navbar-placeholder"></div>
 
@@ -31,10 +42,37 @@
             </div>
         </section>
         
+        <section class="home-slider-section" style="padding: 50px 0;">
+            <div class="video-header">
+                <h2 class="section-title">Latest Achievements</h2>
+                <!-- <p class="section-subtitle">ผลลัพธ์และผลสัมฤทธิ์ของบัณฑิต</p> -->
+            </div>
+            <div class="main-content">
+                
+                <div class="latest-highlights">
+                    <div class="slider-container">
+                        <button class="carousel-btn prev" id="slidePrev">&#10094;</button>
+                        <div class="slider-track-viewport">
+                            <div class="slider-track" id="latestSliderTrack">
+                                </div>
+                        </div>
+                        <button class="carousel-btn next" id="slideNext">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-content">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+
         <section class="dashboard-section container fade-in">
             <div class="video-header">
                 <h2 class="section-title">Graduate Outcomes & Performance</h2>
-                <p class="section-subtitle">ผลลัพธ์และผลสัมฤทธิ์ของบัณฑิต</p>
+                <!-- <p class="section-subtitle">ผลลัพธ์และผลสัมฤทธิ์ของบัณฑิต</p> -->
             </div>
         
             <div class="dashboard-wrapper">
@@ -115,7 +153,7 @@
         <section class="video-section container fade-in">
             <div class="video-header">
                 <h2 class="section-title">Get to Know IoTE</h2>
-                <p class="section-subtitle">ทำความรู้จักกับภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p>
+                <!-- <p class="section-subtitle">ทำความรู้จักกับภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</p> -->
             </div>
             
             <div class="video-container">
@@ -127,6 +165,9 @@
 
     <div id="footer-placeholder"></div>
 
-    <script src="script.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/hall-of-fame.js"></script>
+
+    <script src="/script.js"></script>
 </body>
 </html>
