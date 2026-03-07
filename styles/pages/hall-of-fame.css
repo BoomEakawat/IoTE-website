@@ -250,32 +250,29 @@ body {
 /* hall-of-fame.css */
 
 .close-btn {
-    position: fixed; 
-    top: 0px;
-    right: 0px;
-    
-    /* --- FIXES START HERE --- */
-    z-index: 9999;          /* Force it to be on the very top layer */
-    color: #434343;         /* Make it solid black so you can see it */
-    /* background: rgb(255, 0, 0); */
-    width: 50px; 
-    height: 50px;
-    /* border-radius: 50%; */
-    display: flex;          /* Center the X inside the circle */
-    justify-content: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-    /* ------------------------ */
-    
-    font-size: 65px;
-    font-weight: 200;
+    justify-content: center;
     cursor: pointer;
-    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
-    top: 20px; 
-    right: calc(50% - 380px); /* ตัวอย่างการคำนวณให้อยู่ชิดขอบ Modal ที่กว้าง 800px */
+    z-index: 100;
+    transition: all 0.3s ease;
+    border: none;
+    line-height: 1;
 }
 
 .close-btn:hover {
-    color: #f7941e;    /* Changes to orange on hover */
+    background: rgba(0, 0, 0, 0.8);
+    color: #f7941e;
+    transform: scale(1.1);
 }
 
 
