@@ -449,7 +449,7 @@
 /* จัดการตำแหน่งคอนเทนเนอร์ให้ชิดขวา */
 .view-all-container {
     max-width: 1400px; /* ให้กว้างเท่ากับ slider-wrapper */
-    margin: 20px auto 40px auto; 
+    margin: 10px auto 0 auto; 
     padding: 0 60px;   /* ให้ Padding เท่ากับ slider-wrapper เพื่อให้ขอบตรงกัน */
     display: flex;
     justify-content: flex-end; /* สั่งให้เนื้อหาข้างในชิดขวา */
