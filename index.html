@@ -13,19 +13,9 @@
     <link rel="stylesheet" href="/styles/components/footer.css">
     <link rel="stylesheet" href="/styles/pages/home.css">
     <link rel="stylesheet" href="/styles/pages/academics.css">
-    <link rel="stylesheet" href="/styles/pages/hall-of-fame.css">
-    <link rel="stylesheet" href="/styles/js/hall-of-fame.js">
+    <link rel="stylesheet" href="/styles/pages/slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<div class="modal-overlay" id="modalOverlay">
-    <div class="modal-content">
-        <span class="close-btn" id="closeBtn">&times;</span>
-        
-        <div class="modal-body" id="modalBody"></div>
-    </div>
-</div>
-
 <body>
     <div id="navbar-placeholder"></div>
 
@@ -42,36 +32,34 @@
             </div>
         </section>
         
-        <section class="home-slider-section" style="padding: 50px 0;">
+        <div class="fame-slider-section">
             <div class="video-header">
-                <h2 class="section-title">Latest Achievements</h2>
+                <h2 class="section-title">Performances</h2>
                 <!-- <p class="section-subtitle">ผลลัพธ์และผลสัมฤทธิ์ของบัณฑิต</p> -->
             </div>
-            <div class="main-content">
+            <div class="slider-wrapper">
+                <button class="nav-btn prev-btn" id="famePrev">&#10094;</button>
                 
-                <div class="latest-highlights">
-                    <div class="slider-container">
-                        <button class="carousel-btn prev" id="slidePrev">&#10094;</button>
-                        <div class="slider-track-viewport">
-                            <div class="slider-track" id="latestSliderTrack">
-                                </div>
-                        </div>
-                        <button class="carousel-btn next" id="slideNext">&#10095;</button>
-                    </div>
+                <div class="slider-track" id="fameTrack">
+                    <!-- ข้อมูลจะถูกฉีดเข้าที่นี่ด้วย JavaScript -->
                 </div>
-            </div>
-        </section>
 
-        <div class="modal-overlay" id="modalOverlay">
-            <div class="modal-content">
-                <span class="close-btn" id="closeBtn">&times;</span>
-                <div class="modal-body" id="modalBody"></div>
+                <button class="nav-btn next-btn" id="fameNext">&#10095;</button>
             </div>
         </div>
 
+        <!-- 2. Modal: แปะส่วนนี้ไว้ที่ท้ายไฟล์ (ก่อนปิด body) -->
+        <div class="slider-modal" id="fameModal">
+            <div class="modal-inner">
+                <span class="modal-close" id="closeFameModal">&times;</span>
+                <div id="fameModalBody"></div>
+            </div>
+        </div>
+        
         <section class="dashboard-section container fade-in">
+
             <div class="video-header">
-                <h2 class="section-title">Graduate Outcomes & Performance</h2>
+                <h2 class="section-title">Graduate Outcomes</h2>
                 <!-- <p class="section-subtitle">ผลลัพธ์และผลสัมฤทธิ์ของบัณฑิต</p> -->
             </div>
         
@@ -165,9 +153,20 @@
 
     <div id="footer-placeholder"></div>
 
+    <!-- 2. Modal: แปะส่วนนี้ไว้ที่ท้ายไฟล์ (ก่อนปิด body) -->
+    <div class="slider-modal" id="fameModal">
+        <div class="modal-inner">
+            <span class="modal-close" id="closeFameModal">&times;</span>
+            <div id="fameModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Load data first -->
     <script src="/js/data.js"></script>
     <script src="/js/hall-of-fame.js"></script>
-
+    <!-- Load slider functionality -->
+    <script src="/js/slider.js"></script>
+    <!-- Load main script -->
     <script src="/script.js"></script>
 </body>
 </html>
