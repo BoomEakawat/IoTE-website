@@ -504,10 +504,6 @@ function renderPagination() {
     }
 }
 
-
-
-// hall-of-fame.js
-
 function openModal(item) {
     const modalOverlay = document.getElementById("modalOverlay");
     const modalBody = document.getElementById("modalBody");
@@ -628,11 +624,14 @@ function renderGrid(page) {
             <div class="fame-info">
                 <h3 class="fame-title">${item.title}</h3>
                 <div class="fame-description">${item.desc}</div>
-                <div class="fame-footer">🕒 ${item.date}</div>
+                <div class="fame-footer">
+                    <i class="fa-regular fa-clock"></i> ${item.date}
+                </div>
             </div>
         `;
         card.onclick = () => openModal(item);
         grid.appendChild(card);
     });
 }
+
 

@@ -39,6 +39,7 @@ body {
     font-weight: 700;
     color: black;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 /* Grid */
@@ -133,6 +134,10 @@ body {
     color: white;
 }
 
+.page-title {
+    font-family: sans-serif;
+}
+
 /* Modal */
 .modal-close {
     position: absolute;
@@ -155,11 +160,7 @@ body {
     padding: 30px;
 }
 
-@media (max-width: 768px) {
-    .fame-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+
 
 /* hall-of-fame.css */
 
@@ -408,3 +409,15 @@ body {
     padding: 0;            /* ตรวจดูว่าไม่ได้เผลอใส่ padding ไว้ตรงนี้ */
     /* ส่วนประกอบอื่นยังคงเดิม */
 }
+
+@media (max-width: 950px) {
+    .fame-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .fame-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
