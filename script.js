@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
-// 3. Centralized Menu Logic
 function initMenu() {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -214,5 +213,3 @@ function updateDashboard(year) {
         activeBtn.classList.add('active');
     }
 }
-
-
